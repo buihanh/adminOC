@@ -1,0 +1,160 @@
+html, body {
+    background-color: #fff;
+    color: #6E6E6E;
+    font-family: arial;
+    font-size: 10px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+	#preview-frame {
+    background-color: #FFFFFF;
+    width: 100%;
+	height:100%;
+}
+
+
+.art-footer-text a {
+    display: none !important;
+}
+iframe{
+	z-index:1;
+	
+}
+.top{
+	position:position;
+	bottom:10px;
+	width:1000px;
+	height:20px;
+	background:red;
+	z-index:99999999999999999999999999;
+	
+}
+#page{
+	margin:0 auto;
+	overflow:hidden;
+}
+.tablet-landscapes {
+	background: url("../image/tablet-landscape.jpg") no-repeat scroll 0 0 transparent;
+	height: 768px;
+	margin: 20px auto;
+	padding: 34px 82px 80px 44px;
+	width: 1024px;
+}
+.tablet-portraits{
+
+	background: url("../image/tablet-portrait.jpg") no-repeat scroll 0 0 transparent;
+	height: 1034px;
+	margin: 20px auto;
+	padding: 34px 34px 140px;
+	width: 768px;
+}
+.smartphone-landscapes{
+	background: url("../image/mobile-landscape.jpg") no-repeat scroll 0 0 transparent;
+	height: 318px;
+	margin: 40px auto 0;
+	padding: 25px 77px 222px 53px;
+	width: 480px;
+}
+.smartphone-portraits{
+	background: url("../image/mobile-portrait.jpg") no-repeat scroll 0 0 transparent;
+	height: 480px;
+	margin: 20px auto 0;
+	padding: 53px 25px 252px;
+	width: 320px
+}
+.bg-page{
+	width:100%;
+	height:500px;
+	overflow:auto;
+}
+.download-view {
+    height: 63px;
+	background:#000;
+    width: 100%;
+
+}
+.show-hide {
+    text-align: right;
+    background: #ccc;
+    clear: both;
+}
+@media (min-width: 768px) {
+    .enabled{
+        width: 360px;
+        float: right;
+    }
+
+    .div-search {
+        float: left;
+        margin: 12px;
+        width: 408px;
+    }
+}
+.div-search input{
+    border: 1px solid #ccc;
+    height: 33px;
+    border-radius:4px ;
+    width: 100%;
+}
+
+.download {
+    float: right;
+    margin-top: 19px;
+    width: 100px;
+}
+
+.download > a {
+    background: none repeat scroll 0 0 #fff;
+    padding: 12px;
+}
+
+.download-view .enabled a{
+    display: list-item;
+}
+
+.name-themes {
+    float: left;
+    line-height: 51px;
+    text-align: right;
+    width: 329px;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.download-view .enabled a div {
+    background-image: url("../image/devices.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    height: 59px;
+    width: 62px;
+
+}
+
+.enabled ul li {
+    display: inline-flex;
+    list-style: none outside none;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+.enabled ul {
+    margin: 0;
+    padding: 0;
+}
+.tablet-landscape > div {
+    background-position: -59px 0 !important;
+}
+.tablet-portrait > div {
+    background-position: -113px 3px !important;
+    width: 57px !important;
+}
+.smartphone-landscape > div {
+    background-position: -163px -7px !important;
+    width: 55px !important;
+}
+.smartphone-portrait > div {
+    background-position: -215px 0 !important;
+}

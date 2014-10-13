@@ -1,0 +1,9 @@
+.valid {
+    position: absolute;
+    top: 100%;
+    width: 90%;
+    z-index: 9999;
+}
+.newsletter-submit{
+	position: relative;
+}

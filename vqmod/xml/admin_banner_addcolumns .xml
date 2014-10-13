@@ -1,0 +1,265 @@
+<modification>
+	<id>VQMOD Amdin Banner Add columns ( description1, description2,description3)</id>
+	<version>1.1</version>
+	<vqmver>3</vqmver>
+	<author>congnghevietuc.com</author>
+	<!-- Front End -->
+	
+	<file name="admin/model/design/banner.php">
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+                    class ModelDesignBanner extends Model {   
+			]]></search>
+			<add><![CDATA[
+					public function getBanner_image() {
+						$sql = "SELECT * FROM " . DB_PREFIX . "banner_image_description";
+						$query = $this->db->query($sql);
+						return $query->row;
+					}
+					
+					public function alter_banner_image() {
+						$sql = "ALTER TABLE `" . DB_PREFIX . "banner_image_description` ADD `description1` varchar(300),ADD `description2`  varchar(300) ,ADD `description3`  varchar(300) AFTER `title`";
+					
+					$query = $this->db->query($sql);
+						
+					}
+			
+			]]></add>
+		</operation>
+		
+		
+		<operation error="skip">
+			<search position="replace" offset=""><![CDATA[
+				$this->db->query("INSERT INTO " . DB_PREFIX . "banner_image_description SET banner_image_id = '" . (int)$banner_image_id . "', language_id = '" . (int)$language_id . "', banner_id = '" . (int)$banner_id . "', title = '" .  $this->db->escape($banner_image_description['title']) . "'");
+			]]></search>
+			<add><![CDATA[
+			
+			$this->db->query("INSERT INTO " . DB_PREFIX . "banner_image_description SET banner_image_id = '" . (int)$banner_image_id . "', language_id = '" . (int)$language_id . "', banner_id = '" . (int)$banner_id . "', title = '" .  $this->db->escape($banner_image_description['title']) . "',  description1 = '" .  $this->db->escape($banner_image_description['description1']) . "', description2 = '" .  $this->db->escape($banner_image_description['description2']) . "', description3 = '" .  $this->db->escape($banner_image_description['description3']) . "'");
+			
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace" offset=""><![CDATA[
+				$banner_image_description_data[$banner_image_description['language_id']] = array('title' => $banner_image_description['title']);
+				
+			]]></search>
+			<add><![CDATA[
+				$banner_image_description_data[$banner_image_description['language_id']] = array('title' => $banner_image_description['title'],'description1' => $banner_image_description['description1'],'description2' => $banner_image_description['description2'],'description3' => $banner_image_description['description3']);
+			]]></add>
+		</operation>
+		
+		
+		
+	</file>	
+	
+	<file name="admin/controller/design/banner.php">
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+                    public function index() {    
+			]]></search>
+			<add><![CDATA[
+				$this->load->model('design/banner');		
+				$list = $this->model_design_banner->getBanner_image(null);				
+				try{
+					if(empty($list['price']))		
+					$this->model_design_banner->alter_banner_image();
+				}
+				catch(exception $e)
+				{
+				   
+				}
+			
+			]]></add>
+		</operation>
+		
+		
+		
+		
+	</file>	
+	
+	<file name="admin/view/template/design/banner_form.tpl">	
+		
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+               <td class="left"><?php echo $entry_link; ?></td>
+			   
+		  ]]></search>
+			<add><![CDATA[
+		
+				 <td class="left">Descriptions1</td>
+				  <td class="left">Descriptions2</td>
+				   <td class="left">Descriptions3</td>
+			]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+               <td class="left"><input type="text" name="banner_image[<?php echo $image_row; ?>][link]" value="<?php echo $banner_image['link']; ?>" /></td>
+		  ]]></search>
+			<add><![CDATA[
+				
+				<td class="left">
+				
+				<?php foreach ($languages as $language) { ?>
+				<textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description1]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description1'] : ''; ?></textarea>
+				<?php } ?>
+				
+				</td>
+				
+				<td class="left">
+				
+				<?php foreach ($languages as $language) { ?>
+				<textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description2]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description2'] : ''; ?></textarea>
+				<?php } ?>
+				
+				</td>
+				
+				
+				<td class="left">
+				
+				<?php foreach ($languages as $language) { ?>
+				<textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description3]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description3'] : ''; ?></textarea>
+				<?php } ?>
+				
+				</td>
+				
+				
+				
+				
+				]]></add>
+		</operation>
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+               html += '<td class="left"><input type="text" name="banner_image[' + image_row + '][link]" value="" /></td>';
+		  ]]></search>
+			<add><![CDATA[
+				
+	
+				 html += '<td class="left">';
+				 <?php foreach ($languages as $language) { ?>
+				 html += '<textarea name="banner_image[' + image_row + '][banner_image_description][<?php echo $language['language_id']; ?>][description1]" ></textarea>';
+				 <?php } ?>				 
+				 html += '</td>';
+				
+				html += '<td class="left">';
+				 <?php foreach ($languages as $language) { ?>
+				 html += '<textarea name="banner_image[' + image_row + '][banner_image_description][<?php echo $language['language_id']; ?>][description2]" ></textarea>';
+				 <?php } ?>				 
+				html += '</td>';
+				 
+				 html += '<td class="left">';
+				 <?php foreach ($languages as $language) { ?>
+				 html += '<textarea name="banner_image[' + image_row + '][banner_image_description][<?php echo $language['language_id']; ?>][description3]" ></textarea>';
+				 <?php } ?>				 
+				 html += '</td>';
+
+
+				]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="replace" offset=""><![CDATA[
+            <td colspan="3"></td>
+			]]></search>
+			<add><![CDATA[
+			<td colspan="6"></td>
+			]]></add>
+		</operation>
+		
+	</file>
+	
+	
+	
+	<file name="catalog/controller/module/slideshow.php">	
+		
+		
+		
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+              $this->data['banners'][] = array(
+		  ]]></search>
+			<add><![CDATA[
+				
+				'description1' => $result['description1'],
+				'description2' => $result['description2'],
+				'description3' => $result['description3'], 
+			]]></add>
+		</operation>
+		
+		
+	</file>
+	
+	<file name="admin/view/template/module/slideshow.tpl">	
+		<operation error="skip">
+			<search position="before" offset=""><![CDATA[
+                   <td class="left"><select name="slideshow_module[<?php echo $module_row; ?>][status]">
+			]]></search>
+			<add><![CDATA[
+				 <td class="left"><select name="slideshow_module[<?php echo $module_row; ?>][type]">
+                  <?php if ($module['type']==1) { ?>
+                  <option value="1" selected="selected">slider 1</option>
+                  <option value="2" >slider 2</option>
+				  <option value="3" >slider 3</option>
+				  
+				  
+                  <?php }
+
+				  elseif ($module['type']==3) { ?>
+					<option value="1" >slider 1</option>
+					<option value="2" >slider 2</option>
+					<option value="3" selected="selected">slider 3</option>
+				  
+                  <?php } 				  
+				   elseif ($module['type']==2) { ?>
+                  <option value="1" >slider 1</option>
+                  <option value="2" selected="selected">slider 2</option>
+				   <option value="3" >slider 3</option>
+                  <?php } else { ?>
+					 <option value="1" selected="selected">slider 1</option>
+					<option value="2" >slider 2</option>
+					<option value="3" >slider 3</option>
+				  <?php } ?>
+                </select></td>
+			]]></add>
+		</operation>	
+
+		<operation error="skip">
+			<search position="before" offset=""><![CDATA[
+                   <td class="left"><?php echo $entry_status; ?></td>
+			]]></search>
+			<add><![CDATA[
+				 <td class="left">Type</td>
+			]]></add>
+		</operation>
+		
+		<operation error="skip">
+			<search position="before" offset=""><![CDATA[
+                   html += '    <td class="left"><select name="slideshow_module[' + module_row + '][status]">';
+			]]></search>
+			<add><![CDATA[
+				html += '    <td class="left"><select name="slideshow_module[' + module_row + '][type]">';
+				html += '      <option value="1" selected="selected">slider 1</option>';
+				html += '      <option value="2">slider 2</option>';
+				html += '      <option value="3">slider 3</option>';
+				html += '    </select></td>';
+			]]></add>
+		</operation>
+		
+	</file>
+	
+		<file name="catalog/controller/module/slideshow.php">	
+		
+		<operation error="skip">
+			<search position="after" offset=""><![CDATA[
+                   $this->data['width'] = $setting['width'];
+			]]></search>
+			<add><![CDATA[
+				$this->data['type'] = $setting['type'];
+				
+			]]></add>
+		</operation>
+			
+	</file>
+	
+	
+</modification>

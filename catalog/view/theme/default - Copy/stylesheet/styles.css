@@ -1,0 +1,56 @@
+
+.mobilemenu>li.first {
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	behavior: url(http://www.plazathemes.com/skin/frontend/default/plazathemes/css/css3.htc);
+	position: relative;
+}
+.mobilemenu li.link-login {
+	-webkit-border-radius:0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+	behavior: url(http://www.plazathemes.com/skin/frontend/default/plazathemes/css/css3.htc);
+	position: relative;
+}
+#Example_F {
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+}
+
+.content1 .content1-button a.btn-view-product,
+.content1 .content1-button a.btn-join-us,
+.banner7-title a ,
+.banner7-readmore a,
+.block-subscribe .input-box button.button span,
+.block-subscribe .input-box,
+.products-grid a.more-details,
+.products-grid a.view-demo,
+.pager .pages a.next, .pager a.previous,
+.product-view a.view-demo ,
+.product-view  a.member-download, button.btn-cart span,
+.pricing-contain .pricing-content .pricing-td .join-now span, button.button span,
+.wrapper_box #shopping_cart, .wrapper_box #continue_shopping,
+ul.shown-sub, .dropit .dropit-submenu, #back-top {
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(http://www.plazathemes.com/skin/frontend/default/plazathemes/css/css3.htc);
+}
+a, .content1 .content1-button a.btn-view-product,
+.content1 .content1-button a.btn-join-us,
+.banner7-readmore a,
+.banner7-title a,
+.block-subscribe .input-box button.button span,
+button.btn-cart span,
+.ma-upsellslider-container .flex-direction-nav,
+.pricing-contain .pricing-content .pricing-td .join-now span,
+button.button span {
+    webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+}

@@ -1,0 +1,154 @@
+
+.menu-collapser {
+    background-color: #999;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 8px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+.collapse-button {
+    background-color: #0e0e0e;
+    background-image: linear-gradient(to bottom, #151515, #040404);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.075);
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 7px 10px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    top: 50%;
+    transform: translate(0px, -50%);
+    width: 40px;
+}
+.collapse-button:hover, .collapse-button:focus {
+    background-color: #040404;
+    background-image: none;
+    color: #fff;
+}
+.collapse-button .icon-bar {
+    background-color: #f5f5f5;
+    border-radius: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    display: block;
+    height: 2px;
+    margin: 2px 0;
+    width: 18px;
+}
+ul.slimmenu {
+    list-style-type: none;
+    margin: 30px 0 0;
+    padding: 0;
+    width: 100%;
+}
+ul.slimmenu li {
+    display: inline-block;
+    position: relative;
+}
+ul.slimmenu > li {
+}
+ul.slimmenu > li:first-child {
+    border-left: 0 none;
+}
+ul.slimmenu > li:last-child {
+    margin-right: 0;
+}
+ul.slimmenu li a {
+    color: #fff;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 36px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: background-color 0.5s ease-out 0s;
+}
+ul.slimmenu li a:hover {
+    text-decoration: none;
+}
+ul.slimmenu li .sub-collapser {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.075);
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 48px;
+    z-index: 999;
+}
+ul.slimmenu li .sub-collapser:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em;
+    vertical-align: middle;
+}
+ul.slimmenu li .sub-collapser > i {
+    color: #333;
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+}
+ul.slimmenu li ul {
+    list-style-type: none;
+    margin: 0;
+}
+ul.slimmenu li ul li {
+    line-height: 36px;
+    width: 100%;
+}
+ul.slimmenu li > ul {
+    background: none repeat scroll 0 0 #888;
+    border-radius: 4px;
+    height: auto !important;
+    left: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 999;
+}
+ul.slimmenu li > ul > li ul {
+    display: none;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+ul.slimmenu.collapsed li {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+ul.slimmenu.collapsed li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+    box-sizing: border-box;
+    display: block;
+    line-height: 40px;
+}
+ul.slimmenu.collapsed li .sub-collapser {
+    height: 40px;
+}
+ul.slimmenu.collapsed li > ul {
+    display: none;
+    position: static;
+}
+.slimmenu li ul li a {
+    padding-left: 13px;
+}

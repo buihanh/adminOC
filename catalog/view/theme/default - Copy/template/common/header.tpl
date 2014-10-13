@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
+<head>
+<meta charset="UTF-8" />
+<title><?php echo $title; ?></title>
+<base href="<?php echo $base; ?>" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<?php if ($description) { ?>
+<meta name="description" content="<?php echo $description; ?>" />
+<?php } ?>
+<?php if ($keywords) { ?>
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<?php } ?>
+<?php if ($icon) { ?>
+<link href="<?php echo $icon; ?>" rel="icon" />
+<?php } ?>
+
+
+
+<link media="all" href="catalog/view/theme/default/stylesheet/bootstrap.css" type="text/css" rel="stylesheet">
+<link media="all" href="catalog/view/theme/default/stylesheet/bootstrap-responsive.css" type="text/css" rel="stylesheet">
+
+<?php foreach ($links as $link) { ?>
+<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+<?php } ?>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<?php foreach ($styles as $style) { ?>
+<link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
+<?php } ?>
+
+
+
+
+
+
+<link media="all" href="catalog/view/theme/default/stylesheet/styles.css" type="text/css" rel="stylesheet">
+<link media="all" href="catalog/view/theme/default/stylesheet/widgets.css" type="text/css" rel="stylesheet">
+<link media="all" href="catalog/view/theme/default/stylesheet/ma.upsellslider.css" type="text/css" rel="stylesheet">
+<link media="all" href="catalog/view/theme/default/stylesheet/ma.banner7.css" type="text/css" rel="stylesheet">
+<link media="print" href="catalog/view/theme/default/stylesheet/print.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
+
+<script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+<?php foreach ($scripts as $script) { ?>
+<script type="text/javascript" src="<?php echo $script; ?>"></script>
+<?php } ?>
+
+
+
+
+
+
+
+<body class=" cms-index-index cms-home">
+
+<div id="notification"></div>
+
+<div class="ma-wrapper">
+     
+    <div class="ma-page">
+        <div class="ma-header-container">
+    <div class="container">
+        <div class="container-inner">
+        <div class="header">
+            <div class="header-content row-fluid">
+                <div class="span3">
+                        <h1 class="logo"><strong>Plazathemes</strong>
+						<a class="logo" title="<?php echo $title; ?>" href="<?php echo $home; ?>">
+						<img alt="<?php echo $title; ?>" src="<?php echo $logo;  ?>"></a>
+						</h1>
+                            </div>
+            <div class="span9">
+                <ul class="menu dropit visible-desktop">
+					<li class="dropit-trigger">
+								
+							<a href="javascript:void(0)">Single Area</a>
+							<ul id="menu_link" class="dropit-submenu">
+							  <li class="first"><a title="My Account" href="http://www.plazathemes.com/customer/account/">My Account</a></li>
+								<li><a class="top-link-cart" title="My Cart (1 item)" href="http://www.plazathemes.com/checkout/cart/">My Cart (1 item)</a></li>
+								<li><a class="top-link-checkout" title="Checkout" href="http://www.plazathemes.com/checkout/">Checkout</a></li>
+								<li class=" last"><a title="Log In" href="http://www.plazathemes.com/customer/account/login/">Log In</a></li>
+							</ul>
+					 </li>
+				</ul>
+				<script type="text/javascript">
+						$jq(document).ready(function(){
+							$jq('.dropit li').hover(function(){			
+								   $jq(this).find('.dropit-submenu').show();
+							   },function(){
+									$jq(this).find('.dropit-submenu').hide();
+							   })
+						})
+				</script>
+                <div class="ma-nav-mobile-container hidden-desktop">
+					<div class="navbar">
+						<div class="navbar-inner navbar-inactive" id="navbar-inner">
+							<a class="btn btn-navbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</a>
+								<span class="brand">Main Menu</span>
+						<ul class="mobilemenu nav-collapse collapse" id="ma-mobilemenu">
+							
+							<?php 
+							
+							if ($categories) { ?>
+							<?php foreach ($categories as $category) { ?>
+							<li class="level0 nav-1 level-top first">
+								<a class="level-top" href="<?php echo $category['href']; ?>">
+									<span><?php echo $category['name']; ?></span>
+								</a>
+								<?php if ($category['children']) { ?>
+									<ul>
+									<?php for ($i = 0; $i < count($category['children']);$i++) { ?>
+										 <li><a href="<?php echo $category['children'][$i]['href']; ?>"><?php echo $category['children'][$i]['name']; ?></a></li>
+									<?php } ?>
+									</ul>
+								<?php } ?>
+								
+							</li>
+							<?php }
+							}
+							?>
+							
+
+			
+					<li class="level0">
+						<a title="Demo Magento Themes" href="#">
+							<span>Demo</span>
+						</a>
+					</li>
+					<li class="nav-membership">
+						<a title="Membership" href="http://www.plazathemes.com/member/"><span>Membership Area</span></a>
+						<ul class="level0" style="display: none;">
+							<li class="level1 first">
+								<a title="Login Club" href="http://www.plazathemes.com/member/">
+									<span>Login Club</span>
+								</a>
+							</li>
+							<li class="level1">
+								<a title="pricing" href="http://www.plazathemes.com/membership-pricing/">
+									<span>Pricing</span>
+								</a>
+							</li>
+							<li class="level1 last">
+								<a title="Download Area" href="http://www.plazathemes.com/member/member/">
+									<span>Download Area</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="link-login"><a href="http://www.plazathemes.com/customer/account/login/">Login</a></li>
+				</ul>
+			</div>
+		</div>
+</div>
+<div class="ma-nav-container visible-desktop">
+        <ul id="nav">
+       <?php 							
+			if ($categories) { ?>
+			<?php foreach ($categories as $category) { ?>
+			<li class="level0 nav-1 level-top first">
+				<a class="level-top" href="<?php echo $category['href']; ?>">
+					<span><?php echo $category['name']; ?></span>
+				</a>
+				<?php if ($category['children']) { ?>
+					<ul>
+					<?php for ($i = 0; $i < count($category['children']);$i++) { ?>
+						 <li><a href="<?php echo $category['children'][$i]['href']; ?>"><?php echo $category['children'][$i]['name']; ?></a></li>
+					<?php } ?>
+					</ul>
+				<?php } ?>
+				
+			</li>
+			<?php }
+				}
+				?>
+
+
+	<li class="level0" id="">
+				<a title="Demo Magento Themes" href="http://www.plazathemes.com/demo/">
+					<span>Demo</span>
+				</a>
+			</li>
+			<li class="nav-membership" id="">
+				<a title="Membership" href="http://www.plazathemes.com/member/"><span>Membership Area</span></a>
+				<ul class="level0">
+					<li class="level1 first" id="">
+						<a title="Login Club" href="http://www.plazathemes.com/member/">
+							<span>Login Club</span>
+						</a>
+					</li>
+					<li class="level1" id="">
+						<a title="pricing" href="http://www.plazathemes.com/membership-pricing/">
+							<span>Pricing</span>
+						</a>
+					</li>
+					<li class="level1 last" id="">
+						<a title="Download Area" href="http://www.plazathemes.com/member/member/">
+							<span>Download Area</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-support" id="">
+				<a title="Support" href="<?php  ?>"><span>Support</span></a>
+				<ul class="level0">
+					<li class="level1 first" id="">
+						<a title="Submit a Ticket" href="http://www.plazathemes.com/tickets">
+							<span>Submit a Ticket</span>
+						</a>
+					</li>
+					<li class="level1" id="">
+						<a title="Contact Form" href="<?php echo $this->url->link('information/contact', '', 'SSL'); ?>">
+							<span>Contact Form</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+        </ul>
+</div>
+            </div>
+            </div>
+        </div>
+                </div>
+    </div>
+</div>   
+
+
+ 
+			 
