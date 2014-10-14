@@ -101,7 +101,7 @@
 				
             <?php if ($products) { ?>
             <?php foreach ($products as $product) { ?>
-					<tr>
+					<tr class="delete_<?php echo $product['product_id'];  ?>">
 					  <td style="text-align: center;"><?php if ($product['selected']) { ?>
 						<input  type="checkbox" name="selected[]" value="<?php echo $product['product_id']; ?>" checked="checked" />
 						<?php } else { ?>
@@ -128,7 +128,7 @@
 					  <td class="visible-md visible-lg">
 						  <div class="btn-group">
 							  <a data-original-title="Sửa" class="btn btn-sm show-tooltip" title="" href="<?php echo $product['href'];  ?>"><i class="fa fa-edit"></i></a>
-							  <a data-original-title="Xóa" class="btn btn-sm btn-danger show-tooltip" title="" onclick="fcdelete(69)" href="#"><i class="fa fa-trash-o"></i></a>
+							  <a data-original-title="Xóa" class="btn btn-sm btn-danger show-tooltip" title="" onclick="fcdelete(<?php echo $product['product_id'];  ?>)" href="javascript:void(0);"><i class="fa fa-trash-o"></i></a>
 						  </div>
 					  </td>
 					  
@@ -151,6 +151,42 @@
 	  
 	</div>
 </div>
+
+<script type="application/javascript">
+    function fcdelete(id){
+        var r=confirm("Bạn có chắc không?");
+        if (r==false)
+        {
+            return false;
+        }
+        var url = $('base').attr('href') + 'index.php?route=catalog/product/fcdelete&token=<?php echo $this->session->data["token"]; ?>';
+        $.ajax({
+
+            type: "post",
+
+            url : url,
+
+            data:{'product_id':id},
+
+            dataType : "html",
+
+            success : function(response){
+
+                if(response!="")
+                {
+                    $('.delete_'+id).css( "display", "none" );
+                }
+
+            }
+        });
+
+    }
+</script>
+
+
+
+
+
 <script type="text/javascript"><!--
 function filter() {
 	url = 'index.php?route=catalog/product&token=<?php echo $token; ?>';

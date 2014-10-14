@@ -48,7 +48,7 @@
 				<tbody>
 					 <?php if ($informations) { ?>
 					<?php foreach ($informations as $information) { ?>
-					<tr>
+					<tr class="delete_<?php echo $information['information_id']; ?>">
 					  <td><?php if ($information['selected']) { ?>
 						<input type="checkbox" name="selected[]" value="<?php echo $information['information_id']; ?>" checked="checked" />
 						<?php } else { ?>
@@ -59,7 +59,7 @@
 					  <td class="visible-md visible-lg">
 						  <div class="btn-group">
 							  <a data-original-title="Sửa" class="btn btn-sm show-tooltip" title="" href="<?php echo $information['href'];  ?>"><i class="fa fa-edit"></i></a>
-							  <a data-original-title="Xóa" class="btn btn-sm btn-danger show-tooltip" title="" onclick="fcdelete(69)" href="#"><i class="fa fa-trash-o"></i></a>
+							  <a data-original-title="Xóa" class="btn btn-sm btn-danger show-tooltip" title="" onclick="fcdelete(<?php echo $information['information_id']; ?>)" href="javascript:void(0);"><i class="fa fa-trash-o"></i></a>
 						  </div>
 					  </td>
 					</tr>
@@ -79,4 +79,39 @@
     </div>
   </div>
 </div>
+
+<script type="application/javascript">
+    function fcdelete(id){
+        var r=confirm("Bạn có chắc không?");
+        if (r==false)
+        {
+            return false;
+        }
+        var url = $('base').attr('href') + 'index.php?route=catalog/information/fcdelete&token=<?php echo $this->session->data["token"]; ?>';
+        $.ajax({
+
+            type: "post",
+
+            url : url,
+
+            data:{'information_id':id},
+
+            dataType : "html",
+
+            success : function(response){
+
+                if(response!="")
+                {
+                    $('.delete_'+id).css( "display", "none" );
+                }
+
+            }
+        });
+
+    }
+</script>
+
+
+
+
 <?php echo $footer; ?>

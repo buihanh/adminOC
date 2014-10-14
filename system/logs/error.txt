@@ -1879,3 +1879,58 @@ mpp\htdocs\congty\image\data\public\phamquocvinh992@gmail.com): failed to open d
 2014-10-13 9:49:30 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\congty\admin123\view\template\common\header.tpl on line 451
 2014-10-13 9:49:30 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\congty\admin123\view\template\common\header.tpl on line 463
 2014-10-13 9:49:30 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\congty\admin123\view\template\common\header.tpl on line 472
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:01:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 422
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 437
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 450
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 451
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 463
+2014-10-14 4:01:23 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 472
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 422
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 437
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 450
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 451
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 463
+2014-10-14 4:08:34 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 472
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 422
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 437
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 450
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 451
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 463
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 472
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 422
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 437
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 450
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 451
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 463
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 472
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 422
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 437
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 450
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 451
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 463
+2014-10-14 4:08:36 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 472

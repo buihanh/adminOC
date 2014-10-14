@@ -75,7 +75,13 @@ class ControllerCatalogInformation extends Controller {
 
 		$this->getForm();
 	}
-
+    public function  fcdelete(){
+        $this->load->model('catalog/information');
+        $information_id = $this->request->post['information_id'];
+        $temp = $this->model_catalog_information->deleteInformation($information_id);
+        echo "OK";
+        die();
+    }
 	public function delete() {
 		$this->language->load('catalog/information');
 

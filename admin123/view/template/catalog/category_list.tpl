@@ -56,7 +56,7 @@
                   <td class="visible-md visible-lg">
                       <div class="btn-group">
                           <a href="<?php echo $category['href']; ?>" title="" class="btn btn-sm show-tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>
-                          <a href="#" onclick="fcdelete(<?php echo $category['category_id'];  ?>)" title="" class="btn btn-sm btn-danger show-tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+                          <a href="javascript:void(0);" onclick="fcdelete(<?php echo $category['category_id'];  ?>)" title="" class="btn btn-sm btn-danger show-tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
                       </div>
                   </td>
               </tr>

@@ -118,6 +118,14 @@ class ControllerCatalogProduct extends Controller {
 		$this->getForm();
 	}
 
+
+    public function  fcdelete(){
+        $this->load->model('catalog/product');
+        $product_id = $this->request->post['product_id'];
+        $temp = $this->model_catalog_product->deleteProduct($product_id);
+        echo "OK";
+        die();
+    }
 	public function delete() {
 		$this->language->load('catalog/product');
 
