@@ -446,7 +446,7 @@
                     <span>Khách hàng</span>
                     <b class="arrow fa fa-angle-right"></b>
                 </a>
-                <ul class="submenu">
+                <ul  <?php if(substr($route,0,4) == "sale") { ?> style="display: block;" <?php }  ?> class="submenu">
                     <li><a href="<?php echo $customer; ?>">Danh sách khách hàng</a></li>
                     <li><a href="<?php echo $contact; ?>">Send Mail cho khách hàng</a></li>
                 </ul>
@@ -486,7 +486,7 @@
                 </a>
 
                 <!-- BEGIN Submenu -->
-                <ul class="submenu">
+                <ul <?php if(substr($route,0,4) == "design") { ?> style="display: block;" <?php }  ?> class="submenu">
                     <li><a href="ui_general.html">Slideshow</a></li>
                     <li><a href="ui_button.html">Banner</a></li>
                 </ul>
@@ -498,6 +498,13 @@
                 <a href="<?php echo $user;  ?>" >
                     <i class="fa fa-users"></i>
                     <span>Người dùng</span>
+
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $setting;  ?>" >
+                    <i class="fa fa-cogs"></i>
+                    <span>Cấu hình web</span>
 
                 </a>
             </li>

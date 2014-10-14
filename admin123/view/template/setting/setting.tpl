@@ -12,72 +12,89 @@
   <div class="success"><?php echo $success; ?></div>
   <?php } ?>
   <div class="box">
-    <div class="heading">
-      <h1><img src="view/image/setting.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
-    </div>
+    
+	
+	<div class="buttons"><a class="btn btn-primary" onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a  class="btn btn-primary" href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
+	
+	<br/><br/>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-store"><?php echo $tab_store; ?></a><a href="#tab-local"><?php echo $tab_local; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-ftp"><?php echo $tab_ftp; ?></a><a href="#tab-mail"><?php echo $tab_mail; ?></a><a href="#tab-fraud"><?php echo $tab_fraud; ?></a><a href="#tab-server"><?php echo $tab_server; ?></a></div>
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
-        <div id="tab-general">
-          <table class="form">
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_name; ?></td>
-              <td><input type="text" name="config_name" value="<?php echo $config_name; ?>" size="40" />
+      <form class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
+        
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Tên cửa hàng:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				
+				<input class="form-control" type="text" name="config_name" value="<?php echo $config_name; ?>" size="40" />
                 <?php if ($error_name) { ?>
                 <span class="error"><?php echo $error_name; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_owner; ?></td>
-              <td><input type="text" name="config_owner" value="<?php echo $config_owner; ?>" size="40" />
+                <?php } ?>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Người tạo cửa hàng:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<input class="form-control" type="text" name="config_owner" value="<?php echo $config_owner; ?>" size="40" />
                 <?php if ($error_owner) { ?>
                 <span class="error"><?php echo $error_owner; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_address; ?></td>
-              <td><textarea name="config_address" cols="40" rows="5"><?php echo $config_address; ?></textarea>
+                <?php } ?>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Địa chỉ:</label>
+			<div class="col-sm-9 col-lg-9 controls">
+				<textarea class="form-control" name="config_address" cols="40" rows="5"><?php echo $config_address; ?></textarea>
                 <?php if ($error_address) { ?>
                 <span class="error"><?php echo $error_address; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_email; ?></td>
-              <td><input type="text" name="config_email" value="<?php echo $config_email; ?>" size="40" />
+                <?php } ?>	
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Email:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<input class="form-control" type="text" name="config_email" value="<?php echo $config_email; ?>" size="40" />
                 <?php if ($error_email) { ?>
                 <span class="error"><?php echo $error_email; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_telephone; ?></td>
-              <td><input type="text" name="config_telephone" value="<?php echo $config_telephone; ?>" />
+                <?php } ?>	
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Số điện thoại:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<input class="form-control" type="text" name="config_telephone" value="<?php echo $config_telephone; ?>" />
                 <?php if ($error_telephone) { ?>
                 <span class="error"><?php echo $error_telephone; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_fax; ?></td>
-              <td><input type="text" name="config_fax" value="<?php echo $config_fax; ?>" /></td>
-            </tr>
-          </table>
-        </div>
-        <div id="tab-store">
-          <table class="form">
-            <tr>
-              <td><span class="required">*</span> <?php echo $entry_title; ?></td>
-              <td><input type="text" name="config_title" value="<?php echo $config_title; ?>" />
+                <?php } ?>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"> <?php echo $entry_fax; ?>:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<input  class="form-control" type="text" name="config_fax" value="<?php echo $config_fax; ?>" />
+			</div>
+		</div>
+		
+		<hr/>
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Title:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<input class="form-control" type="text" name="config_title" value="<?php echo $config_title; ?>" />
                 <?php if ($error_title) { ?>
                 <span class="error"><?php echo $error_title; ?></span>
-                <?php } ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_meta_description; ?></td>
-              <td><textarea name="config_meta_description" cols="40" rows="5"><?php echo $config_meta_description; ?></textarea></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_template; ?></td>
-              <td><select name="config_template" onchange="$('#template').load('index.php?route=setting/setting/template&token=<?php echo $token; ?>&template=' + encodeURIComponent(this.value));">
+                <?php } ?>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Mô tả seo:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<textarea  class="form-control"  name="config_meta_description" cols="40" rows="5"><?php echo $config_meta_description; ?></textarea>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Giao diện:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<select class="form-control" name="config_template" onchange="$('#template').load('index.php?route=setting/setting/template&token=<?php echo $token; ?>&template=' + encodeURIComponent(this.value));">
                   <?php foreach ($templates as $template) { ?>
                   <?php if ($template == $config_template) { ?>
                   <option value="<?php echo $template; ?>" selected="selected"><?php echo $template; ?></option>
@@ -85,12 +102,36 @@
                   <option value="<?php echo $template; ?>"><?php echo $template; ?></option>
                   <?php } ?>
                   <?php } ?>
-                </select></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td id="template"></td>
-            </tr>
+                </select>
+				
+				<div id="template"></div>
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag">Logo:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<div class="image"><img src="<?php echo $logo; ?>" alt="" id="thumb-logo" />
+                  <input type="hidden" name="config_logo" value="<?php echo $config_logo; ?>" id="logo" />
+                  <br />
+                  <a onclick="image_upload('logo', 'thumb-logo');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-logo').attr('src', '<?php echo $no_image; ?>'); $('#logo').attr('value', '');"><?php echo $text_clear; ?></a></div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-3 col-lg-2 control-label" for="tag">Icon:</label>
+			<div class="col-sm-6 col-lg-4 controls">
+				<div class="image"><img src="<?php echo $icon; ?>" alt="" id="thumb-icon" />
+                  <input type="hidden" name="config_icon" value="<?php echo $config_icon; ?>" id="icon" />
+                  <br />
+                  <a onclick="image_upload('icon', 'thumb-icon');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-icon').attr('src', '<?php echo $no_image; ?>'); $('#icon').attr('value', '');"><?php echo $text_clear; ?></a></div>
+			</div>
+		</div>
+		
+		
+		<div style=" height: 0;    opacity: 0;    overflow: hidden;">
+        <div id="tab-store">
+          <table class="form">
             <tr>
               <td><?php echo $entry_layout; ?></td>
               <td><select name="config_layout_id">
@@ -604,20 +645,10 @@
         </div>
         <div id="tab-image">
           <table class="form">
-            <tr>
-              <td><?php echo $entry_logo; ?></td>
-              <td><div class="image"><img src="<?php echo $logo; ?>" alt="" id="thumb-logo" />
-                  <input type="hidden" name="config_logo" value="<?php echo $config_logo; ?>" id="logo" />
-                  <br />
-                  <a onclick="image_upload('logo', 'thumb-logo');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-logo').attr('src', '<?php echo $no_image; ?>'); $('#logo').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_icon; ?></td>
-              <td><div class="image"><img src="<?php echo $icon; ?>" alt="" id="thumb-icon" />
-                  <input type="hidden" name="config_icon" value="<?php echo $config_icon; ?>" id="icon" />
-                  <br />
-                  <a onclick="image_upload('icon', 'thumb-icon');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb-icon').attr('src', '<?php echo $no_image; ?>'); $('#icon').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-            </tr>
+            
+			
+			
+			
             <tr>
               <td><span class="required">*</span> <?php echo $entry_image_category; ?></td>
               <td><input type="text" name="config_image_category_width" value="<?php echo $config_image_category_width; ?>" size="3" />
@@ -1000,7 +1031,8 @@
             </tr>
           </table>
         </div>
-      </form>
+		</div>
+	  </form>
     </div>
   </div>
 </div>

@@ -61,6 +61,19 @@ body {
 
 }
 
+.vtabs-content {
+    float: right;
+    width: 66%;
+}
+.vtabs {
+    float: left;
+    width: 31%;
+}
+.vtabs a {
+    display: inline-table;
+
+}
+
 .options {
     border: 1px solid #ccc;
     padding: 17px;
@@ -83,6 +96,21 @@ body {
     width: 36px;
 }
 
+.clttt > li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 227px;
+}
+.error {
+    color: #e9322d;
+}
+.success{
+    color: #008000;
+    border: 1px solid #cccccc;
+    padding: 7px;
+}
 
 /* #content{
 	background:#fff;

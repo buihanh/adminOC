@@ -43,137 +43,302 @@
 				</div>
 			</div>
 			
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Hình ảnh:</label>
-				<div class="col-sm-3 col-lg-3 controls">
-					<div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
-					<input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
-					<a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div>
+			
+			
+			<div class="col-sm-6 col-lg-6">
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Hình ảnh:</label>
+					<div class="col-sm-3 col-lg-3 controls">
+						<div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
+						<input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+						<a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div>
+					</div>
+				</div>	
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Tag:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input class="form-control" type="text" name="product_description[1][tag]" value="<?php echo isset($product_description[1]) ? $product_description[1]['tag'] : ''; ?>" size="80" />
+					</div>
 				</div>
-				<div class="col-sm-6 col-lg- controls">
-				 <table id="images" class="list tbimages">
-						<thead>
-						  <tr>
-							<td class="left">Hình</td>
-							<td class="right">Thứ tự</td>
-							<td></td>
-						  </tr>
-						</thead>
-						<?php $image_row = 0; ?>
-						<?php foreach ($product_images as $product_image) { ?>
-						<tbody id="image-row<?php echo $image_row; ?>">
-						  <tr>
-							<td class="left"><div class="image"><img src="<?php echo $product_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
-								<input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="image<?php echo $image_row; ?>" />
-								<br />
-								<a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-							<td class="right"><input type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" size="2" /></td>
-							<td class="right"><a class="btn btn-sm btn-danger show-tooltip" onclick="$('#image-row<?php echo $image_row; ?>').remove();" ><i class="fa fa-trash-o"></i></a></td>
-						  </tr>
-						</tbody>
-						<?php $image_row++; ?>
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="model"><span class="required">*</span> Kiểu:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input class="form-control" type="text" name="model" value="<?php echo $model; ?>" />
+						<?php if ($error_model) { ?>
+						<span class="error"><?php echo $error_model; ?></span>
 						<?php } ?>
-						<tfoot>
-						  <tr>
-							<td colspan="2"></td>
-							<td class="right"><a onclick="addImage();" class="btn btn-primary">Thêm hình</a></td>
-						  </tr>
-						</tfoot>
-					</table>
+					</div>
 				</div>
-			</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Giá:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input class="form-control" type="text" name="price" value="<?php echo $price; ?>" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Số lượng:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input  class="form-control" type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" />
+					</div>
+				</div>
+				
+			
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Thứ tự:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input class="form-control" type="text" name="sort_order" value="<?php echo $sort_order; ?>" size="2" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag">Trạng thái:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<select  class="form-control" name="status">
+							  <?php if ($status) { ?>
+							  <option value="1" selected="selected">Bật</option>
+							  <option value="0">Tắt</option>
+							  <?php } else { ?>
+							  <option value="1">Bật</option>
+							  <option value="0" selected="selected">Tắt</option>
+							  <?php } ?>
+						</select>
+					</div>
+				</div>
+				
+			</div><!--- end 1--- -->
 			
 			
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Tag:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<input class="form-control" type="text" name="product_description[1][tag]" value="<?php echo isset($product_description[1]) ? $product_description[1]['tag'] : ''; ?>" size="80" />
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="model"><span class="required">*</span> Kiểu:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<input class="form-control" type="text" name="model" value="<?php echo $model; ?>" />
-					<?php if ($error_model) { ?>
-					<span class="error"><?php echo $error_model; ?></span>
+			
+			
+			<div class="col-sm-6 col-lg-6">
+				 <table id="images" class="list tbimages">
+					<thead>
+					  <tr>
+						<td class="left">Hình</td>
+						<td class="right">Thứ tự</td>
+						<td></td>
+					  </tr>
+					</thead>
+					<?php $image_row = 0; ?>
+					<?php foreach ($product_images as $product_image) { ?>
+					<tbody id="image-row<?php echo $image_row; ?>">
+					  <tr>
+						<td class="left"><div class="image"><img src="<?php echo $product_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
+							<input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="image<?php echo $image_row; ?>" />
+							<br />
+							<a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+						<td class="right"><input type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" size="2" /></td>
+						<td class="right"><a class="btn btn-sm btn-danger show-tooltip" onclick="$('#image-row<?php echo $image_row; ?>').remove();" ><i class="fa fa-trash-o"></i></a></td>
+					  </tr>
+					</tbody>
+					<?php $image_row++; ?>
 					<?php } ?>
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Giá:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<input class="form-control" type="text" name="price" value="<?php echo $price; ?>" />
-				</div>
-			</div>
-			
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Số lượng:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<input  class="form-control" type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" />
-				</div>
-			</div>
-			
-		
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Thứ tự:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<input class="form-control" type="text" name="sort_order" value="<?php echo $sort_order; ?>" size="2" />
-				</div>
-			</div>
-			
-		
-			
-			<div class="form-group">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Trạng thái:</label>
-				<div class="col-sm-6 col-lg-4 controls">
-					<select  class="form-control" name="status">
-						  <?php if ($status) { ?>
-						  <option value="1" selected="selected">Bật</option>
-						  <option value="0">Tắt</option>
-						  <?php } else { ?>
-						  <option value="1">Bật</option>
-						  <option value="0" selected="selected">Tắt</option>
+					<tfoot>
+					  <tr>
+						<td colspan="2"></td>
+						<td class="right"><a onclick="addImage();" class="btn btn-primary">Thêm hình</a></td>
+					  </tr>
+					</tfoot>
+				</table>
+				
+				
+				<div class="col-sm-12 col-lg-12" for="tag">Thuộc tính</div>
+					<div  class="form-group options">
+						<div id="tab-option">
+						  <div id="vtab-option" class="vtabs">
+						  
+							<?php $option_row = 0; ?>
+							<?php foreach ($product_options as $product_option) { ?>
+							<a href="#tab-option-<?php echo $option_row; ?>" id="option-<?php echo $option_row; ?>"><?php echo $product_option['name']; ?>&nbsp;<img src="view/image/delete.png" alt="" onclick="$('#option-<?php echo $option_row; ?>').remove(); $('#tab-option-<?php echo $option_row; ?>').remove(); $('#vtabs a:first').trigger('click'); return false;" /></a>
+							<?php $option_row++; ?>
+							<?php } ?>
+							<span id="option-add">
+							<input name="option" value="" style="width: 130px;" />
+							&nbsp;<img src="view/image/add.png" alt="<?php echo $button_add_option; ?>" title="<?php echo $button_add_option; ?>" /></span></div>
+						  <?php $option_row = 0; ?>
+						  <?php $option_value_row = 0; ?>
+						  <?php foreach ($product_options as $product_option) { ?>
+						  <div id="tab-option-<?php echo $option_row; ?>" class="vtabs-content">
+							<input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_id]" value="<?php echo $product_option['product_option_id']; ?>" />
+							<input type="hidden" name="product_option[<?php echo $option_row; ?>][name]" value="<?php echo $product_option['name']; ?>" />
+							<input type="hidden" name="product_option[<?php echo $option_row; ?>][option_id]" value="<?php echo $product_option['option_id']; ?>" />
+							<input type="hidden" name="product_option[<?php echo $option_row; ?>][type]" value="<?php echo $product_option['type']; ?>" />
+							<table class="form">
+							  <tr>
+								<td><?php echo $entry_required; ?></td>
+								<td><select name="product_option[<?php echo $option_row; ?>][required]">
+									<?php if ($product_option['required']) { ?>
+									<option value="1" selected="selected"><?php echo $text_yes; ?></option>
+									<option value="0"><?php echo $text_no; ?></option>
+									<?php } else { ?>
+									<option value="1"><?php echo $text_yes; ?></option>
+									<option value="0" selected="selected"><?php echo $text_no; ?></option>
+									<?php } ?>
+								  </select></td>
+							  </tr>
+							  <?php if ($product_option['type'] == 'text') { ?>
+							  <tr>
+								<td><?php echo $entry_option_value; ?></td>
+								<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" /></td>
+							  </tr>
+							  <?php } ?>
+							  <?php if ($product_option['type'] == 'textarea') { ?>
+							  <tr>
+								<td><?php echo $entry_option_value; ?></td>
+								<td><textarea name="product_option[<?php echo $option_row; ?>][option_value]" cols="40" rows="5"><?php echo $product_option['option_value']; ?></textarea></td>
+							  </tr>
+							  <?php } ?>
+							  <?php if ($product_option['type'] == 'file') { ?>
+							  <tr style="display: none;">
+								<td><?php echo $entry_option_value; ?></td>
+								<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" /></td>
+							  </tr>
+							  <?php } ?>
+							  <?php if ($product_option['type'] == 'date') { ?>
+							  <tr>
+								<td><?php echo $entry_option_value; ?></td>
+								<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="date" /></td>
+							  </tr>
+							  <?php } ?>
+							  <?php if ($product_option['type'] == 'datetime') { ?>
+							  <tr>
+								<td><?php echo $entry_option_value; ?></td>
+								<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="datetime" /></td>
+							  </tr>
+							  <?php } ?>
+							  <?php if ($product_option['type'] == 'time') { ?>
+							  <tr>
+								<td><?php echo $entry_option_value; ?></td>
+								<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="time" /></td>
+							  </tr>
+							  <?php } ?>
+							</table>
+							<?php if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') { ?>
+							<table id="option-value<?php echo $option_row; ?>" class="list">
+							  <thead>
+								<tr>
+								  <td class="left"><?php echo $entry_option_value; ?></td>
+								  <td class="right"><?php echo $entry_quantity; ?></td>
+								  <td class="left"><?php echo $entry_subtract; ?></td>
+								  <td class="right"><?php echo $entry_price; ?></td>
+								  <td class="right"><?php echo $entry_option_points; ?></td>
+								  <td class="right"><?php echo $entry_weight; ?></td>
+								  <td></td>
+								</tr>
+							  </thead>
+							  <?php foreach ($product_option['product_option_value'] as $product_option_value) { ?>
+							  <tbody id="option-value-row<?php echo $option_value_row; ?>">
+								<tr>
+								  <td class="left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]">
+									  <?php if (isset($option_values[$product_option['option_id']])) { ?>
+									  <?php foreach ($option_values[$product_option['option_id']] as $option_value) { ?>
+									  <?php if ($option_value['option_value_id'] == $product_option_value['option_value_id']) { ?>
+									  <option value="<?php echo $option_value['option_value_id']; ?>" selected="selected"><?php echo $option_value['name']; ?></option>
+									  <?php } else { ?>
+									  <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
+									  <?php } ?>
+									  <?php } ?>
+									  <?php } ?>
+									</select>
+									<input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][product_option_value_id]" value="<?php echo $product_option_value['product_option_value_id']; ?>" /></td>
+								  <td class="right"><input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][quantity]" value="<?php echo $product_option_value['quantity']; ?>" size="3" /></td>
+								  <td class="left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][subtract]">
+									  <?php if ($product_option_value['subtract']) { ?>
+									  <option value="1" selected="selected"><?php echo $text_yes; ?></option>
+									  <option value="0"><?php echo $text_no; ?></option>
+									  <?php } else { ?>
+									  <option value="1"><?php echo $text_yes; ?></option>
+									  <option value="0" selected="selected"><?php echo $text_no; ?></option>
+									  <?php } ?>
+									</select></td>
+								  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price_prefix]">
+									  <?php if ($product_option_value['price_prefix'] == '+') { ?>
+									  <option value="+" selected="selected">+</option>
+									  <?php } else { ?>
+									  <option value="+">+</option>
+									  <?php } ?>
+									  <?php if ($product_option_value['price_prefix'] == '-') { ?>
+									  <option value="-" selected="selected">-</option>
+									  <?php } else { ?>
+									  <option value="-">-</option>
+									  <?php } ?>
+									</select>
+									<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price]" value="<?php echo $product_option_value['price']; ?>" size="5" /></td>
+								  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points_prefix]">
+									  <?php if ($product_option_value['points_prefix'] == '+') { ?>
+									  <option value="+" selected="selected">+</option>
+									  <?php } else { ?>
+									  <option value="+">+</option>
+									  <?php } ?>
+									  <?php if ($product_option_value['points_prefix'] == '-') { ?>
+									  <option value="-" selected="selected">-</option>
+									  <?php } else { ?>
+									  <option value="-">-</option>
+									  <?php } ?>
+									</select>
+									<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points]" value="<?php echo $product_option_value['points']; ?>" size="5" /></td>
+								  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight_prefix]">
+									  <?php if ($product_option_value['weight_prefix'] == '+') { ?>
+									  <option value="+" selected="selected">+</option>
+									  <?php } else { ?>
+									  <option value="+">+</option>
+									  <?php } ?>
+									  <?php if ($product_option_value['weight_prefix'] == '-') { ?>
+									  <option value="-" selected="selected">-</option>
+									  <?php } else { ?>
+									  <option value="-">-</option>
+									  <?php } ?>
+									</select>
+									<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight]" value="<?php echo $product_option_value['weight']; ?>" size="5" /></td>
+								  <td class="left"><a onclick="$('#option-value-row<?php echo $option_value_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+								</tr>
+							  </tbody>
+							  <?php $option_value_row++; ?>
+							  <?php } ?>
+							  <tfoot>
+								<tr>
+								  <td colspan="6"></td>
+								  <td class="left"><a onclick="addOptionValue('<?php echo $option_row; ?>');" class="button"><?php echo $button_add_option_value; ?></a></td>
+								</tr>
+							  </tfoot>
+							</table>
+							<select id="option-values<?php echo $option_row; ?>" style="display: none;">
+							  <?php if (isset($option_values[$product_option['option_id']])) { ?>
+							  <?php foreach ($option_values[$product_option['option_id']] as $option_value) { ?>
+							  <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
+							  <?php } ?>
+							  <?php } ?>
+							</select>
+							<?php } ?>
+						  </div>
+						  <?php $option_row++; ?>
 						  <?php } ?>
-					</select>
-				</div>
-			</div>
-			<div  class="form-group options">
-				<label class="col-sm-3 col-lg-2 control-label" for="tag">Thuộc tính</label>
-				<div class="col-sm-12 col-lg-12 controls">
-					<?php  foreach($options as $option) {
-						
-						if($option['type'] == "select")
-						{
-							echo '<div class="col-sm-3 col-lg-3 controls">
-							<label>'.$option['name'].'</label>
-							<select class="form-control" name=""><option value="">--Chọn--</option>';
-							
-							
-							echo '</select> </div>';
-						}
-						
-						if($option['type'] == "radio")
-						{
-						
-						}
-						
-						if($option['type'] == "checkbox")
-						{
-						
-						}
-						if($option['type'] == "text")
-						{
-						
-						}
-					}
-					?>
-				</div>
-			</div>
-			<?php //echo "<pre>"; print_r($options);  ?>
+						</div>
+				
+					</div>
+			
+				
+				
+				
+			</div><!--- end 1--- -->
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+			
+			<?php // echo "<pre>"; print_r($options);  ?>
 			
 		</form>
 	
+	<div style="clear:both"></div>
 
         <div  style="opacity: 0; height:0px;" id="tab-data">
           <table class="form">
@@ -500,175 +665,9 @@
 				</tfoot>
 			  </table>
 			</div>
-			<div id="tab-option">
-			  <div id="vtab-option" class="vtabs">
-				<?php $option_row = 0; ?>
-				<?php foreach ($product_options as $product_option) { ?>
-				<a href="#tab-option-<?php echo $option_row; ?>" id="option-<?php echo $option_row; ?>"><?php echo $product_option['name']; ?>&nbsp;<img src="view/image/delete.png" alt="" onclick="$('#option-<?php echo $option_row; ?>').remove(); $('#tab-option-<?php echo $option_row; ?>').remove(); $('#vtabs a:first').trigger('click'); return false;" /></a>
-				<?php $option_row++; ?>
-				<?php } ?>
-				<span id="option-add">
-				<input name="option" value="" style="width: 130px;" />
-				&nbsp;<img src="view/image/add.png" alt="<?php echo $button_add_option; ?>" title="<?php echo $button_add_option; ?>" /></span></div>
-			  <?php $option_row = 0; ?>
-			  <?php $option_value_row = 0; ?>
-			  <?php foreach ($product_options as $product_option) { ?>
-			  <div id="tab-option-<?php echo $option_row; ?>" class="vtabs-content">
-				<input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_id]" value="<?php echo $product_option['product_option_id']; ?>" />
-				<input type="hidden" name="product_option[<?php echo $option_row; ?>][name]" value="<?php echo $product_option['name']; ?>" />
-				<input type="hidden" name="product_option[<?php echo $option_row; ?>][option_id]" value="<?php echo $product_option['option_id']; ?>" />
-				<input type="hidden" name="product_option[<?php echo $option_row; ?>][type]" value="<?php echo $product_option['type']; ?>" />
-				<table class="form">
-				  <tr>
-					<td><?php echo $entry_required; ?></td>
-					<td><select name="product_option[<?php echo $option_row; ?>][required]">
-						<?php if ($product_option['required']) { ?>
-						<option value="1" selected="selected"><?php echo $text_yes; ?></option>
-						<option value="0"><?php echo $text_no; ?></option>
-						<?php } else { ?>
-						<option value="1"><?php echo $text_yes; ?></option>
-						<option value="0" selected="selected"><?php echo $text_no; ?></option>
-						<?php } ?>
-					  </select></td>
-				  </tr>
-				  <?php if ($product_option['type'] == 'text') { ?>
-				  <tr>
-					<td><?php echo $entry_option_value; ?></td>
-					<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" /></td>
-				  </tr>
-				  <?php } ?>
-				  <?php if ($product_option['type'] == 'textarea') { ?>
-				  <tr>
-					<td><?php echo $entry_option_value; ?></td>
-					<td><textarea name="product_option[<?php echo $option_row; ?>][option_value]" cols="40" rows="5"><?php echo $product_option['option_value']; ?></textarea></td>
-				  </tr>
-				  <?php } ?>
-				  <?php if ($product_option['type'] == 'file') { ?>
-				  <tr style="display: none;">
-					<td><?php echo $entry_option_value; ?></td>
-					<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" /></td>
-				  </tr>
-				  <?php } ?>
-				  <?php if ($product_option['type'] == 'date') { ?>
-				  <tr>
-					<td><?php echo $entry_option_value; ?></td>
-					<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="date" /></td>
-				  </tr>
-				  <?php } ?>
-				  <?php if ($product_option['type'] == 'datetime') { ?>
-				  <tr>
-					<td><?php echo $entry_option_value; ?></td>
-					<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="datetime" /></td>
-				  </tr>
-				  <?php } ?>
-				  <?php if ($product_option['type'] == 'time') { ?>
-				  <tr>
-					<td><?php echo $entry_option_value; ?></td>
-					<td><input type="text" name="product_option[<?php echo $option_row; ?>][option_value]" value="<?php echo $product_option['option_value']; ?>" class="time" /></td>
-				  </tr>
-				  <?php } ?>
-				</table>
-				<?php if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') { ?>
-				<table id="option-value<?php echo $option_row; ?>" class="list">
-				  <thead>
-					<tr>
-					  <td class="left"><?php echo $entry_option_value; ?></td>
-					  <td class="right"><?php echo $entry_quantity; ?></td>
-					  <td class="left"><?php echo $entry_subtract; ?></td>
-					  <td class="right"><?php echo $entry_price; ?></td>
-					  <td class="right"><?php echo $entry_option_points; ?></td>
-					  <td class="right"><?php echo $entry_weight; ?></td>
-					  <td></td>
-					</tr>
-				  </thead>
-				  <?php foreach ($product_option['product_option_value'] as $product_option_value) { ?>
-				  <tbody id="option-value-row<?php echo $option_value_row; ?>">
-					<tr>
-					  <td class="left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]">
-						  <?php if (isset($option_values[$product_option['option_id']])) { ?>
-						  <?php foreach ($option_values[$product_option['option_id']] as $option_value) { ?>
-						  <?php if ($option_value['option_value_id'] == $product_option_value['option_value_id']) { ?>
-						  <option value="<?php echo $option_value['option_value_id']; ?>" selected="selected"><?php echo $option_value['name']; ?></option>
-						  <?php } else { ?>
-						  <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
-						  <?php } ?>
-						  <?php } ?>
-						  <?php } ?>
-						</select>
-						<input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][product_option_value_id]" value="<?php echo $product_option_value['product_option_value_id']; ?>" /></td>
-					  <td class="right"><input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][quantity]" value="<?php echo $product_option_value['quantity']; ?>" size="3" /></td>
-					  <td class="left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][subtract]">
-						  <?php if ($product_option_value['subtract']) { ?>
-						  <option value="1" selected="selected"><?php echo $text_yes; ?></option>
-						  <option value="0"><?php echo $text_no; ?></option>
-						  <?php } else { ?>
-						  <option value="1"><?php echo $text_yes; ?></option>
-						  <option value="0" selected="selected"><?php echo $text_no; ?></option>
-						  <?php } ?>
-						</select></td>
-					  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price_prefix]">
-						  <?php if ($product_option_value['price_prefix'] == '+') { ?>
-						  <option value="+" selected="selected">+</option>
-						  <?php } else { ?>
-						  <option value="+">+</option>
-						  <?php } ?>
-						  <?php if ($product_option_value['price_prefix'] == '-') { ?>
-						  <option value="-" selected="selected">-</option>
-						  <?php } else { ?>
-						  <option value="-">-</option>
-						  <?php } ?>
-						</select>
-						<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price]" value="<?php echo $product_option_value['price']; ?>" size="5" /></td>
-					  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points_prefix]">
-						  <?php if ($product_option_value['points_prefix'] == '+') { ?>
-						  <option value="+" selected="selected">+</option>
-						  <?php } else { ?>
-						  <option value="+">+</option>
-						  <?php } ?>
-						  <?php if ($product_option_value['points_prefix'] == '-') { ?>
-						  <option value="-" selected="selected">-</option>
-						  <?php } else { ?>
-						  <option value="-">-</option>
-						  <?php } ?>
-						</select>
-						<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][points]" value="<?php echo $product_option_value['points']; ?>" size="5" /></td>
-					  <td class="right"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight_prefix]">
-						  <?php if ($product_option_value['weight_prefix'] == '+') { ?>
-						  <option value="+" selected="selected">+</option>
-						  <?php } else { ?>
-						  <option value="+">+</option>
-						  <?php } ?>
-						  <?php if ($product_option_value['weight_prefix'] == '-') { ?>
-						  <option value="-" selected="selected">-</option>
-						  <?php } else { ?>
-						  <option value="-">-</option>
-						  <?php } ?>
-						</select>
-						<input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][weight]" value="<?php echo $product_option_value['weight']; ?>" size="5" /></td>
-					  <td class="left"><a onclick="$('#option-value-row<?php echo $option_value_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
-					</tr>
-				  </tbody>
-				  <?php $option_value_row++; ?>
-				  <?php } ?>
-				  <tfoot>
-					<tr>
-					  <td colspan="6"></td>
-					  <td class="left"><a onclick="addOptionValue('<?php echo $option_row; ?>');" class="button"><?php echo $button_add_option_value; ?></a></td>
-					</tr>
-				  </tfoot>
-				</table>
-				<select id="option-values<?php echo $option_row; ?>" style="display: none;">
-				  <?php if (isset($option_values[$product_option['option_id']])) { ?>
-				  <?php foreach ($option_values[$product_option['option_id']] as $option_value) { ?>
-				  <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
-				  <?php } ?>
-				  <?php } ?>
-				</select>
-				<?php } ?>
-			  </div>
-			  <?php $option_row++; ?>
-			  <?php } ?>
-			</div>
+			
+			
+			
 			<div id="tab-profile">
 				<table class="list">
 					<thead>
