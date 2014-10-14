@@ -78,7 +78,7 @@
 		<div style="clear:both"></div>	
 			
 			
-		<div style="opacity: 0; height:0px; width:0px">
+		<div style="opacity: 0; height:0px; width:0px; overflow: hidden">
 			<div id="tab-data">
 			  <table class="form">
 				<tr>
