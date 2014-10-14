@@ -13,8 +13,6 @@ if (!defined('DIR_APPLICATION')) {
 	exit;
 }
 
-echo "test";
-
 // VirtualQMOD
 require_once('./vqmod/vqmod.php');
 VQMod::bootup();
