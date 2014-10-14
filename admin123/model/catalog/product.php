@@ -683,5 +683,21 @@ class ModelCatalogProduct extends Model {
 
 		return $query->row['total'];
 	}
+
+
+
+    public function getOptions() {
+        //	$product_option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_option_value pov LEFT JOIN " . DB_PREFIX . "option_value ov ON (pov.option_value_id = ov.option_value_id) LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE pov.product_id = '" . (int)$product_id . "'  AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order");
+        $option = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_description as opd , " . DB_PREFIX . "option as op  where op.option_id = opd.option_id ");
+
+        return $option->rows;
+
+    }
+    public function getOptions_description($option_id) {
+        $option = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value_description as opd, " . DB_PREFIX . "option_value as op    where opd.option_value_id = op.option_value_id and  opd.option_id =  ".(int)$option_id."  ORDER BY op.sort_order ASC");
+
+        return $option->rows;
+
+    }
 }
 ?>

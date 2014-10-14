@@ -495,7 +495,7 @@
 
 
             <li>
-                <a href="#" >
+                <a href="<?php echo $user;  ?>" >
                     <i class="fa fa-users"></i>
                     <span>Người dùng</span>
 

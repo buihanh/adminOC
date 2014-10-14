@@ -397,6 +397,12 @@ class ControllerCatalogProduct extends Controller {
 			);
 		}
 
+
+
+    
+
+
+
 		$this->data['heading_title'] = $this->language->get('heading_title');		
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');		
@@ -902,6 +908,27 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['product_profiles'] = array();
 		}
 
+		$this->load->model('catalog/product');
+        $this->data['options'] = array();
+        $options = $this->model_catalog_product->getOptions();
+        foreach ($options as $option) {
+            $option_value = $this->model_catalog_product->getOptions_description($option['option_id']);
+
+            $this->data['options'][] = array(
+                'type'=>$option['type'],
+                'name'=>$option['name'],
+                'option_id'=>$option['option_id'],
+                'option_value'=>$option_value
+            );
+        }
+		
+		
+		
+		
+		
+		
+		
+		
 		$this->load->model('localisation/tax_class');
 
 		$this->data['tax_classes'] = $this->model_localisation_tax_class->getTaxClasses();

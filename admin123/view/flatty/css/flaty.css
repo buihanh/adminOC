@@ -52,6 +52,37 @@ body {
     color:#15b74e;
 }
 
+.list.tbimages {
+    width: 100%;
+
+}
+.list.tbimages tr {
+    border-bottom: 1px dashed  #ccc;
+
+}
+
+.options {
+    border: 1px solid #ccc;
+    padding: 17px;
+}
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.visible-md.visible-lg {
+    text-align: right;
+}
+
+.list.tbimages tr td{
+    padding: 10px;
+}
+.tbimages img {
+    width: 36px;
+}
+
 
 /* #content{
 	background:#fff;
