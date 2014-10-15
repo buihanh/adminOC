@@ -263,7 +263,27 @@ class ControllerUserUser extends Controller {
 
 		$this->response->setOutput($this->render());
 	}
+    public  function  getinfo(){
+        $this->load->model('user/user');
+        $user_info = $this->model_user_user->getUser($this->user->isLogged());
+        echo json_encode($user_info);
+        die();
+    }
 
+    public  function  update_acount(){
+        $this->load->model('user/user');
+        $this->model_user_user->update_acount($this->request->post['firstname'],$this->request->post['lastname'],$this->request->post['email'],$this->user->isLogged());
+        //echo json_encode($user_info);
+        echo "OK";
+        die();
+    }
+    public  function  update_password(){
+        $this->load->model('user/user');
+        $this->model_user_user->editPassword($this->user->isLogged(),$this->request->post['password']);
+        //echo json_encode($user_info);
+        echo "OK";
+        die();
+    }
 	protected function getForm() {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 

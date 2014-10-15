@@ -6,15 +6,26 @@
     <?php } ?>
   </div>
   <div class="box">
+
+
+
     <div class="heading">
-      <h1><img src="view/image/mail.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a id="button-send" onclick="send('index.php?route=sale/contact/send&token=<?php echo $token; ?>');" class="button"><?php echo $button_send; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
+      <div class="buttons"><a id="button-send" onclick="send('index.php?route=sale/contact/send&token=<?php echo $token; ?>');" class="btn btn-primary"><?php echo $button_send; ?></a><a href="<?php echo $cancel; ?>" class="btn btn-primary"><?php echo $button_cancel; ?></a></div>
     </div>
+
+
+
+
+
     <div class="content">
-        <table id="mail" class="form">
+
+
+
+
+        <table cellpadding="10"  id="mail" class="form form-horizontal">
           <tr>
             <td><?php echo $entry_store; ?></td>
-            <td><select name="store_id">
+            <td><select class="form-control" name="store_id">
                 <option value="0"><?php echo $text_default; ?></option>
                 <?php foreach ($stores as $store) { ?>
                 <option value="<?php echo $store['store_id']; ?>"><?php echo $store['name']; ?></option>
@@ -23,7 +34,7 @@
           </tr>
           <tr>
             <td><?php echo $entry_to; ?></td>
-            <td><select name="to">
+            <td><select class="form-control" name="to">
                 <option value="newsletter"><?php echo $text_newsletter; ?></option>
                 <option value="customer_all"><?php echo $text_customer_all; ?></option>
                 <option value="customer_group"><?php echo $text_customer_group; ?></option>
@@ -36,7 +47,7 @@
           <tbody id="to-customer-group" class="to">
             <tr>
               <td><?php echo $entry_customer_group; ?></td>
-              <td><select name="customer_group_id">
+              <td><select class="form-control" name="customer_group_id">
                   <?php foreach ($customer_groups as $customer_group) { ?>
                   <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
                   <?php } ?>
@@ -46,7 +57,7 @@
           <tbody id="to-customer" class="to">
             <tr>
               <td><?php echo $entry_customer; ?></td>
-              <td><input type="text" name="customers" value="" /></td>
+              <td><input class="form-control" type="text" name="customers" value="" /></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -56,7 +67,7 @@
           <tbody id="to-affiliate" class="to">
             <tr>
               <td><?php echo $entry_affiliate; ?></td>
-              <td><input type="text" name="affiliates" value="" /></td>
+              <td><input class="form-control" type="text" name="affiliates" value="" /></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -66,7 +77,7 @@
           <tbody id="to-product" class="to">
             <tr>
               <td><?php echo $entry_product; ?></td>
-              <td><input type="text" name="products" value="" /></td>
+              <td><input class="form-control" type="text" name="products" value="" /></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -75,11 +86,11 @@
           </tbody>
           <tr>
             <td><span class="required">*</span> <?php echo $entry_subject; ?></td>
-            <td><input type="text" name="subject" value="" /></td>
+            <td><input class="form-control" type="text" name="subject" value="" /></td>
           </tr>
           <tr>
             <td><span class="required">*</span> <?php echo $entry_message; ?></td>
-            <td><textarea name="message"></textarea></td>
+            <td><textarea class="form-control" name="message"></textarea></td>
           </tr>
         </table>
     </div>

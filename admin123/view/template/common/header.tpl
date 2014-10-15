@@ -334,12 +334,17 @@
 
 
         <li>
-            <a href="#">
+            <a class="update-acount" href="#">
                 <i class="fa fa-user"></i>
                 Cập nhật thông tin
             </a>
         </li>
-
+        <li>
+            <a class="update-password" href="#">
+                <i class="fa fa-compass"></i>
+                Thay đổi mật khẩu
+            </a>
+        </li>
 
         <li class="divider visible-xs"></li>
 
@@ -456,7 +461,7 @@
                 </a>
             </li>
 
-
+<!--
             <li>
                 <a href="<?php echo $order_return;  ?>" >
                     <i class="fa fa-retweet"></i>
@@ -464,7 +469,7 @@
 
                 </a>
             </li>
-
+-->
 
 
             <li>
@@ -515,3 +520,122 @@
 
 
 
+        <script type="application/javascript">
+            $('.update-acount').click(function(){
+                var url = $('base').attr('href') + 'index.php?route=user/user/getinfo&token=<?php echo $this->session->data["token"]; ?>';
+                $.ajax({
+                    type: "post",
+                    url : url,
+                    dataType : "json",
+                    success : function(data){
+                        $("#firstname").val(data['firstname']);
+                        $("#lastname").val(data['lastname']);
+                        $("#email").val(data['email']);
+
+                        $("#dialog-acount").dialog({modal: true, height: 300, width: 550 });
+                        $("#dialog-acount").dialog('option', 'title', 'Cập nhật thông tin');
+                    }
+                });
+
+            });
+
+
+
+            $('.update-password').click(function(){
+                $("#dialog-password").dialog({modal: true, height: 400, width: 550 });
+                $("#dialog-password").dialog('option', 'title', 'Thay đổi mật khẩu');
+            });
+            function fcupdateacount(){
+                var firstname = $("#firstname").val();
+                var lastname = $("#lastname").val();
+                var email = $("#email").val();
+                var url = $('base').attr('href') + 'index.php?route=user/user/update_acount&token=<?php echo $this->session->data["token"]; ?>';
+                $.ajax({
+                    type: "post",
+                    data:{'firstname':firstname, 'lastname':lastname, 'email':email },
+                    url : url,
+                    dataType : "html",
+                    success : function(data){
+                        $("#dialog-acount").dialog("close");
+                    }
+                });
+
+            }
+            function fcupdatepass(){
+                var password_current = $("#password_current").val();
+                var password_confirm = $("#password_confirm").val();
+                var password_new = $("#password_new").val();
+                var temp = '';
+                if(password_current=="")
+                    temp += "Vui lòng nhập mật khẩu hiện tại! <br/>";
+                if(password_new=="")
+                    temp += 'Vui lòng nhập mật khẩu mới! <br/>';
+
+                if(password_confirm=="")
+                    temp += 'Vui lòng nhập mật khẩu xác nhận! <br/>';
+
+                if(password_confirm!=password_new)
+                    temp += 'Mật khẩu xác nhận chưa đúng! <br/>';
+
+                if(temp!='')
+                {
+                  $(".err_password").html(temp);
+                    return false;
+                }
+
+                var email = $("#email").val();
+                var url = $('base').attr('href') + 'index.php?route=user/user/update_password&token=<?php echo $this->session->data["token"]; ?>';
+                $.ajax({
+                    type: "post",
+                    data:{'password':password_new },
+                    url : url,
+                    dataType : "html",
+                    success : function(data){
+                        $("#dialog-password").dialog("close");
+                    }
+                });
+            }
+            //$("#dialog").dialog("close");
+        </script>
+
+
+        <div style="display: none" id="dialog-acount">
+            <table cellpadding="10" width="100%">
+                <tr>
+                    <td  style="width: 139px;">Họ và tên đệm</td>
+                    <td><input class="form-control" type="text" name="" id="firstname" /></td>
+                </tr>
+                <tr>
+                    <td>Tên</td>
+                    <td><input class="form-control" type="text" name="" id="lastname" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input class="form-control" type="text" name="" id="email" /></td>
+                </tr>
+                <tr><td></td><td><button class="btn btn-primary" onclick="fcupdateacount();" >Cập nhật</button></td></tr>
+
+            </table>
+        </div>
+
+        <div style="display: none"  id="dialog-password">
+
+            <span class="err_password"></span>
+            <table cellpadding="10" width="100%">
+                <tr>
+                    <td style="width: 139px;">Mật khẩu hiện tại</td>
+                    <td><input class="form-control" type="password" name="" id="password_current" /></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu mới</td>
+                    <td><input class="form-control" type="password" name="" id="password_new" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Xác nhận mật khẩu</td>
+                    <td><input class="form-control" type="password" name="" id="password_confirm" /></td>
+                </tr>
+                <tr><td></td><td><button class="btn btn-primary" onclick="fcupdatepass();" >Cập nhật</button></td></tr>
+            </table>
+        </div>

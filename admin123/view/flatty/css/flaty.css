@@ -28,12 +28,12 @@ body {
 }
 
 .buttons {
-      border: 1px solid #ccc;
+      border: 1px solid #edf6f6;
     border-radius: 4px;
     padding: 5px;
     text-align: right;
-    background: #efe;
-    box-shadow: 1px 0px 3px #ccc;
+    background: #f8fcfc;
+    box-shadow: 1px 0px 1px #ccc;
 }
 .buttons a {
     margin-left: 15px;
@@ -73,12 +73,16 @@ body {
     display: inline-table;
 
 }
-
+.tble table td {
+    border-bottom: 1px dashed  #ccc;
+}
 .options {
     border: 1px solid #ccc;
     padding: 17px;
 }
-
+.err_password{
+    color: red;
+}
 .left {
     text-align: left;
 }
@@ -115,7 +119,11 @@ body {
     font-size: 20px;
     color: #008000;
 }
-
+.div_category{
+    width: 100%;
+    height: 210px;
+    overflow: auto;
+}
 .div_category ul li{
     list-style: none;
     line-height: 25px;
@@ -124,7 +132,9 @@ body {
     padding: 0;
     margin: 0;
 }
-
+.parent{
+    border-bottom: 1px solid #cccccc;
+}
 .htabs {
     padding: 0px 0px 0px 10px;
     height: 30px;
@@ -3766,7 +3776,7 @@ a.tile:hover {
     background: #d9d9d9!important;
 }
 .ui-widget-header {
-    background: #aaa!important;
+   /* background: #aaa!important;*/
 }
 .ui-slider-horizontal             {height: 2px!important;}
 .ui-slider-vertical               {width: 2px!important;}

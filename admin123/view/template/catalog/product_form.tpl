@@ -25,7 +25,7 @@
 			</div>
 			<div class="form-group">
 				<label class="col-sm-3 col-lg-2 control-label" for="category">Danh mục:</label>
-				<div class="col-sm-6 col-lg-4 controls">
+				<div class="col-sm-6 col-lg-6 controls">
 				    <div class="div_category">
                            <ul>
 								<?php  foreach($categories as $post) {
@@ -39,7 +39,7 @@
 									}
 									?>
 									
-									<li><input <?php echo $temp; ?>  type="checkbox" name="product_category[]" value="<?php echo  $post['category_id'];  ?>" /> <?php echo $post['name']; ?></li>
+									<li class="parent"><input <?php echo $temp; ?>  type="checkbox" name="product_category[]" value="<?php echo  $post['category_id'];  ?>" /> <?php echo $post['name']; ?></li>
 									<?php 
 										dequy($post['category_id'],$categories,$product_categories );
 									}
@@ -408,7 +408,7 @@
 	
 	<div style="clear:both"></div>
 
-        <div  style="opacity: 0; height:0px;" id="tab-data">
+        <div  style="opacity: 0; height:0px; overflow: hidden;" id="tab-data">
           <table class="form">
         
             <tr>
