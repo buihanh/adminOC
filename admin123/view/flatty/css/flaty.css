@@ -80,7 +80,7 @@ body {
     border: 1px solid #ccc;
     padding: 17px;
 }
-.err_password{
+.err_password,.err_acount{
     color: red;
 }
 .left {

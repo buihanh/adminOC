@@ -522,6 +522,7 @@
 
         <script type="application/javascript">
             $('.update-acount').click(function(){
+                $(".err_acount").html();
                 var url = $('base').attr('href') + 'index.php?route=user/user/getinfo&token=<?php echo $this->session->data["token"]; ?>';
                 $.ajax({
                     type: "post",
@@ -542,13 +543,30 @@
 
 
             $('.update-password').click(function(){
+                $(".err_password").html();
                 $("#dialog-password").dialog({modal: true, height: 400, width: 550 });
                 $("#dialog-password").dialog('option', 'title', 'Thay đổi mật khẩu');
             });
             function fcupdateacount(){
+
                 var firstname = $("#firstname").val();
                 var lastname = $("#lastname").val();
                 var email = $("#email").val();
+
+
+                var temp = '';
+                if(firstname=="")
+                    temp += "Vui lòng nhập họ và tên đệm! <br/>";
+                if(lastname=="")
+                    temp += 'Vui lòng nhập tên! <br/>';
+
+                if(temp!='')
+                {
+                    $(".err_acount").html(temp);
+                    return false;
+                }
+
+
                 var url = $('base').attr('href') + 'index.php?route=user/user/update_acount&token=<?php echo $this->session->data["token"]; ?>';
                 $.ajax({
                     type: "post",
@@ -600,6 +618,7 @@
 
 
         <div style="display: none" id="dialog-acount">
+            <span class="err_acount"></span>
             <table cellpadding="10" width="100%">
                 <tr>
                     <td  style="width: 139px;">Họ và tên đệm</td>
