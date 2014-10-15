@@ -126,7 +126,7 @@
 
 			
 
-                <div style=" opacity: 0;">
+                <div style=" height: 0;    opacity: 0;    overflow: hidden;    width: 0;">
                     <input type="text" name="filter" value="" />
 
                     <?php $class = 'odd'; ?>

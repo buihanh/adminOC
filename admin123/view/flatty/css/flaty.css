@@ -63,7 +63,7 @@ body {
 
 .vtabs-content {
     float: right;
-    width: 66%;
+    width: 81%;
 }
 .vtabs {
     float: left;
@@ -124,6 +124,79 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.htabs {
+    padding: 0px 0px 0px 10px;
+    height: 30px;
+    line-height: 16px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 15px;
+}
+.htabs a {
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    background: #FFFFFF url('../image/tab.png') repeat-x;
+    padding: 7px 15px 6px 15px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 2px;
+    display: none;
+}
+.htabs a.selected {
+    padding-bottom: 7px;
+    background: #FFFFFF;
+}
+.vtabs {
+    width: 161px;
+    padding: 10px 0px;
+    min-height: 300px;
+    float: left;
+    display: block;
+    border-right: 1px solid #DDDDDD;
+}
+.vtabs a {
+    display: none;
+}
+.vtabs a, .vtabs span {
+    display: block;
+    float: left;
+    width: 160px;
+    margin-bottom: 5px;
+    clear: both;
+    border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    background: #F7F7F7;
+    padding: 6px 14px 7px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none;
+    color: #000000;
+}
+.vtabs a.selected {
+    padding-right: 15px;
+    background: #FFFFFF;
+}
+.vtabs a img, .vtabs span img {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+.clr{
+    clear: both;
+}
+.form{
+    width: 100%;
+}
+
 /* #content{
 	background:#fff;
 } */
