@@ -24,6 +24,74 @@
 				<?php } ?>
 			</div>
 			<div class="form-group">
+				<label class="col-sm-3 col-lg-2 control-label" for="category">Danh mục:</label>
+				<div class="col-sm-6 col-lg-4 controls">
+				    <div class="div_category">
+                           <ul>
+								<?php  foreach($categories as $post) {
+									
+									if($post['parent_id']==0) {
+									$temp = '';
+									foreach($product_categories as $product_category)
+									{
+										if($product_category['category_id']==$post['category_id'])
+										$temp = 'checked="checked"';
+									}
+									?>
+									
+									<li><input <?php echo $temp; ?>  type="checkbox" name="product_category[]" value="<?php echo  $post['category_id'];  ?>" /> <?php echo $post['name']; ?></li>
+									<?php 
+										dequy($post['category_id'],$categories,$product_categories );
+									}
+							   } ?>
+                           </ul>
+				    </div>
+
+
+
+                    <?php
+                        function dequy($id,$category,$category_update)
+                        {
+							$i =0 ;
+                            if (!empty($category)) {
+                                foreach ($category as $key => $post) {
+									if($post['parent_id']==$id)
+                                    {
+										if($i==0)
+										echo "<ul>";
+										$i++;
+										
+										$temp = '';
+										foreach($category_update as $product_category)
+										{
+											if($product_category['category_id']==$post['category_id'])
+											$temp = 'checked="checked"';
+										}
+										
+											echo "<li><input  ".$temp." name='product_category[]' type='checkbox' value='".$post['category_id']."' /> ".$post['name']."</li>";
+										
+											dequy($post['category_id'],$category,$category_update);
+										
+									}
+								}
+
+							}
+							if($i!=0)
+								echo "</ul>";
+						}
+                    ?>
+
+
+
+        
+				</div>
+			</div>
+
+			
+			
+			
+			
+			<div class="form-group">
 				<label class="col-sm-3 col-lg-2 control-label" for="product_description[1][meta_description]">Mô tả seo:</label>
 				<div class="col-sm-9 col-lg-6 controls">
 					<textarea class="form-control" name="product_description[1][meta_description]" cols="40" rows="5"><?php echo isset($product_description[1]) ? $product_description[1]['meta_description'] : ''; ?></textarea>
@@ -47,22 +115,22 @@
 			
 			<div class="col-sm-6 col-lg-6">
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Hình ảnh:</label>
-					<div class="col-sm-3 col-lg-3 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Hình ảnh:</label>
+					<div class="col-sm-3 col-lg-5 controls">
 						<div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
 						<input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
 						<a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div>
 					</div>
 				</div>	
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Tag:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Tag:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<input class="form-control" type="text" name="product_description[1][tag]" value="<?php echo isset($product_description[1]) ? $product_description[1]['tag'] : ''; ?>" size="80" />
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="model"><span class="required">*</span> Kiểu:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="model"><span class="required">*</span> Kiểu:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<input class="form-control" type="text" name="model" value="<?php echo $model; ?>" />
 						<?php if ($error_model) { ?>
 						<span class="error"><?php echo $error_model; ?></span>
@@ -71,30 +139,30 @@
 				</div>
 				
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Giá:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Giá:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<input class="form-control" type="text" name="price" value="<?php echo $price; ?>" />
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Số lượng:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Số lượng:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<input  class="form-control" type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" />
 					</div>
 				</div>
 				
 			
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Thứ tự:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Thứ tự:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<input class="form-control" type="text" name="sort_order" value="<?php echo $sort_order; ?>" size="2" />
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label class="col-sm-3 col-lg-2 control-label" for="tag">Trạng thái:</label>
-					<div class="col-sm-9 col-lg-9 controls">
+					<label class="col-sm-3 col-lg-4 control-label" for="tag">Trạng thái:</label>
+					<div class="col-sm-9 col-lg-5 controls">
 						<select  class="form-control" name="status">
 							  <?php if ($status) { ?>
 							  <option value="1" selected="selected">Bật</option>

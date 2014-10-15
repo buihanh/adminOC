@@ -39,6 +39,11 @@ class User {
 		if ($user_query->num_rows) {
 			$this->session->data['user_id'] = $user_query->row['user_id'];
 
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $this->session->data['date_time'] = date("d-m-Y H:i:s");
+
+
+
 			$this->user_id = $user_query->row['user_id'];
 			$this->username = $user_query->row['username'];			
 
@@ -60,6 +65,7 @@ class User {
 
 	public function logout() {
 		unset($this->session->data['user_id']);
+        unset($this->session->data['date_time']);
 
 		$this->user_id = '';
 		$this->username = '';
@@ -74,7 +80,9 @@ class User {
 			return false;
 		}
 	}
-
+    public function getDate_time() {
+        return $this->session->data['date_time'];
+    }
 	public function isLogged() {
 		return $this->user_id;
 	}

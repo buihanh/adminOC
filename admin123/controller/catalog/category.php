@@ -450,13 +450,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->response->setOutput($this->render());
 	}
     
-    public function dcategory($categories) {
 
-        foreach ($categories as $child) {
-			
-        }
-        return $this->dcategory();
-    }
     
 	protected function validateForm() {
 		if (!$this->user->hasPermission('modify', 'catalog/category')) {

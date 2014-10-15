@@ -125,6 +125,11 @@ class ControllerCommonHeader extends Controller {
 			$this->data['home'] = $this->url->link('common/login', '', 'SSL');
 		} else {
 			$this->data['logged'] = sprintf($this->language->get('text_logged'), $this->user->getUserName());
+
+
+            $this->data['username'] =  $this->user->getUserName();
+            $this->data['date_time'] =  $this->user->getDate_time();
+
 			$this->data['pp_express_status'] = $this->config->get('pp_express_status');
 
 			$this->data['home'] = $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL');

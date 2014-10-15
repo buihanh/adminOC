@@ -908,6 +908,12 @@ class ControllerCatalogProduct extends Controller {
 			$this->data['product_profiles'] = array();
 		}
 
+        $this->load->model('catalog/category');
+        $this->data['categories'] =  $this->model_catalog_category->getCategories_sub();
+
+
+
+
 		$this->load->model('catalog/product');
         $this->data['options'] = array();
         $options = $this->model_catalog_product->getOptions();

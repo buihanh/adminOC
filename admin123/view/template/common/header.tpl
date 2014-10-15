@@ -317,9 +317,9 @@
 <!-- BEGIN Button User -->
 <li class="user-profile">
     <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
-        <img class="nav-user-photo" src="view/flatty/img/demo/avatar/avatar1.jpg" alt="Penny's Photo" />
+        <i class="fa fa-meh-o climguser"></i>
                         <span class="hhh" id="user_info">
-                            Penny
+                            <?php echo $username;  ?>
                         </span>
         <i class="fa fa-caret-down"></i>
     </a>
@@ -328,29 +328,18 @@
     <ul class="dropdown-menu dropdown-navbar" id="user_menu">
         <li class="nav-header">
             <i class="fa fa-clock-o"></i>
-            Logined From 20:45
+             <?php echo $date_time; ?>
         </li>
 
-        <li>
-            <a href="#">
-                <i class="fa fa-cog"></i>
-                Account Settings
-            </a>
-        </li>
+
 
         <li>
             <a href="#">
                 <i class="fa fa-user"></i>
-                Edit Profile
+                Cập nhật thông tin
             </a>
         </li>
 
-        <li>
-            <a href="#">
-                <i class="fa fa-question"></i>
-                Help
-            </a>
-        </li>
 
         <li class="divider visible-xs"></li>
 
@@ -379,10 +368,10 @@
         <li class="divider"></li>
 
         <li>
-            <a href="#">
-                <i class="fa fa-off"></i>
-                Logout
-            </a>
+
+
+                <a href=" <?php  echo $logout;  ?>" > <i class="fa fa-off"></i> Thoát</a>
+
         </li>
     </ul>
     <!-- BEGIN User Dropdown -->
