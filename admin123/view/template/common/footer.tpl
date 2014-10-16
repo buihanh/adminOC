@@ -1,6 +1,6 @@
 <div class="clr"></div>
 <footer>
-    <p>2013 © FLATY Admin Template.</p>
+    <p>2014 © <a target="_blank" href="http://congnghevietuc.com/">Công Ty Công Nghệ Việt Úc</a></p>
 </footer>
 
 <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>

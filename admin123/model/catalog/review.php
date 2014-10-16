@@ -63,6 +63,10 @@ class ModelCatalogReview extends Model {
 
 		return $query->rows;	
 	}
+    public function getReview_header() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review ORDER BY date_added DESC limit 0,5 ");
+        return $query->rows;
+    }
 
 	public function getTotalReviews() {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review");

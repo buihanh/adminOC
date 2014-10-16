@@ -11,13 +11,35 @@
   <?php if ($success) { ?>
   <div class="success"><?php echo $success; ?></div>
   <?php } ?>
-  <div class="box">
-    <div class="heading">
-      <h1><img src="view/image/banner.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a href="<?php echo $insert; ?>" class="button"><?php echo $button_insert; ?></a><a onclick="$('form').submit();" class="button"><?php echo $button_delete; ?></a></div>
-    </div>
+
+
+
+
+
     <div class="content">
-      <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form">
+        <div class="table-responsive">
+            <table class="table table-advance">
+                <thead>
+                    <th>Tên</th>
+                <th></th>
+                </thead>
+                <tbody>
+                    <?php if ($banners) { ?>
+                    <?php foreach ($banners as $banner) { ?>
+                    <tr>
+                        <td class="left"><?php echo $banner['name']; ?></td>
+                        <td class="right"><?php foreach ($banner['action'] as $action) { ?>
+                         <a class="btn btn-sm show-tooltip" href="<?php echo $action['href']; ?>"><i class="fa fa-edit"></i></a>
+                        <?php } ?></td>
+                    </tr>
+                    <?php }
+                     }
+                     ?>
+                </tbody>
+            </table>
+        </div>
+
+        <!--
         <table class="list">
           <thead>
             <tr>
@@ -58,9 +80,11 @@
             <?php } ?>
           </tbody>
         </table>
-      </form>
-      <div class="pagination"><?php echo $pagination; ?></div>
-    </div>
+         <div class="pagination"><?php echo $pagination; ?></div>
+        -->
+
+
+
   </div>
 </div>
 <?php echo $footer; ?>

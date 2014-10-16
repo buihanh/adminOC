@@ -185,7 +185,7 @@ class ControllerCommonHeader extends Controller {
 			$this->data['report_customer_reward'] = $this->url->link('report/customer_reward', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['report_customer_credit'] = $this->url->link('report/customer_credit', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['report_affiliate_commission'] = $this->url->link('report/affiliate_commission', 'token=' . $this->session->data['token'], 'SSL');
-			$this->data['review'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'], 'SSL');
+			$this->data['review1'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['return'] = $this->url->link('sale/return', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['return_action'] = $this->url->link('localisation/return_action', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['return_reason'] = $this->url->link('localisation/return_reason', 'token=' . $this->session->data['token'], 'SSL');
@@ -221,7 +221,7 @@ class ControllerCommonHeader extends Controller {
 			$this->data['openbay_link_amazonus_settings'] = $this->url->link('openbay/amazonus/settings', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['openbay_link_amazonus_links'] = $this->url->link('openbay/amazonus/itemLinks', 'token=' . $this->session->data['token'], 'SSL');
 
-            $this->data['order'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
+            $this->data['orders'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
             $this->data['order_return'] = $this->url->link('sale/return', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['openbay_markets'] = array(
 				'ebay' => $this->config->get('openbay_status'),
@@ -236,6 +236,28 @@ class ControllerCommonHeader extends Controller {
 			$this->data['stores'] = array();
 
 			$this->load->model('setting/store');
+
+            $this->load->model('sale/order');
+            $results = $this->model_sale_order->getOrderHeader();
+
+            foreach($results as $result)
+            {
+                $this->data['Orders'][] = array(
+                    'name' =>$result['firstname']." ".$result['lastname']." (".$result['email'].")",
+                    'href' => $this->url->link('sale/order/info', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'], 'SSL')
+                );
+            }
+            $this->load->model('catalog/review');
+            $Reviewss = $this->model_catalog_review->getReview_header();
+
+            foreach($Reviewss as $result)
+            {
+                $this->data['Reviewss'][] = array(
+                    'author' =>$result['author'],
+                    'date_added' =>$result['date_added']
+                );
+            }
+
 
 			$results = $this->model_setting_store->getStores();
 

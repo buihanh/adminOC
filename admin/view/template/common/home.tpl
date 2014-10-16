@@ -67,6 +67,9 @@
           </table>
         </div>
       </div>
+
+
+
       <div class="statistic">
         <div class="range"><?php echo $entry_range; ?>
           <select id="range" onchange="getSalesChart(this.value)">

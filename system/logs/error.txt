@@ -2460,3 +2460,296 @@ mpp\htdocs\congty\image\data\public\phamquocvinh992@gmail.com): failed to open d
 2014-10-15 12:24:19 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 525
 2014-10-15 12:24:19 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 552
 2014-10-15 12:24:19 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 587
+2014-10-15 12:33:28 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-15 12:33:28 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-15 12:33:28 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 322
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 331
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 378
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 416
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 423
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 431
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 443
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 444
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 445
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 466
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 483
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 492
+2014-10-15 12:33:29 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 499
+2014-10-15 12:33:29 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 526
+2014-10-15 12:33:29 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 570
+2014-10-15 12:33:29 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 605
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-15 15:38:54 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 322
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 331
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 378
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 416
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 423
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 431
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 443
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 444
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 445
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 466
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 483
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 492
+2014-10-15 15:38:54 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 499
+2014-10-15 15:38:54 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 526
+2014-10-15 15:38:54 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 570
+2014-10-15 15:38:54 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 605
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 4:38:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 322
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 331
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 378
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 416
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 423
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 431
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 443
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 444
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 445
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 466
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 483
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 492
+2014-10-16 4:38:39 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 499
+2014-10-16 4:38:39 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 526
+2014-10-16 4:38:39 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 570
+2014-10-16 4:38:39 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 605
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 6:29:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 322
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 331
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 378
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 416
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 423
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 431
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 443
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 444
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 445
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 466
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 483
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 492
+2014-10-16 6:29:09 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 499
+2014-10-16 6:29:09 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 526
+2014-10-16 6:29:09 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 570
+2014-10-16 6:29:09 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 605
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 220
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 9:39:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 222
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 227
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 322
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 331
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 378
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 416
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 423
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 431
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 443
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 444
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 445
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: order in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 466
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: banner in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 476
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 486
+2014-10-16 9:39:55 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 493
+2014-10-16 9:39:55 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 520
+2014-10-16 9:39:55 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 564
+2014-10-16 9:39:55 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 599
+2014-10-16 9:48:36 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 457
+2014-10-16 9:49:03 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 456
+2014-10-16 9:49:28 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 442
+2014-10-16 9:49:52 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:50:46 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:52:05 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:56:21 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:57:49 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:58:48 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 9:59:34 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 429
+2014-10-16 10:00:25 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 430
+2014-10-16 10:01:20 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:01:30 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:02:15 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:02:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:03:29 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:29 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:41 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:44 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:46 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:04:54 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:12:05 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:12:10 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:12:19 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:12:33 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 433
+2014-10-16 10:13:25 - PHP Notice:  Undefined variable: review in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 425
+2014-10-16 10:13:27 - PHP Notice:  Undefined variable: review in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 425
+2014-10-16 10:13:36 - PHP Notice:  Undefined variable: review in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 425
+2014-10-16 11:11:51 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:51 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:51 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:11:52 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 249
+2014-10-16 11:12:23 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 252
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:01 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-16 11:13:18 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 253
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 248
+2014-10-16 11:13:50 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 251
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:16:17 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:16:17 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:17:00 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:17:00 - PHP Notice:  Undefined variable: Reviews in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 239
+2014-10-16 11:17:00 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'author' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 255
+2014-10-16 11:18:05 - PHP Warning:  Illegal string offset 'date_added' in D:\xampp\htdocs\adminOC\admin123\controller\common\header.php on line 256
+2014-10-16 11:18:05 - PHP Notice:  Undefined variable: Reviews in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 239
+2014-10-16 11:18:05 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:22:39 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:23:02 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:23:46 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
+2014-10-16 11:23:46 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:24:00 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
+2014-10-16 11:24:00 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:24:02 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
+2014-10-16 11:24:03 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:24:50 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
+2014-10-16 11:24:50 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398

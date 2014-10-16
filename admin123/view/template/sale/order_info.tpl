@@ -7,15 +7,22 @@
   </div>
   <div class="box">
     <div class="heading">
-      <h1><img src="view/image/order.png" alt="" /> <?php echo $heading_title; ?></h1>
+
       <div class="buttons"><a href="<?php echo $invoice; ?>" target="_blank" class="button"><?php echo $button_invoice; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div class="vtabs"><a href="#tab-order"><?php echo $tab_order; ?></a><a href="#tab-payment"><?php echo $tab_payment; ?></a>
-        <?php if ($shipping_method) { ?>
+      <div class="vtabs">
+          <a href="#tab-order"><?php echo $tab_order; ?></a>
+
+      <!--
+        <a href="#tab-payment"><?php echo $tab_payment; ?></a>
+       <?php if ($shipping_method) { ?>
         <a href="#tab-shipping"><?php echo $tab_shipping; ?></a>
         <?php } ?>
-        <a href="#tab-product"><?php echo $tab_product; ?></a><a href="#tab-history"><?php echo $tab_history; ?></a>
+       -->
+
+        <a href="#tab-product"><?php echo $tab_product; ?></a>
+          <a href="#tab-history"><?php echo $tab_history; ?></a>
         <?php if ($maxmind_id) { ?>
         <a href="#tab-fraud"><?php echo $tab_fraud; ?></a>
         <?php } ?>
@@ -164,6 +171,8 @@
           </tr>
         </table>
       </div>
+
+      <!--
       <div id="tab-payment" class="vtabs-content">
         <table class="form">
           <tr>
@@ -304,6 +313,9 @@
         </table>
       </div>
       <?php } ?>
+
+      -->
+
       <div id="tab-product" class="vtabs-content">
         <table class="list">
           <thead>

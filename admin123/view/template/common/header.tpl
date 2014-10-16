@@ -35,7 +35,6 @@
     <script type="text/javascript" src="view/javascript/common.js"></script>
 </head>
 <body>
-
 <!-- BEGIN Theme Setting -->
 <div id="theme-setting">
     <a href="#"><i class="fa fa-gears fa fa-2x"></i></a>
@@ -106,13 +105,15 @@
 <!-- BEGIN Navbar Buttons -->
 <ul class="nav flaty-nav pull-right">
 <!-- BEGIN Button Tasks -->
-<li class="hidden-xs">
+
+
+    <!-- BEGIN Tasks Dropdown
+
+    <li class="hidden-xs">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
         <i class="fa fa-tasks"></i>
         <span class="badge badge-warning">4</span>
     </a>
-
-    <!-- BEGIN Tasks Dropdown -->
     <ul class="dropdown-navbar dropdown-menu">
         <li class="nav-header">
             <i class="fa fa-check"></i>
@@ -175,51 +176,38 @@
             <a href="#">See tasks with details</a>
         </li>
     </ul>
-    <!-- END Tasks Dropdown -->
-</li>
+    </li>
+     END Tasks Dropdown -->
+
+
 <!-- END Button Tasks -->
 
 <!-- BEGIN Button Notifications -->
 <li class="hidden-xs">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
         <i class="fa fa-bell"></i>
-        <span class="badge badge-important">5</span>
+        <span class="badge badge-important"><?php echo count($Orders); ?></span>
     </a>
 
     <!-- BEGIN Notifications Dropdown -->
     <ul class="dropdown-navbar dropdown-menu">
         <li class="nav-header">
             <i class="fa fa-warning"></i>
-            5 Notifications
+           Đơn hàng mới
         </li>
-
+        <?php  foreach($Orders as $order ){ ?>
         <li class="notify">
-            <a href="#">
-                <i class="fa fa-comment orange"></i>
-                <p>New Comments</p>
-                <span class="badge badge-warning">4</span>
+            <a href="<?php echo $order['href']; ?>">
+                <p><?php echo $order['name']; ?></p>
             </a>
         </li>
+        <?php } ?>
 
-        <li class="notify">
-            <a href="#">
-                <i class="fa fa-twitter blue"></i>
-                <p>New Twitter followers</p>
-                <span class="badge badge-info">7</span>
-            </a>
-        </li>
-
-        <li class="notify">
-            <a href="#">
-                <img src="view/flatty/img/demo/avatar/avatar2.jpg" alt="Alex" />
-                <p>David would like to become moderator.</p>
-            </a>
-        </li>
 
         <ul class="right" style="display: none;">
             <li id="store"><a href="<?php echo $store; ?>" target="_blank" class="top"><?php echo $text_front; ?></a>
                 <ul>
-                    <?php foreach ($stores as $stores) { ?>
+                    <?php  foreach ($stores as $stores) { ?>
                     <li><a href="<?php echo $stores['href']; ?>" target="_blank"><?php echo $stores['name']; ?></a></li>
                     <?php } ?>
                 </ul>
@@ -227,20 +215,7 @@
             <li><a class="top" href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
         </ul>
 
-        <li class="notify">
-            <a href="#">
-                <i class="fa fa-bug pink"></i>
-                <p>New bug in program!</p>
-            </a>
-        </li>
 
-        <li class="notify">
-            <a href="#">
-                <i class="fa fa-shopping-cart green"></i>
-                <p>You have some new orders</p>
-                <span class="badge badge-success">+10</span>
-            </a>
-        </li>
 
         <li class="more">
             <a href="#">See all notifications</a>
@@ -254,60 +229,34 @@
 <li class="hidden-xs">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
         <i class="fa fa-envelope"></i>
-        <span class="badge badge-success">3</span>
+        <span class="badge badge-success"><?php echo count($Reviewss); ?></span>
     </a>
 
     <!-- BEGIN Messages Dropdown -->
     <ul class="dropdown-navbar dropdown-menu">
         <li class="nav-header">
             <i class="fa fa-comments"></i>
-            3 Messages
+            <?php echo count($Reviewss); ?> Đánh giá
         </li>
+        <?php
 
-        <li class="msg">
-            <a href="#">
-                <img src="view/flatty/img/demo/avatar/avatar3.jpg" alt="Sarah's Avatar" />
-                <div>
-                    <span class="msg-title">Sarah</span>
-                                    <span class="msg-time">
-                                        <i class="fa fa-clock-o"></i>
-                                        <span>a moment ago</span>
-                                    </span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </a>
-        </li>
+         foreach($Reviewss as $review){ ?>
+            <li class="msg">
+                <a href="#">
 
-        <li class="msg">
-            <a href="#">
-                <img src="view/flatty/img/demo/avatar/avatar4.jpg" alt="Emma's Avatar" />
-                <div>
-                    <span class="msg-title">Emma</span>
-                                    <span class="msg-time">
-                                        <i class="fa fa-clock-o"></i>
-                                        <span>2 Days ago</span>
-                                    </span>
-                </div>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ...</p>
-            </a>
-        </li>
+                    <div>
+                        <span class="msg-title"><?php echo $review['author']; ?></span>
+                        <span class="msg-time">
+                            <i class="fa fa-clock-o"></i>
+                            <span><?php echo $review['date_added']; ?></span>
+                        </span>
+                    </div>
 
-        <li class="msg">
-            <a href="#">
-                <img src="view/flatty/img/demo/avatar/avatar5.jpg" alt="John's Avatar" />
-                <div>
-                    <span class="msg-title">John</span>
-                                    <span class="msg-time">
-                                        <i class="fa fa-clock-o"></i>
-                                        <span>8:24 PM</span>
-                                    </span>
-                </div>
-                <p>Duis aute irure dolor in reprehenderit in ...</p>
-            </a>
-        </li>
-
+                </a>
+            </li>
+        <?php } ?>
         <li class="more">
-            <a href="#">See all messages</a>
+            <a href="<?php echo $review1; ?>">Xem chi tiết</a>
         </li>
     </ul>
     <!-- END Notifications Dropdown -->
@@ -446,7 +395,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" >
+                <a href="<?php echo $review1; ?>" >
                     <i class="fa fa-desktop"></i>
                     <span>Đánh giá</span>
 
@@ -454,7 +403,7 @@
             </li>
 
             <li>
-                <a href="<?php echo $order;  ?>" >
+                <a href="<?php echo $orders;  ?>" >
                     <i class="fa fa-shopping-cart"></i>
                     <span>Đơn hàng</span>
 
@@ -473,18 +422,12 @@
 
 
             <li>
-                <a href="#"  class="dropdown-toggle">
+                <a href="<?php echo $banner;   ?>" >
                     <i class="fa fa-picture-o"></i>
                     <span>Quản lý hình ảnh</span>
-                    <b class="arrow fa fa-angle-right"></b>
+
                 </a>
 
-                <!-- BEGIN Submenu -->
-                <ul <?php if(substr($route,0,4) == "design") { ?> style="display: block;" <?php }  ?> class="submenu">
-                    <li><a href="ui_general.html">Slideshow</a></li>
-                    <li><a href="ui_button.html">Banner</a></li>
-                </ul>
-                <!-- END Submenu -->
             </li>
 
 

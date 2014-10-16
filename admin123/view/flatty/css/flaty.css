@@ -107,6 +107,15 @@ body {
     padding: 0;
     width: 227px;
 }
+.clrow{
+    background: none repeat scroll 0 0 #e9f0f9;
+    padding-top: 15px;
+}
+
+.required {
+    color: red;
+}
+
 .error {
     color: #e9322d;
 }
@@ -206,6 +215,26 @@ body {
 .form{
     width: 100%;
 }
+
+.range select {
+    float: right;
+}
+.range {
+    height: 50px;
+    padding: 10px 0;
+}
+.dashboard-heading {
+    float: left;
+    width: 28%;
+}
+
+.dashboard-headings {
+    background: none repeat scroll 0 0 #e9f0f9;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
 
 /* #content{
 	background:#fff;
