@@ -107,7 +107,6 @@ function addImage() {
 	html += '</tbody>'; 
 	
 	$('#images tfoot').before(html);
-	
 	image_row++;
 }
 //--></script>
