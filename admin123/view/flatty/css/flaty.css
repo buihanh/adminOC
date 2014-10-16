@@ -46,10 +46,18 @@ body {
 	padding:10px 0px;
 }
 .desc {
-    color:#fb3838
+    color:#fb3838;
+    background-image: url("../img/desc.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 30px;
 }
 .asc {
     color:#15b74e;
+    background-image: url("../img/asc.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 30px;
 }
 
 .list.tbimages {

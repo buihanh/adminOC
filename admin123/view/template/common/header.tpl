@@ -33,6 +33,12 @@
     <script type="text/javascript" src="view/javascript/jquery/tabs.js"></script>
     <script type="text/javascript" src="view/javascript/jquery/superfish/js/superfish.js"></script>
     <script type="text/javascript" src="view/javascript/common.js"></script>
+    <script type="application/javascript" >
+        jQuery(document).ready(function () {
+            //hide a div after 3 seconds
+            setTimeout( "jQuery('.success').hide();",3000 );
+        });
+    </script>
 </head>
 <body>
 <!-- BEGIN Theme Setting -->

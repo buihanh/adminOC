@@ -239,7 +239,7 @@ class ControllerCommonHeader extends Controller {
 
             $this->load->model('sale/order');
             $results = $this->model_sale_order->getOrderHeader();
-
+            $this->data['Orders'] = array();
             foreach($results as $result)
             {
                 $this->data['Orders'][] = array(
@@ -249,7 +249,7 @@ class ControllerCommonHeader extends Controller {
             }
             $this->load->model('catalog/review');
             $Reviewss = $this->model_catalog_review->getReview_header();
-
+            $this->data['Reviewss'] = array();
             foreach($Reviewss as $result)
             {
                 $this->data['Reviewss'][] = array(
