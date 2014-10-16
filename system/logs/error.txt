@@ -2753,3 +2753,33 @@ mpp\htdocs\congty\image\data\public\phamquocvinh992@gmail.com): failed to open d
 2014-10-16 11:24:03 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
 2014-10-16 11:24:50 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
 2014-10-16 11:24:50 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 189
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 198
+2014-10-16 11:33:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 198
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 208
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 210
+2014-10-16 11:33:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 210
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 215
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 232
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 239
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 243
+2014-10-16 11:33:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 243
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 259
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 271
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 280
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 327
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 365
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 372
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 380
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 392
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 393
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 394
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 398
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 406
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 415
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: banner in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 425
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 435
+2014-10-16 11:33:00 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 442
+2014-10-16 11:33:00 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 469
+2014-10-16 11:33:00 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 513
+2014-10-16 11:33:00 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 548
