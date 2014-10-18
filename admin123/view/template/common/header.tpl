@@ -21,11 +21,13 @@
     <link rel="stylesheet" href="view/flatty/assets/font-awesome/css/font-awesome.min.css">
 
     <!--page specific css styles-->
-
+	<?php foreach ($styles as $style) { ?>
+	<link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
+	<?php } ?>
     <!--flaty css styles-->
     <link rel="stylesheet" href="view/flatty/css/flaty.css">
     <link rel="stylesheet" href="view/flatty/css/flaty-responsive.css">
-
+	
     <link rel="shortcut icon" href="view/flatty/img/favicon.ico">
     <script type="text/javascript" src="view/javascript/jquery/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
@@ -33,6 +35,9 @@
     <script type="text/javascript" src="view/javascript/jquery/tabs.js"></script>
     <script type="text/javascript" src="view/javascript/jquery/superfish/js/superfish.js"></script>
     <script type="text/javascript" src="view/javascript/common.js"></script>
+	<?php foreach ($scripts as $script) { ?>
+	<script type="text/javascript" src="<?php echo $script; ?>"></script>
+	<?php } ?>
     <script type="application/javascript" >
         jQuery(document).ready(function () {
             //hide a div after 3 seconds
@@ -451,6 +456,14 @@
 
                 </a>
             </li>
+            <li>
+                <a href="<?php echo $template;  ?>" >
+                    <i class="fa fa-cogs"></i>
+                    <span>Cấu hình giao diện</span>
+
+                </a>
+            </li>
+
 
         </ul>
         <!-- END Navlist -->

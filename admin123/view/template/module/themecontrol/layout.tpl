@@ -7,7 +7,7 @@
 	<table class="form">
 		<tr>
 			<td>
-			<b>Show modules on Layout</b>
+			<b>Giao diện mặc định</b>
 			</td>
 			<td>
 			<select name="elayout_id" onchange="window.location.href='<?php echo preg_replace("#elayout_id\s*=\s*\d+#","",$action); ?>&elayout_id='+this.value">
@@ -21,10 +21,7 @@
 		</tr>
 	</table>		
 </div>
-
-
-
-<p><i><?php echo $this->getLang("text_explain_modules_function");?></i></p>
+<p>Dùng chuột kéo thả module vào vị trị bạn muốn đặt tương ứng trên website</p>
 <div class="theme-layout clearfix">
 			
 		<div class="header clearfix">
@@ -255,7 +252,7 @@
 		</div>
 	
 	<p>
-		<i>* Note: update position and sort orders of modules could not work smoothly for modules having more than 2 instances in same page layout</i>
+		<i>*Lưu ý: Vị trí cập nhật và sắp xếp các đơn đặt hàng của các mô-đun không thể làm việc thuận lợi cho các mô-đun có nhiều hơn 2 trường hợp trong cùng một bố cục trang.</i>
 	</p>
 </div>
 <script type="text/javascript">

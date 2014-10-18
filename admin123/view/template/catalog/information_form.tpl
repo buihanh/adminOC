@@ -17,27 +17,36 @@
 
 	 <div class="box-content">
       <form  class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
-	  
-		<div class="form-group">
-			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Tiêu đề:</label>
-			<div class="col-sm-9 col-lg-9 controls">
-				<input class="form-control"  type="text" name="information_description[1][title]" size="100" value="<?php echo isset($information_description[1]) ? $information_description[1]['title'] : ''; ?>" />
-                  <?php if (isset($error_title[1])) { ?>
-                  <span class="error"><?php echo $error_title[1]; ?></span>
-                  <?php } ?>
-				  
+		<div id="tab-general">
+          <div id="languages" class="htabs">
+            <?php foreach ($languages as $language) { ?>
+            <a href="#language<?php echo $language['language_id']; ?>"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a>
+            <?php } ?>
+          </div>
+          <?php foreach ($languages as $language) { ?>
+			<div id="language<?php echo $language['language_id']; ?>">	
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Tiêu đề:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+						<input class="form-control"  type="text" name="information_description[<?php echo $language['language_id']; ?>][title]" size="100" value="<?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['title'] : ''; ?>" />
+						  <?php if (isset($error_title[$language['language_id']])) { ?>
+						  <span class="error"><?php echo $error_title[$language['language_id']]; ?></span>
+						  <?php } ?>
+						  
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Mô tả:</label>
+					<div class="col-sm-9 col-lg-9 controls">
+							<textarea name="information_description[<?php echo $language['language_id']; ?>][description]" id="description<?php echo $language['language_id']; ?>"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['description'] : ''; ?></textarea>
+						  <?php if (isset($error_description[$language['language_id']])) { ?>
+						  <span class="error"><?php echo $error_description[$language['language_id']]; ?></span>
+						  <?php } ?>
+					</div>
+				</div>
 			</div>
+			<?php } ?>
 		</div>
-		<div class="form-group">
-			<label class="col-sm-3 col-lg-2 control-label" for="tag"><span class="required">*</span> Mô tả:</label>
-			<div class="col-sm-9 col-lg-9 controls">
-					<textarea name="information_description[1][description]" id="description1"><?php echo isset($information_description[1]) ? $information_description[1]['description'] : ''; ?></textarea>
-				  <?php if (isset($error_description[1])) { ?>
-				  <span class="error"><?php echo $error_description[1]; ?></span>
-				  <?php } ?>
-			</div>
-		</div>
-	
 	
 		<div class="form-group">
 			<label class="col-sm-3 col-lg-2 control-label" for="tag">Từ khóa seo:</label>
@@ -161,7 +170,7 @@
 <script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script> 
 <script type="text/javascript"><!--
 <?php foreach ($languages as $language) { ?>
-CKEDITOR.replace('description1', {
+CKEDITOR.replace('description<?php echo $language['language_id']; ?>', {
 	filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 	filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
 	filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',

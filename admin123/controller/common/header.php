@@ -223,6 +223,10 @@ class ControllerCommonHeader extends Controller {
 
             $this->data['orders'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
             $this->data['order_return'] = $this->url->link('sale/return', 'token=' . $this->session->data['token'], 'SSL');
+            $this->data['template'] = $this->url->link('module/themecontrol', 'token=' . $this->session->data['token'], 'SSL');
+
+
+
 			$this->data['openbay_markets'] = array(
 				'ebay' => $this->config->get('openbay_status'),
 				'amazon' => $this->config->get('amazon_status'),

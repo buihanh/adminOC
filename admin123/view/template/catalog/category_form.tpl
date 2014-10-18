@@ -16,90 +16,97 @@
      <div class="buttons"><a class="btn btn-primary" onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a  class="btn btn-primary" href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
         <div class="box-content">
             <form class="form-horizontal" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
+			   <div class="form-group">
+				<label class="col-sm-3 col-lg-2 control-label" for="parent_id">Danh mục:</label>
+				<div class="col-sm-6 col-lg-4 controls">
+					<select  class="form-control" name="parent_id">
+						<option  value="">Chọn</option>
+						
+						
+						<?php
+							foreach($category_sub as $category)
+							{
 
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="username"><span class="required">*</span>Tên danh mục:</label>
-                    <div class="col-sm-6 col-lg-4 controls">
-                        <input value="<?php echo isset($category_description[1]) ? $category_description[1]['name'] : ''; ?>"  type="text" name="category_description[<?php echo 1; ?>][name]" class="form-control" data-rule-required="true" data-rule-minlength="3" />
-                    </div>
-                    <?php if (isset($error_name[1])) { ?>
-                    <span class="error"><?php echo $error_name[1]; ?></span>
+								 if($category['parent_id']==0)
+									{
+										if($category_id != $category['category_id'])
+										{
+											$select = '';
+											if($category['category_id']==$parent_id)
+											$select = "selected='selected'";
+											 echo "<option ".$select." value='".$category['category_id']."'>".$category['name']."</option>";
+											 dequy($category['category_id'],$category_sub, $parent_id,$category_id);
+										}
+									}
+							}
+						?>
+					</select>
+				 <?php
+					function dequy($id,$category,$parent_id,$category_id)
+					{
+						if (!empty($category)) {
+							foreach ($category as $key => $post) {
+
+								if($category_id != $post['category_id'])
+								{
+									if($post['parent_id']==$id)
+									{
+										$temp = '';
+										if($post['category_id']==$parent_id)
+										$temp = "selected='selected'";
+										echo "<option  ".$temp." value='".$post['category_id']."'>--> ".$post['name']."</option>";
+										dequy($post['category_id'],$category,$parent_id,$category_id);
+
+									}
+								}
+							}
+
+						}
+					}
+					?>
+				   
+				</div>
+			</div>
+			<div id="tab-general">
+                <div id="languages" class="htabs">
+                    <?php foreach ($languages as $language) { ?>
+                    <a href="#language<?php echo $language['language_id']; ?>"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a>
                     <?php } ?>
                 </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="parent_id">Danh mục:</label>
-                    <div class="col-sm-6 col-lg-4 controls">
-                        <select  class="form-control" name="parent_id">
-                            <option  value="">Chọn</option>
-							
-							
-                            <?php
-                                foreach($category_sub as $category)
-                                {
-
-                                     if($category['parent_id']==0)
-                                        {
-                                            if($category_id != $category['category_id'])
-                                            {
-                                                $select = '';
-                                                if($category['category_id']==$parent_id)
-                                                $select = "selected='selected'";
-                                                 echo "<option ".$select." value='".$category['category_id']."'>".$category['name']."</option>";
-                                                 dequy($category['category_id'],$category_sub, $parent_id,$category_id);
-                                            }
-                                        }
-                                }
-                            ?>
-                        </select>
-                     <?php
-                        function dequy($id,$category,$parent_id,$category_id)
-                        {
-                            if (!empty($category)) {
-                                foreach ($category as $key => $post) {
-
-                                    if($category_id != $post['category_id'])
-                                    {
-                                        if($post['parent_id']==$id)
-                                        {
-                                            $temp = '';
-                                            if($post['category_id']==$parent_id)
-                                            $temp = "selected='selected'";
-                                            echo "<option  ".$temp." value='".$post['category_id']."'>--> ".$post['name']."</option>";
-                                            dequy($post['category_id'],$category,$parent_id,$category_id);
-
-                                        }
-                                    }
-                                }
-
-                            }
-                        }
-                        ?>
-                       
-                    </div>
-                </div>
-
-
-
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="meta_description">Mô tả:</label>
-                    <div class="col-sm-6 col-lg-4 controls">
-                        <textarea id="meta_description" name="category_description[<?php echo 1; ?>][meta_description]"  class="form-control" cols="40" rows="5"><?php echo isset($category_description[1]) ? $category_description[1]['meta_description'] : ''; ?></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="meta_keyword">Từ khóa seo:</label>
-                    <div class="col-sm-6 col-lg-4 controls">
-                        <textarea id="meta_keyword" name="category_description[<?php echo 1; ?>][meta_keyword]" class="form-control"  cols="40" rows="5"><?php echo isset($category_description[1]) ? $category_description[1]['meta_keyword'] : ''; ?></textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 col-lg-2 control-label" for="description">Mô tả:</label>
-                    <div class="col-sm-9 col-lg-9 controls">
-                        <textarea name="category_description[<?php echo 1; ?>][description]" cols="90" rows="5" id="description<?php echo 1; ?>"><?php echo isset($category_description[1]) ? $category_description[1]['description'] : ''; ?></textarea>
-                    </div>
-                </div>
+                <?php foreach ($languages as $language) { ?>
+                <div id="language<?php echo $language['language_id']; ?>">
+					<div class="form-group">
+						<label class="col-sm-3 col-lg-2 control-label" for="username"><span class="required">*</span>Tên danh mục:</label>
+						<div class="col-sm-6 col-lg-4 controls">
+							<input value="<?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['name'] : ''; ?>"  type="text" name="category_description[<?php echo $language['language_id']; ?>][name]" class="form-control" data-rule-required="true" data-rule-minlength="3" />
+						</div>
+						<?php if (isset($error_name[$language['language_id']])) { ?>
+						<span class="error"><?php echo $error_name[$language['language_id']]; ?></span>
+						<?php } ?>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 col-lg-2 control-label" for="meta_description">Mô tả:</label>
+						<div class="col-sm-6 col-lg-4 controls">
+							<textarea id="meta_description" name="category_description[<?php echo $language['language_id']; ?>][meta_description]"  class="form-control" cols="40" rows="5"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_description'] : ''; ?></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 col-lg-2 control-label" for="meta_keyword">Từ khóa seo:</label>
+						<div class="col-sm-6 col-lg-4 controls">
+							<textarea id="meta_keyword" name="category_description[<?php echo $language['language_id']; ?>][meta_keyword]" class="form-control"  cols="40" rows="5"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_keyword'] : ''; ?></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 col-lg-2 control-label" for="description">Mô tả:</label>
+						<div class="col-sm-9 col-lg-9 controls">
+							<textarea name="category_description[<?php echo $language['language_id']; ?>][description]" cols="90" rows="5" id="description<?php echo $language['language_id']; ?>"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['description'] : ''; ?></textarea>
+						</div>
+					</div>
+				
+				</div>
+				<?php } ?>
+			</div>
+				
                 <div class="form-group">
                     <label class="col-sm-3 col-lg-2 control-label" for="description">Hình ảnh</label>
                     <div class="col-sm-9 col-lg-9 controls">
@@ -335,6 +342,11 @@ function image_upload(field, thumb) {
 		modal: false
 	});
 };
+//--></script> 
+
+<script type="text/javascript"><!--
+$('#tabs a').tabs(); 
+$('#languages a').tabs();
 //--></script> 
 
 <?php echo $footer; ?>

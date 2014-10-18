@@ -1,9 +1,9 @@
 <?php
 /******************************************************
- * @package Pav Opencart Theme Framework for Opencart 1.5.x
+ * @package  Opencart Theme Framework for Opencart 1.5.x
  * @version 1.0
- * @author http://www.pavothemes.com
- * @copyright	Copyright (C) Feb 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
+ * @author http://www.congnghevietuc.com
+ * @copyright	Copyright (C) Feb 2013 congnghevietuc.com <@emai:congnghevietuc@gmail.com>.All rights reserved.
  * @license		GNU General Public License version 2
 *******************************************************/
 
@@ -120,7 +120,7 @@ class ControllerModuleThemeControl extends Controller {
 			if( $a == 'save-edit'  ){
 				$this->redirect($this->url->link('module/'.$this->moduleName, 'token=' . $this->session->data['token'], 'SSL'));
 			}else {
-				$this->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
+				$this->redirect($this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'));
 			}
 		}
 				

@@ -68,10 +68,12 @@ body {
     border-bottom: 1px dashed  #ccc;
 
 }
-
+.cl-form  input, .cl-form  select {
+    border: 1px solid #ccc;
+}
 .vtabs-content {
     float: right;
-    width: 81%;
+    width: 68%;
 }
 .vtabs {
     float: left;
@@ -163,7 +165,7 @@ body {
     border-top: 1px solid #DDDDDD;
     border-left: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
-    background: #FFFFFF url('../image/tab.png') repeat-x;
+    background-color: #ecf3f6;
     padding: 7px 15px 6px 15px;
     float: left;
     font-family: Arial, Helvetica, sans-serif;

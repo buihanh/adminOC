@@ -9,11 +9,10 @@
   <div class="warning"><?php echo $error_warning; ?></div>
   <?php } ?>
   <div class="box">
-    <div class="heading">
-      <h1><img src="view/image/customer.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
-    </div>
-    <div class="content">
+     <div class="buttons"><a class="btn btn-primary" onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a  class="btn btn-primary" href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
+    
+	<br/><br/>
+	<div class="content">
       <div id="htabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a>
         <?php if ($customer_id) { ?>
         <a href="#tab-history"><?php echo $tab_history; ?></a><a href="#tab-transaction"><?php echo $tab_transaction; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a>
@@ -29,56 +28,56 @@
             <?php } ?>
             <span id="address-add"><?php echo $button_add_address; ?>&nbsp;<img src="view/image/add.png" alt="" onclick="addAddress();" /></span></div>
           <div id="tab-customer" class="vtabs-content">
-            <table class="form">
+            <table cellspacing="5" cellpadding="5" class="form">
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
-                <td><input type="text" name="firstname" value="<?php echo $firstname; ?>" />
+                <td><input  class="form-control" type="text" name="firstname" value="<?php echo $firstname; ?>" />
                   <?php if ($error_firstname) { ?>
                   <span class="error"><?php echo $error_firstname; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
-                <td><input type="text" name="lastname" value="<?php echo $lastname; ?>" />
+                <td><input  class="form-control" type="text" name="lastname" value="<?php echo $lastname; ?>" />
                   <?php if ($error_lastname) { ?>
                   <span class="error"><?php echo $error_lastname; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_email; ?></td>
-                <td><input type="text" name="email" value="<?php echo $email; ?>" />
+                <td><input  class="form-control" type="text" name="email" value="<?php echo $email; ?>" />
                   <?php if ($error_email) { ?>
                   <span class="error"><?php echo $error_email; ?></span>
                   <?php  } ?></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_telephone; ?></td>
-                <td><input type="text" name="telephone" value="<?php echo $telephone; ?>" />
+                <td><input  class="form-control" type="text" name="telephone" value="<?php echo $telephone; ?>" />
                   <?php if ($error_telephone) { ?>
                   <span class="error"><?php echo $error_telephone; ?></span>
                   <?php  } ?></td>
               </tr>
               <tr>
                 <td><?php echo $entry_fax; ?></td>
-                <td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
+                <td><input  class="form-control" type="text" name="fax" value="<?php echo $fax; ?>" /></td>
               </tr>
               <tr>
                 <td><?php echo $entry_password; ?></td>
-                <td><input type="password" name="password" value="<?php echo $password; ?>"  />
+                <td><input  class="form-control" type="password" name="password" value="<?php echo $password; ?>"  />
                   <?php if ($error_password) { ?>
                   <span class="error"><?php echo $error_password; ?></span>
                   <?php  } ?></td>
               </tr>
               <tr>
                 <td><?php echo $entry_confirm; ?></td>
-                <td><input type="password" name="confirm" value="<?php echo $confirm; ?>" />
+                <td><input  class="form-control" type="password" name="confirm" value="<?php echo $confirm; ?>" />
                   <?php if ($error_confirm) { ?>
                   <span class="error"><?php echo $error_confirm; ?></span>
                   <?php  } ?></td>
               </tr>
               <tr>
                 <td><?php echo $entry_newsletter; ?></td>
-                <td><select name="newsletter">
+                <td><select  class="form-control" name="newsletter">
                     <?php if ($newsletter) { ?>
                     <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
                     <option value="0"><?php echo $text_disabled; ?></option>
@@ -90,7 +89,7 @@
               </tr>
               <tr>
                 <td><?php echo $entry_customer_group; ?></td>
-                <td><select name="customer_group_id">
+                <td><select  class="form-control" name="customer_group_id">
                     <?php foreach ($customer_groups as $customer_group) { ?>
                     <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
                     <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
@@ -102,7 +101,7 @@
               </tr>
               <tr>
                 <td><?php echo $entry_status; ?></td>
-                <td><select name="status">
+                <td><select  class="form-control" name="status">
                     <?php if ($status) { ?>
                     <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
                     <option value="0"><?php echo $text_disabled; ?></option>
@@ -117,62 +116,62 @@
           <?php $address_row = 1; ?>
           <?php foreach ($addresses as $address) { ?>
           <div id="tab-address-<?php echo $address_row; ?>" class="vtabs-content">
-            <input type="hidden" name="address[<?php echo $address_row; ?>][address_id]" value="<?php echo $address['address_id']; ?>" />
-            <table class="form">
+            <input  class="form-control" type="hidden" name="address[<?php echo $address_row; ?>][address_id]" value="<?php echo $address['address_id']; ?>" />
+            <table cellspacing="5" cellpadding="5" class="form">
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][firstname]" value="<?php echo $address['firstname']; ?>" />
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][firstname]" value="<?php echo $address['firstname']; ?>" />
                   <?php if (isset($error_address_firstname[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_firstname[$address_row]; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][lastname]" value="<?php echo $address['lastname']; ?>" />
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][lastname]" value="<?php echo $address['lastname']; ?>" />
                   <?php if (isset($error_address_lastname[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_lastname[$address_row]; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><?php echo $entry_company; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][company]" value="<?php echo $address['company']; ?>" /></td>
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][company]" value="<?php echo $address['company']; ?>" /></td>
               </tr>
               <tr class="company-id-display">
                 <td><?php echo $entry_company_id; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][company_id]" value="<?php echo $address['company_id']; ?>" /></td>
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][company_id]" value="<?php echo $address['company_id']; ?>" /></td>
               </tr>
               <tr class="tax-id-display">
                 <td><?php echo $entry_tax_id; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][tax_id]" value="<?php echo $address['tax_id']; ?>" />
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][tax_id]" value="<?php echo $address['tax_id']; ?>" />
                   <?php if (isset($error_address_tax_id[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_tax_id[$address_row]; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_address_1; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][address_1]" value="<?php echo $address['address_1']; ?>" />
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][address_1]" value="<?php echo $address['address_1']; ?>" />
                   <?php if (isset($error_address_address_1[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_address_1[$address_row]; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><?php echo $entry_address_2; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][address_2]" value="<?php echo $address['address_2']; ?>" /></td>
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][address_2]" value="<?php echo $address['address_2']; ?>" /></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_city; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][city]" value="<?php echo $address['city']; ?>" />
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][city]" value="<?php echo $address['city']; ?>" />
                   <?php if (isset($error_address_city[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_city[$address_row]; ?></span>
                   <?php } ?></td>
               </tr>
               <tr>
                 <td><span id="postcode-required<?php echo $address_row; ?>" class="required">*</span> <?php echo $entry_postcode; ?></td>
-                <td><input type="text" name="address[<?php echo $address_row; ?>][postcode]" value="<?php echo $address['postcode']; ?>" /></td>
+                <td><input  class="form-control" type="text" name="address[<?php echo $address_row; ?>][postcode]" value="<?php echo $address['postcode']; ?>" /></td>
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_country; ?></td>
-                <td><select name="address[<?php echo $address_row; ?>][country_id]" onchange="country(this, '<?php echo $address_row; ?>', '<?php echo $address['zone_id']; ?>');">
+                <td><select  class="form-control" name="address[<?php echo $address_row; ?>][country_id]" onchange="country(this, '<?php echo $address_row; ?>', '<?php echo $address['zone_id']; ?>');">
                     <option value=""><?php echo $text_select; ?></option>
                     <?php foreach ($countries as $country) { ?>
                     <?php if ($country['country_id'] == $address['country_id']) { ?>
@@ -188,7 +187,7 @@
               </tr>
               <tr>
                 <td><span class="required">*</span> <?php echo $entry_zone; ?></td>
-                <td><select name="address[<?php echo $address_row; ?>][zone_id]">
+                <td><select  class="form-control" name="address[<?php echo $address_row; ?>][zone_id]">
                   </select>
                   <?php if (isset($error_address_zone[$address_row])) { ?>
                   <span class="error"><?php echo $error_address_zone[$address_row]; ?></span>
@@ -197,9 +196,9 @@
               <tr>
                 <td><?php echo $entry_default; ?></td>
                 <td><?php if (($address['address_id'] == $address_id) || !$addresses) { ?>
-                  <input type="radio" name="address[<?php echo $address_row; ?>][default]" value="<?php echo $address_row; ?>" checked="checked" /></td>
+                  <input  class="form-control" type="radio" name="address[<?php echo $address_row; ?>][default]" value="<?php echo $address_row; ?>" checked="checked" /></td>
                 <?php } else { ?>
-                <input type="radio" name="address[<?php echo $address_row; ?>][default]" value="<?php echo $address_row; ?>" />
+                <input  class="form-control" type="radio" name="address[<?php echo $address_row; ?>][default]" value="<?php echo $address_row; ?>" />
                   </td>
                 <?php } ?>
               </tr>
@@ -211,7 +210,7 @@
         <?php if ($customer_id) { ?>
         <div id="tab-history">
           <div id="history"></div>
-          <table class="form">
+          <table cellspacing="5" cellpadding="5" class="form">
             <tr>
               <td><?php echo $entry_comment; ?></td>
               <td><textarea name="comment" cols="40" rows="8" style="width: 99%;"></textarea></td>
@@ -222,14 +221,14 @@
           </table>
         </div>
         <div id="tab-transaction">
-          <table class="form">
+          <table cellspacing="5" cellpadding="5" class="form">
             <tr>
               <td><?php echo $entry_description; ?></td>
-              <td><input type="text" name="description" value="" /></td>
+              <td><input  class="form-control" type="text" name="description" value="" /></td>
             </tr>
             <tr>
               <td><?php echo $entry_amount; ?></td>
-              <td><input type="text" name="amount" value="" /></td>
+              <td><input  class="form-control" type="text" name="amount" value="" /></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: right;"><a id="button-transaction" class="button" onclick="addTransaction();"><span><?php echo $button_add_transaction; ?></span></a></td>
@@ -238,14 +237,14 @@
           <div id="transaction"></div>
         </div>
         <div id="tab-reward">
-          <table class="form">
+          <table cellspacing="5" cellpadding="5" class="form">
             <tr>
               <td><?php echo $entry_description; ?></td>
-              <td><input type="text" name="description" value="" /></td>
+              <td><input  class="form-control" type="text" name="description" value="" /></td>
             </tr>
             <tr>
               <td><?php echo $entry_points; ?></td>
-              <td><input type="text" name="points" value="" /></td>
+              <td><input  class="form-control" type="text" name="points" value="" /></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: right;"><a id="button-reward" class="button" onclick="addRewardPoints();"><span><?php echo $button_add_reward; ?></span></a></td>
@@ -255,7 +254,7 @@
         </div>
         <?php } ?>
         <div id="tab-ip">
-          <table class="list">
+          <table cellspacing="5" cellpadding="5" class="list">
             <thead>
               <tr>
                 <td class="left"><?php echo $column_ip; ?></td>
@@ -368,47 +367,47 @@ var address_row = <?php echo $address_row; ?>;
 
 function addAddress() {	
 	html  = '<div id="tab-address-' + address_row + '" class="vtabs-content" style="display: none;">';
-	html += '  <input type="hidden" name="address[' + address_row + '][address_id]" value="" />';
+	html += '  <input  class="form-control" type="hidden" name="address[' + address_row + '][address_id]" value="" />';
 	html += '  <table class="form">'; 
 	html += '    <tr>';
     html += '	   <td><span class="required">*</span> <?php echo $entry_firstname; ?></td>';
-    html += '	   <td><input type="text" name="address[' + address_row + '][firstname]" value="" /></td>';
+    html += '	   <td><input  class="form-control" type="text" name="address[' + address_row + '][firstname]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><span class="required">*</span> <?php echo $entry_lastname; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][lastname]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][lastname]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><?php echo $entry_company; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][company]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][company]" value="" /></td>';
     html += '    </tr>';	
     html += '    <tr class="company-id-display">';
     html += '      <td><?php echo $entry_company_id; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][company_id]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][company_id]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr class="tax-id-display">';
     html += '      <td><?php echo $entry_tax_id; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][tax_id]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][tax_id]" value="" /></td>';
     html += '    </tr>';			
     html += '    <tr>';
     html += '      <td><span class="required">*</span> <?php echo $entry_address_1; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][address_1]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][address_1]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><?php echo $entry_address_2; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][address_2]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][address_2]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><span class="required">*</span> <?php echo $entry_city; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][city]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][city]" value="" /></td>';
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><span id="postcode-required' + address_row + '" class="required">*</span> <?php echo $entry_postcode; ?></td>';
-    html += '      <td><input type="text" name="address[' + address_row + '][postcode]" value="" /></td>';
+    html += '      <td><input  class="form-control" type="text" name="address[' + address_row + '][postcode]" value="" /></td>';
     html += '    </tr>';
 	html += '    <tr>';
     html += '      <td><span class="required">*</span> <?php echo $entry_country; ?></td>';
-    html += '      <td><select name="address[' + address_row + '][country_id]" onchange="country(this, \'' + address_row + '\', \'0\');">';
+    html += '      <td><select  class="form-control" name="address[' + address_row + '][country_id]" onchange="country(this, \'' + address_row + '\', \'0\');">';
     html += '         <option value=""><?php echo $text_select; ?></option>';
     <?php foreach ($countries as $country) { ?>
     html += '         <option value="<?php echo $country['country_id']; ?>"><?php echo addslashes($country['name']); ?></option>';
@@ -417,11 +416,11 @@ function addAddress() {
     html += '    </tr>';
     html += '    <tr>';
     html += '      <td><span class="required">*</span> <?php echo $entry_zone; ?></td>';
-    html += '      <td><select name="address[' + address_row + '][zone_id]"><option value="false"><?php echo $this->language->get('text_none'); ?></option></select></td>';
+    html += '      <td><select  class="form-control" name="address[' + address_row + '][zone_id]"><option value="false"><?php echo $this->language->get('text_none'); ?></option></select></td>';
     html += '    </tr>';
 	html += '    <tr>';
     html += '      <td><?php echo $entry_default; ?></td>';
-    html += '      <td><input type="radio" name="address[' + address_row + '][default]" value="1" /></td>';
+    html += '      <td><input  class="form-control" type="radio" name="address[' + address_row + '][default]" value="1" /></td>';
     html += '    </tr>';
     html += '  </table>';
     html += '</div>';
