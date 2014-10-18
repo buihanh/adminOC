@@ -224,6 +224,7 @@ class ControllerCommonHeader extends Controller {
             $this->data['orders'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
             $this->data['order_return'] = $this->url->link('sale/return', 'token=' . $this->session->data['token'], 'SSL');
             $this->data['template'] = $this->url->link('module/themecontrol', 'token=' . $this->session->data['token'], 'SSL');
+            $this->data['menu'] = $this->url->link('module/megamenubase', 'token=' . $this->session->data['token'], 'SSL');
 
 
 

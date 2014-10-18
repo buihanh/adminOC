@@ -1,11 +1,4 @@
 <?php
-/******************************************************
- * @package Pav Megamenu module for Opencart 1.5.x
- * @version 2.0
- * @author http://www.pavothemes.com
- * @copyright	Copyright (C) September 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
- * @license		GNU General Public License version 2
-*******************************************************/
 
 class ModelMenuMegamenu extends Model { 
 	/**
@@ -19,7 +12,7 @@ class ModelMenuMegamenu extends Model {
 	 * Get menu information by id
 	 */
 	public function getInfo( $id ){	
-		$sql = ' SELECT m.*, md.title,md.description FROM ' . DB_PREFIX . 'megamenu m LEFT JOIN '
+		$sql = ' SELECT m.megamenu_id  as category_id, md.title  AS name, m.*, md.title,md.description FROM ' . DB_PREFIX . 'megamenu m LEFT JOIN '
 							.DB_PREFIX.'megamenu_description md ON m.megamenu_id=md.megamenu_id AND language_id='.(int)$this->config->get('config_language_id') ;
 	
 		$sql .= ' WHERE m.megamenu_id='.(int)$id;						
@@ -37,6 +30,31 @@ class ModelMenuMegamenu extends Model {
 		return $query->rows;
 	}
 
+	public function getCategories1($data) {
+		$sql = "SELECT c.megamenu_id  as category_id, c.title  AS name FROM  " . DB_PREFIX . "megamenu_description as c  WHERE c.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+
+		if (!empty($data['filter_name'])) {
+			$sql .= " AND c.title LIKE '" . $this->db->escape($data['filter_name']) . "%'";
+		}
+
+	
+
+		if (isset($data['start']) || isset($data['limit'])) {
+			if ($data['start'] < 0) {
+				$data['start'] = 0;
+			}				
+
+			if ($data['limit'] < 1) {
+				$data['limit'] = 20;
+			}	
+
+			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		}
+		
+		$query = $this->db->query($sql);
+
+		return $query->rows;
+	}
 
 	/**
 	 * get get all  Menu Childrens by Id
@@ -90,7 +108,7 @@ class ModelMenuMegamenu extends Model {
 			$store = ($store_id > 0)?'&store_id='.$store_id:'';
 
 			foreach( $data as $menu ){
-				$url  = $this->url->link('module/pavmegamenubase', 'id='.$menu['megamenu_id'].$store.'&token=' . $this->session->data['token'], 'SSL') ;
+				$url  = $this->url->link('module/megamenubase', 'id='.$menu['megamenu_id'].$store.'&token=' . $this->session->data['token'], 'SSL') ;
 
 				$output .='<li id="list_'.$menu['megamenu_id'].'">
 				<div><span class="disclose"><span></span></span>'.($menu['title']?$menu['title']:"").' (ID:'.$menu['megamenu_id'].') <a class="quickedit" rel="id_'.$menu['megamenu_id'].'" href="'.$url .'">E</a><span class="quickdel" rel="id_'.$menu['megamenu_id'].'">D</span></div>';
@@ -115,7 +133,7 @@ class ModelMenuMegamenu extends Model {
 			$this->children[$child['parent_id']][] = $child;	
 		}
 		
-		$output = '<select name="megamenu[parent_id]" >';
+		$output = '<select  class="form-control" name="megamenu[parent_id]" >';
 		$output .='<option value="1">ROOT</option>';	
 		$output .= $this->genOption( 1 ,1, $selected );
 		$output .= '</select>';
@@ -363,7 +381,7 @@ $sql[] = "INSERT INTO `".DB_PREFIX."megamenu_widgets` VALUES (6, 'PavoThemes Fee
 				  `level` int(11) NOT NULL,
 				  `left` int(11) NOT NULL,
 				  `right` int(11) NOT NULL,
-				  `widget_id` int(11) DEFAULT '0',
+				  `widget_id` varchar(25) DEFAULT '0',
 				  PRIMARY KEY (`megamenu_id`)
 				) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 			";

@@ -219,6 +219,20 @@ body {
     top: 3px;
     cursor: pointer;
 }
+
+#dialog-box-category > ul {
+    margin: 0;
+    padding: 0;
+}
+#dialog-box-category li {
+    border-bottom: 1px dashed #ccc;
+    line-height: 29px;
+    list-style: none outside none;
+}
+#dialog-box-category li:hover {
+    background-color: #ecf3f6;
+}
+
 .clr{
     clear: both;
 }

@@ -456,9 +456,18 @@
 
                 </a>
             </li>
+
+        <li>
+            <a href="<?php echo $menu;  ?>" >
+                <i class="fa fa-list"></i>
+                <span>Thiết kế menu</span>
+
+            </a>
+        </li>
+
             <li>
                 <a href="<?php echo $template;  ?>" >
-                    <i class="fa fa-cogs"></i>
+                    <i class="fa fa-wrench"></i>
                     <span>Cấu hình giao diện</span>
 
                 </a>
