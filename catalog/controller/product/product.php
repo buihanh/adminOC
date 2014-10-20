@@ -271,8 +271,6 @@ class ControllerProductProduct extends Controller {
 			$this->data['tab_review'] = sprintf($this->language->get('tab_review'), $product_info['reviews']);
 			$this->data['tab_related'] = $this->language->get('tab_related');
 
-            $this->data['href_demo']=   $this->url->link('product/demo', 'product_id=' . $product_info['product_id']);
-            $this->data['href_view_demo']=   $product_info['viewdemo'];
 			$this->data['product_id'] = $this->request->get['product_id'];
 			$this->data['manufacturer'] = $product_info['manufacturer'];
 			$this->data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
@@ -345,8 +343,6 @@ class ControllerProductProduct extends Controller {
 			$this->data['options'] = array();
 
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
-			
-			
 				if ($option['type'] == 'select' || $option['type'] == 'radio' || $option['type'] == 'checkbox' || $option['type'] == 'image') {
 					$option_value_data = array();
 
@@ -388,11 +384,6 @@ class ControllerProductProduct extends Controller {
 					);
 				}
 			}
-			
-		/* 	echo "<pre>";
-			
-			print_r($this->model_catalog_product->getProductOptions($this->request->get['product_id']));
-			print_r($this->data['options']); */
 
 			if ($product_info['minimum']) {
 				$this->data['minimum'] = $product_info['minimum'];
@@ -406,122 +397,47 @@ class ControllerProductProduct extends Controller {
 			$this->data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 			$this->data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
-			
-			
-			
 			$this->data['products'] = array();
+
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 
-			
-			
-			
-			if(count($results)==0)
-			{
-				$idC = $this->model_catalog_product->getCategories($this->request->get['product_id']);
-				
-				$data = array(
-					'filter_category_id' => $idC[0]['category_id'],
-					'filter_filter'      => '', 
-					'sort'               => '',
-					'order'              => '',
-					'start'              => 0,
-					'limit'              => 30
+			foreach ($results as $result) {
+				if ($result['image']) {
+					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+				} else {
+					$image = false;
+				}
+
+				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+				} else {
+					$price = false;
+				}
+
+				if ((float)$result['special']) {
+					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+				} else {
+					$special = false;
+				}
+
+				if ($this->config->get('config_review_status')) {
+					$rating = (int)$result['rating'];
+				} else {
+					$rating = false;
+				}
+
+				$this->data['products'][] = array(
+					'product_id' => $result['product_id'],
+					'thumb'   	 => $image,
+					'name'    	 => $result['name'],
+					'price'   	 => $price,
+					'special' 	 => $special,
+					'rating'     => $rating,
+					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
+					'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
-
-				$resultss = $this->model_catalog_product->getProducts($data);
-				foreach ($resultss as $result) {
-					if ($result['image']) {
-						$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-					} else {
-						$image = false;
-					}
-
-					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-						$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-					} else {
-						$price = false;
-					}
-
-					if ((float)$result['special']) {
-						$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-					} else {
-						$special = false;
-					}	
-
-					if ($this->config->get('config_tax')) {
-						$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
-					} else {
-						$tax = false;
-					}				
-
-					if ($this->config->get('config_review_status')) {
-						$rating = (int)$result['rating'];
-					} else {
-						$rating = false;
-					}
-
-					$this->data['products'][] = array(
-						'product_id'  => $result['product_id'],
-						'thumb'       => $image,
-						'name'        => $result['name'],
-						'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 100) . '..',
-						'price'       => $price,
-						'special'     => $special,
-						'tax'         => $tax,
-						'rating'      => $result['rating'],
-						'reviews'     => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-						'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
-					);
-				}
-			
 			}
-			else
-			{	
-			
-				foreach ($results as $result) {
-					if ($result['image']) {
-						$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
-					} else {
-						$image = false;
-					}
 
-					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-						$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-					} else {
-						$price = false;
-					}
-
-					if ((float)$result['special']) {
-						$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-					} else {
-						$special = false;
-					}
-
-					if ($this->config->get('config_review_status')) {
-						$rating = (int)$result['rating'];
-					} else {
-						$rating = false;
-					}
-
-					$this->data['products'][] = array(
-						'product_id' => $result['product_id'],
-						'thumb'   	 => $image,
-						'name'    	 => $result['name'],
-						'price'   	 => $price,
-						'special' 	 => $special,
-						'rating'     => $rating,
-						'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-						'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id']),
-                        'href_demo'    	 => $this->url->link('product/demo', 'product_id=' . $result['product_id'])
-					);
-				}
-			}
-			
-			
-			
-			
-			
-			
 			$this->data['tags'] = array();
 
 			if ($product_info['tag']) {
@@ -540,10 +456,10 @@ class ControllerProductProduct extends Controller {
 
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/addproduct.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/product/addproduct.tpl';
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
+				$this->template = $this->config->get('config_template') . '/template/product/product.tpl';
 			} else {
-				$this->template = 'default/template/product/addproduct.tpl';
+				$this->template = 'default/template/product/product.tpl';
 			}
 
 			$this->children = array(
@@ -837,7 +753,7 @@ class ControllerProductProduct extends Controller {
 			// Check to see if any PHP files are trying to be uploaded
 			$content = file_get_contents($this->request->files['file']['tmp_name']);
 
-			if (preg_match('/\<\?php/i', $content)) {
+			if (preg_match('/\<\?/i', $content)) {
 				$json['error'] = $this->language->get('error_filetype');
 			}
 
