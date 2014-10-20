@@ -16,7 +16,7 @@ class ModelMenuWidget extends Model {
 	 */
 	public function getTypes(){
 
-		$this->language->load('module/pavmegamenubase');
+		$this->language->load('module/megamenubase');
 		return array(
 			'html' 				=> $this->language->get( 'text_widget_html' ),
 			'product_category'  => $this->language->get( 'text_widget_product_category' ),
@@ -278,7 +278,7 @@ class ModelMenuWidget extends Model {
 	 * render widget setting form with passed  fields. And auto fill data values in inputs.
 	 */
 	protected function _renderFormByFields( $fields, $data ){
-		$this->language->load('module/pavmegamenubase');
+		$this->language->load('module/megamenubase');
 		$output = '<table class="form">';
 
 
