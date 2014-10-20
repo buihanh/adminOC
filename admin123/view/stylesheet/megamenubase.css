@@ -1,0 +1,125 @@
+
+.tree-megamenu {
+    float: left;
+    overflow: hidden;
+    width: 38%;
+}
+.megamenu-form {
+    width: 100%;
+}
+td > i {
+    display: block;
+    font-size: 11px;
+}
+.quickdel {
+    background: url("../image/filemanager/edit-delete.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.quickedit {
+    background: url("../image/filemanager/edit-rename.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.quickedit, .quickdel {
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 16px;
+    margin: 0 5px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 25px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+#ajaxloading {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1200;
+}
+#ajaxloading > div {
+    margin: 12px;
+}
+.placeholder {
+    outline: 1px dashed #4183c4;
+}
+.mjs-nestedSortable-error {
+    background: none repeat scroll 0 0 #fbe3e4;
+    border-color: transparent;
+}
+ol {
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+ol.sortable, ol.sortable ol {
+    list-style-type: none;
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+ol.sortable {
+    margin: 4em 0;
+}
+.sortable li {
+    margin: 5px 0 0;
+    padding: 0;
+}
+.sortable li div {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #d4d4d4 #d4d4d4 #bcbcbc;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: move;
+    margin: 0;
+    padding: 6px;
+}
+.sortable li.mjs-nestedSortable-branch div {
+    background: -moz-linear-gradient(center top , #ffffff 0%, #f6f6f6 47%, #f0ece9 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.sortable li.mjs-nestedSortable-leaf div {
+    background: -moz-linear-gradient(center top , #ffffff 0%, #f6f6f6 47%, #bcccbc 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
+    background: none repeat scroll 0 0 #fafafa;
+    border-color: #999;
+}
+.disclose {
+    cursor: pointer;
+    display: none;
+    width: 10px;
+}
+.sortable li.mjs-nestedSortable-collapsed > ol {
+    display: none;
+}
+.sortable li.mjs-nestedSortable-branch > div > .disclose {
+    display: inline-block;
+}
+.sortable li.mjs-nestedSortable-collapsed > div > .disclose > span:before {
+    content: "+ ";
+}
+.sortable li.mjs-nestedSortable-expanded > div > .disclose > span:before {
+    content: "- ";
+}
+.megamenu {
+    margin-top: -44px;
+}
+#tabss a {
+    float: right;
+}
+.menu_layout {
+    width: 100%;
+}
+.abcmenu {
+    border-left: 1px solid #ccc;
+    float: right;
+    padding-left: 17px;
+    width: 58%;
+}
