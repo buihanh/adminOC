@@ -1,11 +1,4 @@
 <?php
-/******************************************************
- * @package Pav Megamenu module for Opencart 1.5.x
- * @version 2.0
- * @author http://www.pavothemes.com
- * @copyright	Copyright (C) September 2013 PavoThemes.com <@emai:pavothemes@gmail.com>.All rights reserved.
- * @license		GNU General Public License version 2
-*******************************************************/
 
 class ModelMenuMegamenu extends Model {		
 	
@@ -35,6 +28,24 @@ class ModelMenuMegamenu extends Model {
 	/**
 	 *
 	 */
+	 
+	public function getCategory( $id=null, $store_id=0 ){
+		$sql = ' SELECT m.*, md.title as name,md.image as image,md.description,md.description as meta_description,md.description as meta_keyword   FROM ' . DB_PREFIX . 'megamenu m LEFT JOIN '
+								.DB_PREFIX.'megamenu_description md ON m.megamenu_id=md.megamenu_id AND language_id='.(int)$this->config->get('config_language_id') ;
+		$sql .= ' WHERE m.`published`=1 ';
+                $sql .= ' AND store_id='.(int)$store_id;
+		if( $id != null ) {						
+			$sql .= ' AND m.megamenu_id='.(int)$id;						
+		}
+		$sql .= ' ORDER BY `position`  ';
+		
+		
+		$query = $this->db->query( $sql );						
+		return $query->rows;
+	} 
+	 
+	 
+	 
 	public function getChilds( $id=null, $store_id=0 ){
 		$sql = ' SELECT m.*, md.title,md.description FROM ' . DB_PREFIX . 'megamenu m LEFT JOIN '
 								.DB_PREFIX.'megamenu_description md ON m.megamenu_id=md.megamenu_id AND language_id='.(int)$this->config->get('config_language_id') ;
@@ -371,34 +382,14 @@ class ModelMenuMegamenu extends Model {
 
 					}$output .= '</div></div>';
 				} else {
-				
-					if($level!=2)
-					{
-						$output = '<div class="'.$class.' level'.$level.'" '.$attrw.' ><div class="dropdown-menu-inner">';
-						$row = '<div class="row-fluid"><div class="span12 mega-col" data-colwidth="12" data-type="menu" ><div class="mega-col-inner"><ul>';
-						foreach( $data as $menu ){
-							$row .= $this->renderMenuContent( $menu , $level+1 );
-						}	
-						$row .= '</ul></div></div></div>';
+					$output = '<div class="'.$class.' level'.$level.'" '.$attrw.' ><div class="dropdown-menu-inner">';
+					$row = '<div class="row-fluid"><div class="span12 mega-col" data-colwidth="12" data-type="menu" ><div class="mega-col-inner"><ul>';
+					foreach( $data as $menu ){
+						$row .= $this->renderMenuContent( $menu , $level+1 );
+					}	
+					$row .= '</ul></div></div></div>';
 
-						$output .= $row;
-					}
-					else
-					{
-						$i = 0;
-						$row = '';
-						$output = '';
-						foreach( $data as $menu ){
-							$i++;
-							//$this->renderMenuContent( $menu , $level+1 );
-						
-							if($i<count($data))
-							$row .=  '<a class="sub-sub pay" href="'.$this->getLink( $menu ).'">'.$menu['title'].'</a>';
-							else
-							$row .=  '<a class="sub-sub" href="'.$this->getLink( $menu ).'">'.$menu['title'].'</a>';
-						}
-						$output .= $row;						
-					}
+					$output .= $row;
 					
 				}
 				
@@ -440,23 +431,20 @@ class ModelMenuMegamenu extends Model {
 		}
 		if( $this->hasChild($menu['megamenu_id']) ){
 
-		
-		
-			$output .= '<li class="parent dropdown-submenu '.$menu['menu_class'].' cll'.$menu['megamenu_id'].'" '.$this->renderAttrs($menu). '>';
+			$output .= '<li class="parent dropdown-submenu'.$menu['menu_class'].'" '.$this->renderAttrs($menu). '>';
 			if( $menu['show_title'] ){
 				$output .= '<a class="dropdown-toggle" data-toggle="dropdown" href="'.$this->getLink( $menu ).'">';
 				$t = '%s';
 				if( $menu['image']){ $output .= '<span class="menu-icon" style="background:url(\''.$this->shopUrl."image/".$menu['image'].'\') no-repeat;">';	}
 				$output .= '<span class="menu-title">'.$menu['title']."</span>";
-				
-				//$output .= "<b class=\"caret\"></b>";
+				if( $menu['description'] ){
+					$output .= '<span class="menu-desc">' . $menu['description'] . "</span>";
+				}
+				$output .= "<b class=\"caret\"></b>";
 				if( $menu['image']){ 
 					$output .= '</span>';
 				}
 				$output .= '</a>';
-				if( $menu['description'] ){
-					$output .= '<span class="menu-desc">' . $menu['description'] . "</span>";
-				}
 			}	
 			if($menu['megamenu_id'] > 1) {
 				$output .= $this->genTree( $menu['megamenu_id'], $level, $menu );
@@ -472,17 +460,14 @@ class ModelMenuMegamenu extends Model {
 			
 				if( $menu['image']){ $output .= '<span class="menu-icon" style="background:url(\''.$this->shopUrl."image/".$menu['image'].'\') no-repeat;">';	}
 				$output .= '<span class="menu-title">'.$menu['title']."</span>";
-				
-				if( $menu['image']){ 
-					$output .= '</span>';
-				}
-				
-				$output .= '</a>';
 				if( $menu['description'] ){
 					$output .= '<span class="menu-desc">' . $menu['description'] . "</span>";
 				}
-				
-				
+				if( $menu['image']){ 
+					$output .= '</span>';
+				}
+
+				$output .= '</a>';
 			}
 			$output .= '</li>';
 		}

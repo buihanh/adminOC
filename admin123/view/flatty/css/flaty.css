@@ -177,6 +177,15 @@ body {
     margin-right: 2px;
     display: none;
 }
+.dialog-box-product ul{
+    margin: 0;
+    padding:0;
+}
+.dialog-box-product ul li{
+    margin: 10px 0px;
+    padding: 0;
+    list-style: none;
+}
 .htabs a.selected {
     padding-bottom: 7px;
     background: #FFFFFF;

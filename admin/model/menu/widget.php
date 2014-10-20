@@ -205,20 +205,27 @@ class ModelMenuWidget extends Model {
 	 */
 	public function getWidgetProduct_listForm( $args, $data ){
 	 	$types = array();	
-	 	$types[] = array(
+	 	
+		/*
+		$types[] = array(
 	 		'value' => 'newest',
 	 		'text'  => $this->language->get('text_products_newest')
-	 	);
+	 	);*/
 	 	$types[] = array(
 	 		'value' => 'bestseller',
 	 		'text'  => $this->language->get('text_products_bestseller')
 	 	);
-
+		$types[] = array(
+	 		'value' => 'random',
+	 		'text'  => 'Random'
+	 	);
+		
+		/*
 	 	$types[] = array(
 	 		'value' => 'special',
 	 		'text'  => $this->language->get('text_products_special')
 	 	);
-
+*/
 
 	 	$fields  = array(
 	 		'list_type' => array( 'type' => 'select', 'value' => '', 'values'=>$types ),
