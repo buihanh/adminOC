@@ -174,7 +174,13 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 					</div>
 
 					
-				</div>													<div id="search" class="span4" >						<div class="button-search"></div>						<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />											</div>					<div class="cart-top pull-right">							<?php echo $cart; ?>					</div>			
+				</div>												
+				<div id="search" class="span4" >	
+				<div class="button-search"></div>		
+				<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />				
+				</div>		
+				<div class="cart-top pull-right">	
+				<?php echo $cart; ?>					</div>			
 			</div>
 		</div>
 </section>

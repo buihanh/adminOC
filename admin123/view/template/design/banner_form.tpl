@@ -24,6 +24,9 @@
                       <tr>
                           <td class="left">Tiêu đề</td>
                           <td class="left"><?php echo $entry_link; ?></td>
+                          <td class="left">Mô tả 1</td>
+                          <td class="left">Mô tả 2</td>
+                          <td class="left">Mô tả 3</td>
                           <td class="left">Hình ảnh</td>
                           <td></td>
                       </tr>
@@ -40,6 +43,9 @@
                               <?php } ?>
                               <?php } ?></td>
                           <td class="left"><input class="form-control" type="text" name="banner_image[<?php echo $image_row; ?>][link]" value="<?php echo $banner_image['link']; ?>" /></td>
+                          <td><textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description1]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description1'] : ''; ?></textarea></td>
+                          <td><textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description2]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description2'] : ''; ?></textarea></td>
+                          <td><textarea  name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][description3]" ><?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['description3'] : ''; ?></textarea></td>
                           <td class="left"><div class="image"><img src="<?php echo $banner_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
                                   <input type="hidden" name="banner_image[<?php echo $image_row; ?>][image]" value="<?php echo $banner_image['image']; ?>" id="image<?php echo $image_row; ?>"  />
                                   <br />
@@ -51,7 +57,7 @@
                       <?php } ?>
                       <tfoot>
                       <tr>
-                          <td colspan="3"></td>
+                          <td colspan="6"></td>
                           <td class="left"><a onclick="addImage();" class="btn btn-primary">Thêm dòng</a></td>
                       </tr>
                       </tfoot>
