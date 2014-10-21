@@ -344,6 +344,7 @@ class ModelCatalogProduct extends Model {
 		
 		$sql .= " WHERE pd.language_id = 1";
 		
+	//	echo (int)$this->config->get('config_language_id');
 		
 		//$sql .= " WHERE pd.language_id = 1"; //'" . (int)$this->config->get('config_language_id') . "'"; 
 
@@ -401,7 +402,7 @@ class ModelCatalogProduct extends Model {
 
 			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
 		}	
-		echo $sql;
+		//echo $sql;
 		
 		$query = $this->db->query($sql);
 

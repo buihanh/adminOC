@@ -58,6 +58,8 @@ foreach ($query->rows as $setting) {
 	}
 }
 
+
+
 // Url
 $url = new Url(HTTP_SERVER, $config->get('config_secure') ? HTTPS_SERVER : HTTP_SERVER);	
 $registry->set('url', $url);
@@ -128,6 +130,9 @@ foreach ($query->rows as $result) {
 }
 
 $config->set('config_language_id', $languages[$config->get('config_admin_language')]['language_id']);
+
+
+
 
 // Language	
 $language = new Language($languages[$config->get('config_admin_language')]['directory']);
