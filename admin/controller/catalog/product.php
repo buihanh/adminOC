@@ -347,6 +347,9 @@ class ControllerCatalogProduct extends Controller {
 		$product_total = $this->model_catalog_product->getTotalProducts($data);
 
 		$results = $this->model_catalog_product->getProducts($data);
+		/* echo "<pre>";
+		print_r($results);
+		die(); */
 
 		foreach ($results as $result) {
 			$action = array();

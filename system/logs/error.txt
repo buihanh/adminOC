@@ -16191,3 +16191,188 @@ mpp\htdocs\congty\image\data\public\phamquocvinh992@gmail.com): failed to open d
 2014-10-21 10:07:05 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
 2014-10-21 10:07:07 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
 2014-10-21 10:07:33 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:14:52 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:14:54 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:15:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:08 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:10 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:15 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:19 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:23 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:27 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:16:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:17:01 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:17:27 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:18:01 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:18:03 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 54
+2014-10-21 10:18:03 - PHP Notice:  Undefined index: token in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 67
+2014-10-21 10:18:07 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:18:07 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:18:13 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:18:13 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:18:28 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\admin\model\setting\setting.php on line 5
+2014-10-21 10:18:28 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:18:28 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:19:17 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:19:17 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:19:19 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\admin\model\setting\setting.php on line 5
+2014-10-21 10:19:19 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:19:19 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:19:25 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_controller_common_header.php on line 233
+2014-10-21 10:19:25 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 10:19:33 - PHP Notice:  Undefined index: store in D:\xampp\htdocs\adminOC\admin\model\setting\setting.php on line 20
+2014-10-21 11:13:31 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:13:33 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:13:36 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:13:38 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:13:42 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:14:04 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:14:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:28:20 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:28:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:28:35 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 200
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 209
+2014-10-21 11:28:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 209
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 219
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 221
+2014-10-21 11:28:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 221
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 226
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 243
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 254
+2014-10-21 11:28:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 254
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 270
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 282
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 291
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 338
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 376
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 383
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 391
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 403
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 404
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 405
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 409
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 417
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 426
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: banner in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 436
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 446
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 453
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: menu in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 461
+2014-10-21 11:28:42 - PHP Notice:  Undefined variable: template in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 469
+2014-10-21 11:28:59 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:39:57 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:31 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:34 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:35 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:45 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:40:47 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:41:01 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:41:03 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:41:05 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:41:20 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:01 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:04 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:12 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:13 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:40 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:42 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:43 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:42:47 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:27 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:29 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:33 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:36 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:43:42 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:44:44 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:44:47 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:12 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:14 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:26 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:29 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:49 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:54 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:45:56 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:04 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:16 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:19 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:21 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:25 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:27 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:29 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:32 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:34 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:46:37 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:48:25 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 200
+2014-10-21 11:48:25 - PHP Notice:  Undefined variable: Orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 209
+2014-10-21 11:48:25 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 209
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: store in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 219
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: stores in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 221
+2014-10-21 11:48:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 221
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 226
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 243
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 250
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: Reviewss in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 254
+2014-10-21 11:48:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 254
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 270
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: username in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 282
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: date_time in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 291
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: logout in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 338
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: category in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 376
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: product in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 383
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: information in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 391
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: route in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 403
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: customer in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 404
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: contact in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 405
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: review1 in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 409
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: orders in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 417
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: order_return in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 426
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: banner in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 436
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: user in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 446
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: setting in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 453
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: menu in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 461
+2014-10-21 11:48:26 - PHP Notice:  Undefined variable: template in D:\xampp\htdocs\adminOC\admin123\view\template\common\header.tpl on line 469
+2014-10-21 11:48:46 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:48:47 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:48:50 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:48:53 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\vqmod\vqcache\vq2-admin_view_template_common_header.tpl on line 276
+2014-10-21 11:55:15 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:00 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:02 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:09 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:10 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:56:12 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:58:48 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:59:47 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 11:59:55 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:00:18 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:00:20 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:00:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:00:27 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:01:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:01:38 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:01:40 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:01:41 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:01:53 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:02:48 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:02:49 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:02:52 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:02:54 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:03:06 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:07:15 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:07:15 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:14:24 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:18:58 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:19:17 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:20:11 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:20:17 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:20:31 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275
+2014-10-21 12:25:09 - PHP Notice:  Array to string conversion in D:\xampp\htdocs\adminOC\admin\view\template\common\header.tpl on line 275

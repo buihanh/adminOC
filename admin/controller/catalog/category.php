@@ -145,6 +145,8 @@ class ControllerCatalogCategory extends Controller {
 		$category_total = $this->model_catalog_category->getTotalCategories();
 
 		$results = $this->model_catalog_category->getCategories($data);
+		
+		
 
 		foreach ($results as $result) {
 			$action = array();

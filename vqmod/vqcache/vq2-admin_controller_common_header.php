@@ -222,11 +222,12 @@ class ControllerCommonHeader extends Controller {
 			$this->load->model('setting/store');
 			$resultsf = $this->model_setting_store->getStore_header();
 			
-			
 			if(count($resultsf)>0)
 			{
 				$this->session->data['store'] = $resultsf['store_id'];
 			}
+			else
+			$this->session->data['store'] = 0;
 			
 			
 			

@@ -13,18 +13,14 @@ if (!defined('DIR_APPLICATION')) {
 	exit;
 }
 
-//VirtualQMOD
-require_once('../vqmod/vqmod.php');
-VQMod::bootup();
-
-// VQMODDED Startup
-require_once(VQMod::modCheck(DIR_SYSTEM . 'startup.php'));
+// Startup
+require_once(DIR_SYSTEM . 'startup.php');
 
 // Application Classes
-require_once(VQMod::modCheck(DIR_SYSTEM . 'library/currency.php'));
-require_once(VQMod::modCheck(DIR_SYSTEM . 'library/user.php'));
-require_once(VQMod::modCheck(DIR_SYSTEM . 'library/weight.php'));
-require_once(VQMod::modCheck(DIR_SYSTEM . 'library/length.php'));
+require_once(DIR_SYSTEM . 'library/currency.php');
+require_once(DIR_SYSTEM . 'library/user.php');
+require_once(DIR_SYSTEM . 'library/weight.php');
+require_once(DIR_SYSTEM . 'library/length.php');
 
 // Registry
 $registry = new Registry();
@@ -49,6 +45,9 @@ $querys = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE active = '1'");
 if(count($querys->row)>0)
 $store_id = $querys->row['store_id'];
 // Settings
+
+
+//echo $store_id;
 $query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '".$store_id."'");
 
 foreach ($query->rows as $setting) {
