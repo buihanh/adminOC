@@ -1,8 +1,15 @@
 <?php
 class ControllerExtensionModule extends Controller {
 	public function index() {
+	
+	
 		$this->language->load('extension/module');
-
+		
+		
+		
+		
+		
+		
 		$this->document->setTitle($this->language->get('heading_title')); 
 
 		$this->data['breadcrumbs'] = array();
@@ -45,11 +52,7 @@ class ControllerExtensionModule extends Controller {
 
 		$this->load->model('setting/extension');
 
-		$extensions = $this->model_setting_extension->getInstalled('module');
-		
-	/* 	echo '<pre>';
-		print_r($extensions);
-		die; */
+		$extensions = $this->model_setting_extension->getInstalled('module',$this->session->data['store']);
 
 		foreach ($extensions as $key => $value) {
 			if (!file_exists(DIR_APPLICATION . 'controller/module/' . $value . '.php')) {
@@ -58,7 +61,12 @@ class ControllerExtensionModule extends Controller {
 				unset($extensions[$key]);
 			}
 		}
-
+	/* 	echo "<pre>";
+		print_r($extensions);
+		die;
+		 */
+		
+		
 		$this->data['extensions'] = array();
 
 		$files = glob(DIR_APPLICATION . 'controller/module/*.php');
@@ -94,7 +102,7 @@ class ControllerExtensionModule extends Controller {
 				);
 			}
 		}
-
+		
 		$this->template = 'extension/module.tpl';
 		$this->children = array(
 			'common/header',
@@ -106,6 +114,7 @@ class ControllerExtensionModule extends Controller {
 
 	public function install() {
 		$this->language->load('extension/module');
+		
 
 		if (!$this->user->hasPermission('modify', 'extension/module')) {
 			$this->session->data['error'] = $this->language->get('error_permission'); 

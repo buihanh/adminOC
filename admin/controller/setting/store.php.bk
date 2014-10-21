@@ -12,12 +12,9 @@ class ControllerSettingStore extends Controller {
 		$this->getList();
 	}
 	public function change() {
-		$this->load->model('setting/store');	
-		$store_id = $this->request->post['store_id'];
-		$this->model_setting_store->editStore_all();
-		$this->model_setting_store->editStore_Row($store_id);
-		
-		echo $store_id;
+		$this->request->post['store_id'];
+		$this->session->data['store'] = $this->request->post['store_id'];
+		echo "OK";
 		die;
 	}
 	public function insert() {

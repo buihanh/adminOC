@@ -165,14 +165,10 @@ class ControllerModuleMegamenubase extends Controller {
       		'separator' => false
    		);
 
-   		$this->data['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_module'),
-			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
-   		);
+
 		
    		$this->data['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('heading_title'),
+       		'text'      => 'Menu',
 			'href'      => $this->url->link('module/megamenubase', 'token=' . $this->session->data['token'], 'SSL'),
       		'separator' => ' :: '
    		);
@@ -185,7 +181,7 @@ class ControllerModuleMegamenubase extends Controller {
 		
 		//$this->data['liveedit_url'] = $this->url->link('module/pavmegamenubase/liveedit', 'root=1'.$store_param.'&token=' . $this->session->data['token'], 'SSL');
 		
-		$this->data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'].$store_param, 'SSL');
+		$this->data['cancel'] = $this->url->link('common/home', 'token=' . $this->session->data['token'].$store_param, 'SSL');
 		
 
 		$this->load->model('menu/widget');

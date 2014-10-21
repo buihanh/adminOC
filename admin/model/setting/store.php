@@ -13,6 +13,20 @@ class ModelSettingStore extends Model {
 
 		$this->cache->delete('store');
 	}
+	
+	public function editStore_all() {
+		$this->db->query("UPDATE " . DB_PREFIX . "store SET active = 0 ");
+		
+	}
+	
+	public function editStore_Row($store_id) {
+		$this->db->query("UPDATE " . DB_PREFIX . "store SET active = 1 WHERE store_id = '" . (int)$store_id . "'");
+
+	}
+	public function getStore_header() {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "store WHERE active = '1'");
+		return $query->row;
+	}
 
 	public function deleteStore($store_id) {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "store WHERE store_id = '" . (int)$store_id . "'");
@@ -26,7 +40,12 @@ class ModelSettingStore extends Model {
 		return $query->row;
 	}
 
+	
+	
+	
 	public function getStores($data = array()) {
+	
+	
 		$store_data = $this->cache->get('store');
 
 		if (!$store_data) {

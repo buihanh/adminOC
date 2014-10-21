@@ -48,9 +48,34 @@ $(document).ready(function(){
         }
     });
         });
+		
+	function fconchangestore(id){
+		$(".full-body").show();
+		var url = $('base').attr('href') + 'index.php?route=setting/store/change&token=<?php echo $this->session->data["token"]; ?>';
+        $.ajax({
+
+            type: "post",
+
+            url : url,
+
+            data:{'store_id':id},
+
+            dataType : "html",
+
+            success : function(response){
+				$(".full-body").hide();
+				var urls = $('base').attr('href') + 'index.php?route=common/home&token=<?php echo $this->session->data["token"]; ?>';
+       
+				window.location = urls;
+            }
+        });
+	}
     </script>
 </head>
 <body>
+
+<div class="full-body"></div>
+
 <div id="container">
     <div id="header">
   <div class="div1">
@@ -238,15 +263,16 @@ $(document).ready(function(){
           </li>
         </ul>
       </li>
-      <li id="help"><a class="top"><?php echo $text_help; ?></a>
-        <ul>
-          <li><a href="http://www.opencart.com" target="_blank"><?php echo $text_opencart; ?></a></li>
-          <li><a href="http://www.opencart.com/index.php?route=documentation/introduction" target="_blank"><?php echo $text_documentation; ?></a></li>
-          <li><a href="http://forum.opencart.com" target="_blank"><?php echo $text_support; ?></a></li>
-        </ul>
-      </li>
+     
     </ul>
     <ul class="right" style="display: none;">
+	<li>
+		<select class="fconchangestore" onchange="fconchangestore(this.value);"  >
+		<?php foreach($arrstores as $store) { ?>
+			<option <?php  if($store['storeselect']==$store['store_id']) echo "selected='selected'"; ?>  value="<?php echo $store['store_id'];  ?>"><?php echo $store['name'];  ?></option>
+		<?php } ?>
+		</select>
+	</li>	
       <li id="store"><a href="<?php echo $store; ?>" target="_blank" class="top"><?php echo $text_front; ?></a>
         <ul>
           <?php foreach ($stores as $stores) { ?>

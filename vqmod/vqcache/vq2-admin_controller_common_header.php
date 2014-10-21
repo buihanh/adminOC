@@ -1,5 +1,6 @@
 <?php 
 class ControllerCommonHeader extends Controller {
+	
 	protected function index() {
 		$this->data['title'] = $this->document->getTitle(); 
 
@@ -216,6 +217,40 @@ class ControllerCommonHeader extends Controller {
 				'amazon' => $this->config->get('amazon_status'),
 				'amazonus' => $this->config->get('amazonus_status'),
 			);
+			
+			
+			$this->load->model('setting/store');
+			$resultsf = $this->model_setting_store->getStore_header();
+			
+			
+			if(count($resultsf)>0)
+			{
+				$this->session->data['store'] = $resultsf['store_id'];
+			}
+			
+			
+			
+			$storeid = $this->session->data['store'];
+			
+			$results = $this->model_setting_store->getStores();
+			$this->data['arrstores'][] = array(
+				'store_id' => 0,
+				'name'=> 'Default',
+				'url'=>HTTP_SERVER,
+				'ssl'=>HTTP_SERVER,
+				'storeselect'=>$storeid
+			);
+			
+			foreach ($results as $result) {
+				$this->data['arrstores'][] = array(
+					'store_id' => $result['store_id'],
+					'name'=> $result['name'],
+					'url'=>$result['url'],
+					'ssl'=>$result['ssl'],
+					'storeselect'=>$storeid
+				);
+			}
+			
 
 			$this->data['paypal_express'] = $this->url->link('payment/pp_express', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['paypal_express_search'] = $this->url->link('payment/pp_express/search', 'token=' . $this->session->data['token'], 'SSL');

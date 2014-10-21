@@ -1,25 +1,34 @@
 <?php
 class ModelSettingExtension extends Model {
-	public function getInstalled($type) {
+	public function getInstalled($type,$store_id) {
 		$extension_data = array();
-		$store_id = $this->session->data['store'];
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "extension WHERE `type` = '" . $this->db->escape($type) . "'  and store_id = '".$store_id."' ");
 
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "extension WHERE  `type` = '" . $this->db->escape($type) . "'");
+		
+		$querys = $this->db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE  store_id= '".$store_id."'");
+
+		
 		foreach ($query->rows as $result) {
-			$extension_data[] = $result['code'];
+			foreach ($querys->rows as $row) {
+				if($row['group'] == $result['code'])
+				{
+					$extension_data[] = $result['code'];
+				}
+			}
+			
 		}
-
+		
 		return $extension_data;
 	}
 
 	public function install($type, $code) {
-		$store_id = $this->session->data['store'];
-		$this->db->query("INSERT INTO " . DB_PREFIX . "extension SET `type` = '" . $this->db->escape($type) . "', `code` = '" . $this->db->escape($code) . "' , store_id = '".$store_id."'");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "extension SET `type` = '" . $this->db->escape($type) . "', `code` = '" . $this->db->escape($code) . "'");
+		/* echo ("INSERT INTO " . DB_PREFIX . "extension SET `type` = '" . $this->db->escape($type) . "', `code` = '" . $this->db->escape($code) . "'");
+		die; */
 	}
 
 	public function uninstall($type, $code) {
-		$store_id = $this->session->data['store'];
-		$this->db->query("DELETE FROM " . DB_PREFIX . "extension WHERE `type` = '" . $this->db->escape($type) . "' AND `code` = '" . $this->db->escape($code) . "' and store_id = '".$store_id."'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "extension WHERE `type` = '" . $this->db->escape($type) . "' AND `code` = '" . $this->db->escape($code) . "'");
 	}
 
 	public function sql($sql) {

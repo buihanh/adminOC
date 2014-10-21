@@ -41,8 +41,15 @@ $registry->set('config', $config);
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 $registry->set('db', $db);
 
+$store_id = 0;
+$querys = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE active = '1'");
+
+
+
+if(count($querys->row)>0)
+$store_id = $querys->row['store_id'];
 // Settings
-$query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '0'");
+$query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '".$store_id."'");
 
 foreach ($query->rows as $setting) {
 	if (!$setting['serialized']) {
