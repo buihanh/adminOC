@@ -13,14 +13,18 @@ if (!defined('DIR_APPLICATION')) {
 	exit;
 }
 
-// Startup
-require_once(DIR_SYSTEM . 'startup.php');
+//VirtualQMOD
+require_once('../vqmod/vqmod.php');
+VQMod::bootup();
+
+// VQMODDED Startup
+require_once(VQMod::modCheck(DIR_SYSTEM . 'startup.php'));
 
 // Application Classes
-require_once(DIR_SYSTEM . 'library/currency.php');
-require_once(DIR_SYSTEM . 'library/user.php');
-require_once(DIR_SYSTEM . 'library/weight.php');
-require_once(DIR_SYSTEM . 'library/length.php');
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/currency.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/user.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/weight.php'));
+require_once(VQMod::modCheck(DIR_SYSTEM . 'library/length.php'));
 
 // Registry
 $registry = new Registry();
@@ -45,9 +49,6 @@ $querys = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE active = '1'");
 if(count($querys->row)>0)
 $store_id = $querys->row['store_id'];
 // Settings
-
-
-//echo $store_id;
 $query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '".$store_id."'");
 
 foreach ($query->rows as $setting) {
@@ -57,8 +58,6 @@ foreach ($query->rows as $setting) {
 		$config->set($setting['key'], unserialize($setting['value']));
 	}
 }
-
-
 
 // Url
 $url = new Url(HTTP_SERVER, $config->get('config_secure') ? HTTPS_SERVER : HTTP_SERVER);	
@@ -129,18 +128,12 @@ foreach ($query->rows as $result) {
 	$languages[$result['code']] = $result;
 }
 
-if($languages[$config->get('config_admin_language')]['language_id']!='')
-    $config->set('config_language_id', $languages[$config->get('config_admin_language')]['language_id']);
-else
-    $config->set('config_language_id',1);
-
+$config->set('config_language_id', $languages[$config->get('config_admin_language')]['language_id']);
 
 // Language	
 $language = new Language($languages[$config->get('config_admin_language')]['directory']);
 $language->load($languages[$config->get('config_admin_language')]['filename']);	
 $registry->set('language', $language);
-
-
 
 // Document
 $registry->set('document', new Document()); 		
