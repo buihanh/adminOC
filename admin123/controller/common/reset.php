@@ -35,7 +35,7 @@ class ControllerCommonReset extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('text_home'),
+				'text'      => "Trang Chủ",
 				'href'      => $this->url->link('common/home'),
 				'separator' => false
 			);
@@ -53,8 +53,8 @@ class ControllerCommonReset extends Controller {
 			$this->data['entry_password'] = $this->language->get('entry_password');
 			$this->data['entry_confirm'] = $this->language->get('entry_confirm');
 
-			$this->data['button_save'] = $this->language->get('button_save');
-			$this->data['button_cancel'] = $this->language->get('button_cancel');
+			$this->data['button_save'] = 'Lưu';
+			$this->data['button_cancel'] = 'Trở lại';
 
 			if (isset($this->error['password'])) {
 				$this->data['error_password'] = $this->error['password'];

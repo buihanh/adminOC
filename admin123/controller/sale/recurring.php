@@ -108,7 +108,7 @@ class ControllerSaleRecurring extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -288,7 +288,7 @@ class ControllerSaleRecurring extends Controller {
 		$pagination->total = $profiles_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/recurring', 'token=' . $this->session->data['token'] . '&page={page}' . $url, 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -364,7 +364,7 @@ class ControllerSaleRecurring extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text' => $this->language->get('text_home'),
+				'text' => "Trang Chủ",
 				'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);

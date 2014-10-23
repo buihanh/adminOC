@@ -372,7 +372,7 @@ class ControllerSaleCustomer extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -411,7 +411,7 @@ class ControllerSaleCustomer extends Controller {
 			$action = array();
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('sale/customer/update', 'token=' . $this->session->data['token'] . '&customer_id=' . $result['customer_id'] . $url, 'SSL')
 			);
 
@@ -420,8 +420,8 @@ class ControllerSaleCustomer extends Controller {
 				'name'           => $result['name'],
 				'email'          => $result['email'],
 				'customer_group' => $result['customer_group'],
-				'status'         => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
-				'approved'       => ($result['approved'] ? $this->language->get('text_yes') : $this->language->get('text_no')),
+				'status'         => ($result['status'] ? 'Bật' : 'Tắt'),
+				'approved'       => ($result['approved'] ? 'Có' : 'Không'),
 				'ip'             => $result['ip'],
 				'date_added'     => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'selected'       => isset($this->request->post['selected']) && in_array($result['customer_id'], $this->request->post['selected']),
@@ -431,13 +431,13 @@ class ControllerSaleCustomer extends Controller {
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
-		$this->data['text_yes'] = $this->language->get('text_yes');
-		$this->data['text_no'] = $this->language->get('text_no');	
+		$this->data['text_enabled'] = 'Bật';
+		$this->data['text_disabled'] = 'Tắt';
+		$this->data['text_yes'] = 'Có';
+		$this->data['text_no'] = 'Không';	
 		$this->data['text_select'] = $this->language->get('text_select');	
 		$this->data['text_default'] = $this->language->get('text_default');		
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 
 		$this->data['column_name'] = $this->language->get('column_name');
 		$this->data['column_email'] = $this->language->get('column_email');
@@ -560,7 +560,7 @@ class ControllerSaleCustomer extends Controller {
 		$pagination->total = $customer_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/customer', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -596,12 +596,12 @@ class ControllerSaleCustomer extends Controller {
 	protected function getForm() {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = 'Bật';
+		$this->data['text_disabled'] = 'Tắt';
 		$this->data['text_select'] = $this->language->get('text_select');
 		$this->data['text_none'] = $this->language->get('text_none');
 		$this->data['text_wait'] = $this->language->get('text_wait');
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu';
 		$this->data['text_add_ban_ip'] = $this->language->get('text_add_ban_ip');
 		$this->data['text_remove_ban_ip'] = $this->language->get('text_remove_ban_ip');
 
@@ -635,8 +635,8 @@ class ControllerSaleCustomer extends Controller {
 		$this->data['entry_amount'] = $this->language->get('entry_amount');
 		$this->data['entry_points'] = $this->language->get('entry_points');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['button_add_address'] = $this->language->get('button_add_address');
 		$this->data['button_add_history'] = $this->language->get('button_add_history');
 		$this->data['button_add_transaction'] = $this->language->get('button_add_transaction');
@@ -789,7 +789,7 @@ class ControllerSaleCustomer extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -1095,7 +1095,7 @@ class ControllerSaleCustomer extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('text_home'),
+				'text'      => "Trang Chủ",
 				'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);
@@ -1135,7 +1135,7 @@ class ControllerSaleCustomer extends Controller {
 			$this->data['error_warning'] = '';
 		}		
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] ='Không có dữ liệu!';
 
 		$this->data['column_date_added'] = $this->language->get('column_date_added');
 		$this->data['column_comment'] = $this->language->get('column_comment');
@@ -1163,7 +1163,7 @@ class ControllerSaleCustomer extends Controller {
 		$pagination->total = $transaction_total;
 		$pagination->page = $page;
 		$pagination->limit = 10; 
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/customer/history', 'token=' . $this->session->data['token'] . '&customer_id=' . $this->request->get['customer_id'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -1192,7 +1192,7 @@ class ControllerSaleCustomer extends Controller {
 			$this->data['error_warning'] = '';
 		}		
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 		$this->data['text_balance'] = $this->language->get('text_balance');
 
 		$this->data['column_date_added'] = $this->language->get('column_date_added');
@@ -1225,7 +1225,7 @@ class ControllerSaleCustomer extends Controller {
 		$pagination->total = $transaction_total;
 		$pagination->page = $page;
 		$pagination->limit = 10; 
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/customer/transaction', 'token=' . $this->session->data['token'] . '&customer_id=' . $this->request->get['customer_id'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -1254,7 +1254,7 @@ class ControllerSaleCustomer extends Controller {
 			$this->data['error_warning'] = '';
 		}	
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 		$this->data['text_balance'] = $this->language->get('text_balance');
 
 		$this->data['column_date_added'] = $this->language->get('column_date_added');
@@ -1287,7 +1287,7 @@ class ControllerSaleCustomer extends Controller {
 		$pagination->total = $reward_total;
 		$pagination->page = $page;
 		$pagination->limit = 10; 
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/customer/reward', 'token=' . $this->session->data['token'] . '&customer_id=' . $this->request->get['customer_id'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

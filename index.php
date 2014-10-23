@@ -50,6 +50,15 @@ if (isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS
 } else {
 	$store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $db->escape('http://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
 }
+//echo ("SELECT * FROM " . DB_PREFIX . "store WHERE REPLACE(`url`, 'www.', '') = '" . $db->escape('http://' . str_replace('www.', '', $_SERVER['HTTP_HOST']) . rtrim(dirname($_SERVER['PHP_SELF']), '/.\\') . '/') . "'");
+
+/* $config_url =  explode("//", $_SERVER['HTTP_HOST']); 
+$store_query = $db->query("SELECT * FROM " . DB_PREFIX . "store WHERE url = '".$config_url[0]."'");
+
+ */
+
+
+//print_r($store_query->row);
 
 if ($store_query->num_rows) {
 	$config->set('config_store_id', $store_query->row['store_id']);
@@ -58,21 +67,36 @@ if ($store_query->num_rows) {
 }
 		
 // Settings
-$query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '0' OR store_id = '" . (int)$config->get('config_store_id') . "' ORDER BY store_id ASC");
+$query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '".$store_query->row['store_id']."' OR store_id = '" . (int)$config->get('config_store_id') . "' ORDER BY store_id ASC");
+
+  
+//$config_url = '';
 
 foreach ($query->rows as $setting) {
+
+	/* if($setting['key']=="config_url")
+	$config_url =  $setting['value']; */
+
 	if (!$setting['serialized']) {
 		$config->set($setting['key'], $setting['value']);
 	} else {
 		$config->set($setting['key'], unserialize($setting['value']));
 	}
 }
+/* if($store_query->num_rows){
+	$config->set('config_url', $config_url);
+} */
+/* echo  '<pre>';
+print_r($query->rows);
+die;  */
 
 if (!$store_query->num_rows) {
 	$config->set('config_url', HTTP_SERVER);
 	$config->set('config_ssl', HTTPS_SERVER);	
 }
 
+
+	
 // Url
 $url = new Url($config->get('config_url'), $config->get('config_secure') ? $config->get('config_ssl') : $config->get('config_url'));	
 $registry->set('url', $url);

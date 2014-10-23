@@ -188,7 +188,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		$this->data['text_cron_job_url'] = $this->language->get('text_cron_job_url');
 		$this->data['help_cron_job_url'] = $this->language->get('help_cron_job_url');
 		$this->data['text_amazon_join'] = $this->language->get('text_amazon_join');
-		$this->data['text_home'] = $this->language->get('text_home');
+		$this->data['text_home'] = "Trang Chủ";
 		$this->data['heading_title'] = $this->language->get('heading_title');
 		$this->data['text_access_key'] = $this->language->get('text_access_key');
 		$this->data['text_access_secret'] = $this->language->get('text_access_secret');
@@ -215,8 +215,8 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		$this->data['text_upload_success'] = $this->language->get('text_upload_success');
 		$this->data['text_add'] = $this->language->get('text_add');
 
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
-		$this->data['button_save'] = $this->language->get('button_save');
+		$this->data['button_cancel'] = 'Trở lại';
+		$this->data['button_save'] = 'Lưu';
 
 		$this->data['text_button_settings'] = $this->language->get('text_button_settings');
 		$this->data['text_colour'] = $this->language->get('text_colour');
@@ -240,7 +240,7 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

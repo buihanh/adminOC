@@ -28,12 +28,43 @@ class ControllerSettingStore extends Controller {
 		$this->load->model('setting/store');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$store_id = $this->model_setting_store->addStore($this->request->post);
+			
+			
+			$folder = '';
+			$time = time();
+			$config_url =  explode("//", $this->request->post['config_url']); 
+			
+			
+			if(!preg_match("/^[0-9]+$/", strpos($this->request->post['config_url'], "//")))
+			{
+				$path = DIR_IMAGE . 'data/public/'.trim($this->request->post['config_url']).$time;
+				$folder = trim($this->request->post['config_url']).$time;
+				$url_id = $this->request->post['config_url'];
+			}
+			else
+			{
+				$path = DIR_IMAGE . 'data/public/'.trim($config_url[1]).$time;
+				$folder = trim($config_url[1]).$time;
+				$url_id =  $config_url[1];
+				
+			}				
+		
+			if(!file_exists($path))
+			{
+				mkdir($path, 0777, true);
+				//rmdir
+			}
+			// url_id
+			
+		
+			$store_id = $this->model_setting_store->addStore($this->request->post,$folder);
 
 			$this->load->model('setting/setting');
 
-			$this->model_setting_setting->editSetting('config', $this->request->post, $store_id);
+			$this->model_setting_setting->editSetting('config', $this->request->post,$store_id);
 
+			
+			
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$this->redirect($this->url->link('setting/store', 'token=' . $this->session->data['token'], 'SSL'));
@@ -75,8 +106,18 @@ class ControllerSettingStore extends Controller {
 
 		if (isset($this->request->post['selected']) && $this->validateDelete()) {
 			foreach ($this->request->post['selected'] as $store_id) {
+				
+				
+				$results = $this->model_setting_store->getStore( $store_id);
+				$path = DIR_IMAGE . 'data/public/'.$results['folder'];
+				
+				
+				
+				if(file_exists($path))
+				{
+					rmdir($path);
+				}
 				$this->model_setting_store->deleteStore($store_id);
-
 				$this->model_setting_setting->deleteSetting('config', $store_id);
 			}
 
@@ -404,6 +445,9 @@ class ControllerSettingStore extends Controller {
 			$this->load->model('setting/setting');
 
 			$store_info = $this->model_setting_setting->getSetting('config', $this->request->get['store_id']);
+			
+		
+			
 		}
 
 		$this->data['token'] = $this->session->data['token'];
@@ -415,6 +459,9 @@ class ControllerSettingStore extends Controller {
 		} else {
 			$this->data['config_url'] = '';
 		}
+		
+		
+		
 
 		if (isset($this->request->post['config_ssl'])) {
 			$this->data['config_ssl'] = $this->request->post['config_ssl'];

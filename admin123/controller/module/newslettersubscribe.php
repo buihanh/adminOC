@@ -28,7 +28,7 @@ class ControllerModuleNewslettersubscribe extends Controller {
 		$this->data['text_yes'] = $this->language->get('text_yes');
 		$this->data['text_no'] = $this->language->get('text_no');
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_content_top'] = $this->language->get('text_content_top');
 		$this->data['text_content_bottom'] = $this->language->get('text_content_bottom');		
 		$this->data['text_column_left'] = $this->language->get('text_column_left');
@@ -71,8 +71,8 @@ class ControllerModuleNewslettersubscribe extends Controller {
 		$this->data['entry_subject'] = $this->language->get('entry_subject');
 		$this->data['entry_message'] = $this->language->get('entry_message');
 		
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['button_add_module'] = $this->language->get('button_add_module');
 		$this->data['button_remove'] = $this->language->get('button_remove');
 		$this->data['button_delete'] = $this->language->get('button_delete');
@@ -89,7 +89,7 @@ class ControllerModuleNewslettersubscribe extends Controller {
 		$this->data['breadcrumbs'] = array();
 
    		$this->data['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_home'),
+       		'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
       		'separator' => false
    		);
@@ -246,7 +246,7 @@ class ControllerModuleNewslettersubscribe extends Controller {
 		$pagination->total = $user_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('module/newslettersubscribe', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 			
 		$this->data['pagination'] = $pagination->render();

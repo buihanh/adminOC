@@ -54,7 +54,7 @@ class ControllerCommonForgotten extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home'),        	
 			'separator' => false
 		);
@@ -73,7 +73,7 @@ class ControllerCommonForgotten extends Controller {
 		$this->data['entry_email'] = $this->language->get('entry_email');
 
 		$this->data['button_reset'] = $this->language->get('button_reset');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_cancel'] = 'Trở lại';
 
 		if (isset($this->error['warning'])) {
 			$this->data['error_warning'] = $this->error['warning'];

@@ -28,14 +28,14 @@ class ControllerSaleContact extends Controller {
 		$this->data['entry_message'] = $this->language->get('entry_message');
 
 		$this->data['button_send'] = $this->language->get('button_send');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_cancel'] = 'Trở lại';
 
 		$this->data['token'] = $this->session->data['token'];
 
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

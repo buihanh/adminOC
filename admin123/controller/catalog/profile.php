@@ -17,7 +17,7 @@ class ControllerCatalogProfile extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -47,7 +47,7 @@ class ControllerCatalogProfile extends Controller {
 
 			$action[] = array(
 				'href' => $this->url->link('catalog/profile/update', 'token=' . $this->session->data['token'] . '&profile_id=' . $profile['profile_id'], 'SSL'),
-				'name' => $this->language->get('text_edit'),
+				'name' => 'Sửa',
 			);
 
 			$this->data['profiles'][] = array(
@@ -129,7 +129,7 @@ class ControllerCatalogProfile extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -148,8 +148,8 @@ class ControllerCatalogProfile extends Controller {
 
 		$this->data['cancel'] = $this->url->link('catalog/profile', 'token=' . $this->session->data['token'], 'SSL');
 
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
-		$this->data['button_save'] = $this->language->get('button_save');
+		$this->data['button_cancel'] = 'Trở lại';
+		$this->data['button_save'] = 'Lưu';
 		$this->data['button_remove'] = $this->language->get('button_remove');
 
 		$this->data['token'] = $this->session->data['token'];
@@ -175,7 +175,7 @@ class ControllerCatalogProfile extends Controller {
 
 		$this->data['button_add_profile'] = $this->language->get('button_add_profile');
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 
 		$this->data['text_recurring_help'] = $this->language->get('text_recurring_help');
 

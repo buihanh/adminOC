@@ -138,11 +138,11 @@
                             <td>
                                 <select name="pp_express_status">
                                     <?php if ($pp_express_status) { ?>
-                                        <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                                        <option value="0"><?php echo $text_disabled; ?></option>
+                                        <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                                        <option value="0"><?php echo "Tắt"; ?></option>
                                     <?php } else { ?>
-                                        <option value="1"><?php echo $text_enabled; ?></option>
-                                        <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                                        <option value="1"><?php echo "Bật"; ?></option>
+                                        <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                                     <?php } ?>
                                 </select>
                             </td>
@@ -156,11 +156,11 @@
                             <td>
                                 <select name="pp_express_profile_cancel_status">
                                     <?php if ($pp_express_profile_cancel_status) { ?>
-                                        <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                                        <option value="0"><?php echo $text_disabled; ?></option>
+                                        <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                                        <option value="0"><?php echo "Tắt"; ?></option>
                                     <?php } else { ?>
-                                        <option value="1"><?php echo $text_enabled; ?></option>
-                                        <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                                        <option value="1"><?php echo "Bật"; ?></option>
+                                        <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                                     <?php } ?>
                                 </select>
                             </td>

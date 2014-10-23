@@ -1,4 +1,6 @@
 <?php
+
+
 // HTTP
 define('HTTP_SERVER', 'http://local.adminOC/admin123/');
 define('HTTP_CATALOG', 'http://local.adminOC/');

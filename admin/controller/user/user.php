@@ -20,7 +20,13 @@ class ControllerUserUser extends Controller {
 		$this->load->model('user/user');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+
+            /* print_r($this->request->post);
+            die; */
+
 			$this->model_user_user->addUser($this->request->post);
+
+
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -410,6 +416,51 @@ class ControllerUserUser extends Controller {
 		} else {
 			$this->data['user_group_id'] = '';
 		}
+
+
+
+
+
+        $this->load->model('setting/store');
+        $resultsf = $this->model_setting_store->getStore_header();
+
+        if(count($resultsf)>0)
+        {
+            $this->session->data['store'] = $resultsf['store_id'];
+        }
+        else
+            $this->session->data['store'] = 0;
+
+
+
+        $storeid = $this->session->data['store'];
+
+        $results = $this->model_setting_store->getStores();
+        $this->data['arrstores'][] = array(
+            'store_id' => 0,
+            'name'=> 'Default'
+
+        );
+
+        foreach ($results as $result) {
+            $this->data['arrstores'][] = array(
+                'store_id' => $result['store_id'],
+                'name'=> $result['name']
+
+            );
+        }
+
+        if (isset($this->request->post['store_id'])) {
+            $this->data['store_id'] = $this->request->post['store_id'];
+        } elseif (!empty($user_info)) {
+            $this->data['store_id'] = $user_info['store_id'];
+        } else {
+            $this->data['store_id'] = $storeid;
+        }
+
+
+
+
 
 		$this->load->model('user/user_group');
 

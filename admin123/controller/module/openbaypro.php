@@ -10,7 +10,7 @@ class ControllerModuleOpenbaypro extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -30,7 +30,7 @@ class ControllerModuleOpenbaypro extends Controller {
 		$this->data['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['text_installed'] = $this->language->get('text_installed');
 
 		$this->template = 'module/openbaypro.tpl';

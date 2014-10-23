@@ -41,7 +41,7 @@ class ControllerOpenbayEbayProfile extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -185,7 +185,7 @@ class ControllerOpenbayEbayProfile extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 

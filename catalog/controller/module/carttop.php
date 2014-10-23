@@ -131,7 +131,7 @@ class ControllerModuleCarttop extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/carttop.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/module/carttop.tpl';
 		} else {
-			$this->template = 'default/template/module/carttop.tpl';
+			$this->template = 'default/template/module/cart.tpl';
 		}
 
 		$this->response->setOutput($this->render());		

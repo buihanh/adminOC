@@ -8,7 +8,7 @@ class ControllerExtensionTotal extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -76,7 +76,7 @@ class ControllerExtensionTotal extends Controller {
 					);
 				} else {
 					$action[] = array(
-						'text' => $this->language->get('text_edit'),
+						'text' => 'Sửa',
 						'href' => $this->url->link('total/' . $extension . '', 'token=' . $this->session->data['token'], 'SSL')
 					);
 
@@ -88,7 +88,7 @@ class ControllerExtensionTotal extends Controller {
 
 				$this->data['extensions'][] = array(
 					'name'       => $this->language->get('heading_title'),
-					'status'     => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
+					'status'     => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_enabled'),
 					'sort_order' => $this->config->get($extension . '_sort_order'),
 					'action'     => $action
 				);

@@ -20,7 +20,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_all_zones'] = $this->language->get('text_all_zones');
 		$this->data['text_yes'] = $this->language->get('text_yes');
 		$this->data['text_no'] = $this->language->get('text_no');
@@ -46,8 +46,8 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		$this->data['entry_return_url'] = $this->language->get('entry_return_url');
 		$this->data['entry_post_url'] = $this->language->get('entry_post_url');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 
 		$this->data['tab_settings'] = $this->language->get('tab_settings');
 		$this->data['tab_order_status'] = $this->language->get('tab_order_status');
@@ -99,7 +99,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),       		
 			'separator' => false
 		);
@@ -242,7 +242,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text' => $this->language->get('text_home'),
+				'text' => "Trang Chủ",
 				'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);
@@ -277,7 +277,7 @@ class ControllerPaymentPPPayflowIframe extends Controller {
 			$this->data['entry_transaction_amount'] = $this->language->get('entry_transaction_amount');
 			$this->data['entry_refund_amount'] = $this->language->get('entry_refund_amount');
 
-			$this->data['button_cancel'] = $this->language->get('button_cancel');
+			$this->data['button_cancel'] = 'Trở lại';
 			$this->data['button_refund'] = $this->language->get('button_refund');
 
 			$this->template = 'payment/pp_payflow_iframe_refund.tpl';

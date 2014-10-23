@@ -320,7 +320,7 @@ class ControllerSaleAffiliate extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),       		
 			'separator' => false
 		);
@@ -357,7 +357,7 @@ class ControllerSaleAffiliate extends Controller {
 			$action = array();
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('sale/affiliate/update', 'token=' . $this->session->data['token'] . '&affiliate_id=' . $result['affiliate_id'] . $url, 'SSL')
 			);
 
@@ -366,7 +366,7 @@ class ControllerSaleAffiliate extends Controller {
 				'name'         => $result['name'],
 				'email'        => $result['email'],
 				'balance'      => $this->currency->format($result['balance'], $this->config->get('config_currency')),
-				'status'       => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
+				'status'       => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_enabled')),
 				'approved'     => ($result['approved'] ? $this->language->get('text_yes') : $this->language->get('text_no')),
 				'date_added'   => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'selected'     => isset($this->request->post['selected']) && in_array($result['affiliate_id'], $this->request->post['selected']),
@@ -377,7 +377,7 @@ class ControllerSaleAffiliate extends Controller {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_yes'] = $this->language->get('text_yes');
 		$this->data['text_no'] = $this->language->get('text_no');		
 		$this->data['text_no_results'] = $this->language->get('text_no_results');
@@ -483,7 +483,7 @@ class ControllerSaleAffiliate extends Controller {
 		$pagination->total = $affiliate_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/affiliate', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -510,7 +510,7 @@ class ControllerSaleAffiliate extends Controller {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_select'] = $this->language->get('text_select');
 		$this->data['text_none'] = $this->language->get('text_none');
 		$this->data['text_wait'] = $this->language->get('text_wait');
@@ -547,8 +547,8 @@ class ControllerSaleAffiliate extends Controller {
 		$this->data['entry_amount'] = $this->language->get('entry_amount');
 		$this->data['entry_description'] = $this->language->get('entry_description');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['button_add_transaction'] = $this->language->get('button_add_transaction');
 		$this->data['button_remove'] = $this->language->get('button_remove');
 
@@ -671,7 +671,7 @@ class ControllerSaleAffiliate extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -1086,7 +1086,7 @@ class ControllerSaleAffiliate extends Controller {
 		$pagination->total = $transaction_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/affiliate/transaction', 'token=' . $this->session->data['token'] . '&affiliate_id=' . $this->request->get['affiliate_id'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

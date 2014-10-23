@@ -20,11 +20,11 @@
           <td><?php echo $entry_unsubscribe; ?></td>
           <td><select name="option_unsubscribe">
               <?php if ($option_unsubscribe) { ?>
-              <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-              <option value="0"><?php echo $text_disabled; ?></option>
+              <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+              <option value="0"><?php echo "Tắt"; ?></option>
               <?php } else { ?>
-              <option value="1"><?php echo $text_enabled; ?></option>
-              <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+              <option value="1"><?php echo "Bật"; ?></option>
+              <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
               <?php } ?>
             </select></td>
         </tr>
@@ -32,11 +32,11 @@
           <td><?php echo $entry_mail; ?> </td>
           <td><select name="newslettersubscribe_mail_status">
               <?php if ($newslettersubscribe_mail_status) { ?>
-              <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-              <option value="0"><?php echo $text_disabled; ?></option>
+              <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+              <option value="0"><?php echo "Tắt"; ?></option>
               <?php } else { ?>
-              <option value="1"><?php echo $text_enabled; ?></option>
-              <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+              <option value="1"><?php echo "Bật"; ?></option>
+              <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
               <?php } ?>
             </select> </td>
         </tr>
@@ -44,11 +44,11 @@
           <td><?php echo $entry_thickbox; ?> </td>
           <td><select name="newslettersubscribe_thickbox">
               <?php if ($newslettersubscribe_thickbox) { ?>
-              <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-              <option value="0"><?php echo $text_disabled; ?></option>
+              <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+              <option value="0"><?php echo "Tắt"; ?></option>
               <?php } else { ?>
-              <option value="1"><?php echo $text_enabled; ?></option>
-              <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+              <option value="1"><?php echo "Bật"; ?></option>
+              <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
               <?php } ?>
             </select> </td>
         </tr>
@@ -60,11 +60,11 @@
           </td>
           <td><select name="newslettersubscribe_registered">
               <?php if ($newslettersubscribe_registered) { ?>
-              <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-              <option value="0"><?php echo $text_disabled; ?></option>
+              <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+              <option value="0"><?php echo "Tắt"; ?></option>
               <?php } else { ?>
-              <option value="1"><?php echo $text_enabled; ?></option>
-              <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+              <option value="1"><?php echo "Bật"; ?></option>
+              <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
               <?php } ?>
             </select></td>
         </tr>
@@ -208,11 +208,11 @@
 			  
 			<td class="left"><select name="newslettersubscribe_module[<?php echo $module_row; ?>][status]">
                 <?php if ($module['status']) { ?>
-                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                <option value="0"><?php echo $text_disabled; ?></option>
+                <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                <option value="0"><?php echo "Tắt"; ?></option>
                 <?php } else { ?>
-                <option value="1"><?php echo $text_enabled; ?></option>
-                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <option value="1"><?php echo "Bật"; ?></option>
+                <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                 <?php } ?>
               </select></td>
 			  
@@ -267,8 +267,8 @@ function addModule() {
 	
 	html += '    </select></td>';
 	html += '    <td class="left"><select name="newslettersubscribe_module[' + module_row + '][status]">';
-    html += '      <option value="1" selected="selected"><?php echo $text_enabled; ?></option>';
-    html += '      <option value="0"><?php echo $text_disabled; ?></option>';
+    html += '      <option value="1" selected="selected"><?php echo "Bật"; ?></option>';
+    html += '      <option value="0"><?php echo "Tắt"; ?></option>';
     html += '    </select></td>';
 	
 	

@@ -1,8 +1,9 @@
 <?php 
 class ModelSettingSetting extends Model {
 	public function getSetting($group, $store_id = 0) {
+	
 		$data = array(); 
-		$store_id = $this->session->data['store'];
+		//$store_id = $this->session->data['store'];
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '" . (int)$store_id . "' AND `group` = '" . $this->db->escape($group) . "'");
 		
 		foreach ($query->rows as $result) {
@@ -17,7 +18,11 @@ class ModelSettingSetting extends Model {
 	}
 	
 	public function editSetting($group, $data, $store_id = 0) {
-		$store_id = $this->session->data['store'];
+	
+		if($store_id==0)
+		$store_id =  $this->session->data['store'];
+		
+		//echo $this->session->data['store'];
 		
 		
 		$this->db->query("DELETE FROM " . DB_PREFIX . "setting WHERE store_id = '" . (int)$store_id . "' AND `group` = '" . $this->db->escape($group) . "'");
@@ -33,12 +38,14 @@ class ModelSettingSetting extends Model {
 	}
 	
 	public function deleteSetting($group, $store_id = 0) {
+		if($store_id==0)
 		$store_id = $this->session->data['store'];
 		$this->db->query("DELETE FROM " . DB_PREFIX . "setting WHERE store_id = '" . (int)$store_id . "' AND `group` = '" . $this->db->escape($group) . "'");
 	}
 	
 	public function editSettingValue($group = '', $key = '', $value = '', $store_id = 0) {
-	$store_id = $this->session->data['store'];
+		if($store_id==0)
+		$store_id = $this->session->data['store'];
 		if (!is_array($value)) {
 			$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape($value) . "' WHERE `group` = '" . $this->db->escape($group) . "' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '" . (int)$store_id . "'");
 		} else {

@@ -22,7 +22,7 @@ class ControllerCommonHome extends Controller {
 		$this->data['text_week'] = $this->language->get('text_week');
 		$this->data['text_month'] = $this->language->get('text_month');
 		$this->data['text_year'] = $this->language->get('text_year');
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 
 		$this->data['column_order'] = $this->language->get('column_order');
 		$this->data['column_customer'] = $this->language->get('column_customer');
@@ -130,7 +130,7 @@ class ControllerCommonHome extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

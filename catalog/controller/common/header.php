@@ -3,6 +3,12 @@ class ControllerCommonHeader extends Controller {
 	protected function index() {
 		$this->data['title'] = $this->document->getTitle();
 
+		//echo (int)$this->config->get('config_store_id') ;
+		
+		
+		
+		
+		
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
 			$server = $this->config->get('config_ssl');
 		} else {
@@ -147,6 +153,7 @@ class ControllerCommonHeader extends Controller {
 			$this->template = 'default/template/common/header.tpl';
 		}
 
+		
 		$this->render();
 	} 	
 }

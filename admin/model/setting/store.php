@@ -1,11 +1,63 @@
 <?php
 class ModelSettingStore extends Model {
-	public function addStore($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "store SET name = '" . $this->db->escape($data['config_name']) . "', `url` = '" . $this->db->escape($data['config_url']) . "', `ssl` = '" . $this->db->escape($data['config_ssl']) . "'");
-
+	public function addStore($data,$folder) {
+		$this->db->query("INSERT INTO " . DB_PREFIX . "store SET name = '" . $this->db->escape($data['config_name']) . "', `url` = '" . $this->db->escape($data['config_url']) . "', `ssl` = '" . $this->db->escape($data['config_ssl']) . "'  , folder = '" . $this->db->escape($folder) . "' ");
+		
+		$store_id = $this->db->getLastId();
+		
+		$array[] = array(
+		"name" =>"Account",
+		"url"  =>'account'		
+		);
+		$array[] = array(
+		"name" =>"Affiliate",
+		"url"  =>'affiliate/'		
+		);
+		$array[] = array(
+		"name" =>"Category",
+		"url"  =>'product/category'	
+		);
+		$array[] = array(
+		"name" =>"Checkout",
+		"url"  =>'checkout/'		
+		);
+		$array[] = array(
+		"name" =>"Contact",
+		"url"  =>'information/contact'	
+		);
+		$array[] = array(
+		"name" =>"Home",
+		"url"  =>'common/home'	
+		);
+		$array[] = array(
+		"name" =>"Product",
+		"url"  =>'product/product'	
+		);
+		$array[] = array(
+		"name" =>"Information",
+		"url"  =>'information/information'
+		);
+		$array[] = array(
+		"name" =>"Manufacturer",
+		"url"  =>'product/manufacturer'
+		);
+		$array[] = array(
+		"name" =>"Sitemap",
+		"url"  =>'information/sitemap'
+		);
+		
+		foreach($array as $row)
+		{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "layout SET name = '" .$row['name']. "' ");
+			$layout_id = $this->db->getLastId();
+			$this->db->query("INSERT INTO " . DB_PREFIX . "layout_route SET layout_id = '" .$layout_id. "' , store_id = '" .$store_id. "' , route = '" .$row['url']. "'   ");
+			
+		}
+		
 		$this->cache->delete('store');
-
-		return $this->db->getLastId();
+		
+		
+		return $store_id;
 	}
 
 	public function editStore($store_id, $data) {
@@ -46,14 +98,14 @@ class ModelSettingStore extends Model {
 	public function getStores($data = array()) {
 	
 	
-		$store_data = $this->cache->get('store');
+		$store_data = null;// $this->cache->get('store');
 
 		if (!$store_data) {
 			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "store ORDER BY url");
 
 			$store_data = $query->rows;
 
-			$this->cache->set('store', $store_data);
+			//$this->cache->set('store', $store_data);
 		}
 
 		return $store_data;

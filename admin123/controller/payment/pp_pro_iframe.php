@@ -20,7 +20,7 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_all_zones'] = $this->language->get('text_all_zones');
 		$this->data['text_yes'] = $this->language->get('text_yes');
 		$this->data['text_no'] = $this->language->get('text_no');
@@ -41,8 +41,8 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->data['entry_ipn_url'] = $this->language->get('entry_ipn_url');
 		$this->data['entry_debug'] = $this->language->get('entry_debug');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 
 		$this->data['tab_settings'] = $this->language->get('tab_settings');
 		$this->data['tab_order_status'] = $this->language->get('tab_order_status');
@@ -90,7 +90,7 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),       		
 			'separator' => false
 		);
@@ -272,7 +272,7 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->document->setTitle($this->language->get('text_refund'));
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['entry_transaction_id'] = $this->language->get('entry_transaction_id');
 		$this->data['entry_full_refund'] = $this->language->get('entry_full_refund');
 		$this->data['entry_amount'] = $this->language->get('entry_amount');
@@ -283,7 +283,7 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -575,7 +575,7 @@ class ControllerPaymentPPProIframe extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

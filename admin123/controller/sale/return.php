@@ -322,7 +322,7 @@ class ControllerSaleReturn extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -366,7 +366,7 @@ class ControllerSaleReturn extends Controller {
 			);
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('sale/return/update', 'token=' . $this->session->data['token'] . '&return_id=' . $result['return_id'] . $url, 'SSL')
 			);
 
@@ -386,7 +386,7 @@ class ControllerSaleReturn extends Controller {
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 
 		$this->data['column_return_id'] = $this->language->get('column_return_id');
 		$this->data['column_order_id'] = $this->language->get('column_order_id');
@@ -521,7 +521,7 @@ class ControllerSaleReturn extends Controller {
 		$pagination->total = $return_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/return', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -574,8 +574,8 @@ class ControllerSaleReturn extends Controller {
 		$this->data['entry_opened'] = $this->language->get('entry_opened');
 		$this->data['entry_action'] = $this->language->get('entry_action');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 
 		$this->data['tab_return'] = $this->language->get('tab_return');
 		$this->data['tab_product'] = $this->language->get('tab_product');
@@ -679,7 +679,7 @@ class ControllerSaleReturn extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -899,8 +899,8 @@ class ControllerSaleReturn extends Controller {
 			$this->data['entry_notify'] = $this->language->get('entry_notify');
 			$this->data['entry_comment'] = $this->language->get('entry_comment');
 
-			$this->data['button_save'] = $this->language->get('button_save');
-			$this->data['button_cancel'] = $this->language->get('button_cancel');
+			$this->data['button_save'] = 'Lưu';
+			$this->data['button_cancel'] = 'Trở lại';
 			$this->data['button_add_history'] = $this->language->get('button_add_history');				
 
 			$this->data['tab_return'] = $this->language->get('tab_return');
@@ -957,7 +957,7 @@ class ControllerSaleReturn extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('text_home'),
+				'text'      => "Trang Chủ",
 				'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);
@@ -1056,7 +1056,7 @@ class ControllerSaleReturn extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('text_home'),
+				'text'      => "Trang Chủ",
 				'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);
@@ -1175,7 +1175,7 @@ class ControllerSaleReturn extends Controller {
 			}
 		}
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 
 		$this->data['column_date_added'] = $this->language->get('column_date_added');
 		$this->data['column_status'] = $this->language->get('column_status');
@@ -1207,7 +1207,7 @@ class ControllerSaleReturn extends Controller {
 		$pagination->total = $history_total;
 		$pagination->page = $page;
 		$pagination->limit = 10; 
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('sale/return/history', 'token=' . $this->session->data['token'] . '&return_id=' . $this->request->get['return_id'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

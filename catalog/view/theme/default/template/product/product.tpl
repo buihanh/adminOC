@@ -1,254 +1,50 @@
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content" class="container" ><?php echo $content_top; ?>
-
+<div id="content"><?php echo $content_top; ?>
+  <div class="breadcrumb">
+    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
+    <?php } ?>
+  </div>
   <h1><?php echo $heading_title; ?></h1>
-
-
-
-
-
-<a target="_blank"  href="<?php  echo $href_demo; ?>">View demo</a>
-
-
-
   <div class="product-info">
-  
-  
-  <?php if ($images) { ?>
-  <script>
-	$( document ).ready(function() {
-
-            var _SlideshowTransitions = [
-            //Fade in R
-            {$Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
-            //Fade out L
-            , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 }
-            ];
-
-            var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
-
-                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
-                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
-                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
-                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
-                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
-                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
-                },
-
-                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
-                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
-                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                    $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
-                },
-
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 2,                                //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 2                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                },
-
-                $ThumbnailNavigatorOptions: {
-                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
-                    $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
-                }
-            };
-
-            var jssor_sliderb = new $JssorSlider$("sliderb_container", options);
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-                var parentWidth = jssor_sliderb.$Elmt.parentNode.clientWidth;
-                if (parentWidth)
-                    jssor_sliderb.$SetScaleWidth(Math.min(parentWidth, 1170));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
-
-            ScaleSlider();
-
-            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-                $(window).bind('resize', ScaleSlider);
-            }
-
-
-           
-	});
-	
-    </script>
-	
-	
-	
-	
-	
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="sliderb_container" style="position: relative; width: 1170px;
-        height: 500px; overflow: hidden;">
-
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(catalog/view/theme/default/image/loader.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div>
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1170px; height: 500px;
-            overflow: hidden;">
-			<?php foreach ($images as $image) { ?>			
-            <div>				
-                <img u=image src="<?php echo $image['popup']; ?>" />           
-            </div>			
-			<?php } ?>
-        </div>
-
-        <!-- ThumbnailNavigator Skin Begin 
-        <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:1170px;">
-            <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
-                background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-            <!-- Thumbnail Item Skin Begin 
-            <div u="slides">
-                <div u="prototype" style="POSITION: absolute; WIDTH: 1170px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
-                    <thumbnailtemplate style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
-                </div>
-            </div>
-            <!-- Thumbnail Item Skin End 
-			
-			
-			
-        </div>
-        <!-- ThumbnailNavigator Skin End -->
-       
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb01" style="position: absolute; border-radius:12px; bottom: 16px; right: 10px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype" style="POSITION: absolute; WIDTH: 12px; border-radius:12px; HEIGHT: 12px;"></div>
-        </div>
-        <!-- Bullet Navigator Skin End -->
-        
-     
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; border-radius:12px; top: 123px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; border-radius:12px; top: 123px; right: 8px">
-        </span>
-     
- </div>
-
-<?php } ?>
-  
-  
-    <div class="col-xs-12 col-sm-6">
-	        <div id="horizontalTab">
-            <ul class="resp-tabs-list">
-				<li><?php echo $tab_description; ?></li>
-					
-				<?php if ($review_status) { ?>
-					<li><?php echo $tab_review; ?></li>
-				<?php } ?>
-				
-            </ul>
-            <div class="resp-tabs-container">
-                <div>
-                   <?php echo $description; ?>
-                </div>
-				
-				
-				
-				
-				
-							
-		
-
-
-				
-				
-				
-                <div>
-                   <?php if ($review_status) { ?>
-						<div id="tab-review" class="tab-content">
-							<div id="review"></div>
-							<h2 id="review-title"><?php echo $text_write; ?></h2>
-							<b><?php echo $entry_name; ?></b><br />
-							<input type="text" name="name" value="" />
-							<br />
-							<br />
-							<b><?php echo $entry_review; ?></b>
-							<textarea name="text" cols="40" rows="8" style="width: 98%;"></textarea>
-							<span style="font-size: 11px;"><?php echo $text_note; ?></span><br />
-							<br />
-							<b><?php echo $entry_rating; ?></b> <span><?php echo $entry_bad; ?></span>&nbsp;
-							<input type="radio" name="rating" value="1" />
-							&nbsp;
-							<input type="radio" name="rating" value="2" />
-							&nbsp;
-							<input type="radio" name="rating" value="3" />
-							&nbsp;
-							<input type="radio" name="rating" value="4" />
-							&nbsp;
-							<input type="radio" name="rating" value="5" />
-							&nbsp;<span><?php echo $entry_good; ?></span><br />
-							<br />
-							<b><?php echo $entry_captcha; ?></b><br />
-							<input type="text" name="captcha" value="" />
-							<br />
-							<img src="index.php?route=product/product/captcha" alt="" id="captcha" /><br />
-							<br />
-							<div class="buttons">
-							  <div class="right"><a id="button-review" class="button"><?php echo $button_continue; ?></a></div>
-							</div>
-						  </div>
-				   <?php  } ?>
-                </div>
-               
-            </div>
-        </div>
-	
+    <?php if ($thumb || $images) { ?>
+    <div class="left">
+      <?php if ($thumb) { ?>
+      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
+      <?php } ?>
+      <?php if ($images) { ?>
+      <div class="image-additional">
+        <?php foreach ($images as $image) { ?>
+        <a href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
+        <?php } ?>
+      </div>
+      <?php } ?>
     </div>
-
-	 <div class="col-xs-12 col-sm-6">
-   
+    <?php } ?>
+    <div class="right">
       <div class="description">
         <?php if ($manufacturer) { ?>
         <span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
         <?php } ?>
-		
-		
-		
         <span><?php echo $text_model; ?></span> <?php echo $model; ?><br />
         <?php if ($reward) { ?>
         <span><?php echo $text_reward; ?></span> <?php echo $reward; ?><br />
         <?php } ?>
         <span><?php echo $text_stock; ?></span> <?php echo $stock; ?></div>
-		
-		
-		
-     
-       
+      <?php if ($price) { ?>
+      <div class="price"><?php echo $text_price; ?>
+        <?php if (!$special) { ?>
+        <?php echo $price; ?>
+        <?php } else { ?>
+        <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>
+        <?php } ?>
+        <br />
+        <?php if ($tax) { ?>
+        <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span><br />
+        <?php } ?>
+        <?php if ($points) { ?>
+        <span class="reward"><small><?php echo $text_points; ?> <?php echo $points; ?></small></span><br />
+        <?php } ?>
         <?php if ($discounts) { ?>
         <br />
         <div class="discount">
@@ -257,8 +53,8 @@
           <?php } ?>
         </div>
         <?php } ?>
-     
-      
+      </div>
+      <?php } ?>
       <?php if ($profiles): ?>
       <div class="option">
           <h2><span class="required">*</span><?php echo $text_payment_profile ?></h2>
@@ -422,41 +218,100 @@
         <?php } ?>
       </div>
       <?php } ?>
-	  
-	   <?php if ($price) { ?>
-      <div class="price"><?php echo $text_price; ?>
-        <?php if (!$special) { ?>
-        <?php echo $price; ?>
-        <?php } else { ?>
-        <span class="price-old"><?php echo $price; ?></span> <span class="price-new"><?php echo $special; ?></span>
-        <?php } ?>
-		</div>
-	  <?php } ?>
       <div class="cart">
         <div><?php echo $text_qty; ?>
           <input type="text" name="quantity" size="2" value="<?php echo $minimum; ?>" />
           <input type="hidden" name="product_id" size="2" value="<?php echo $product_id; ?>" />
           &nbsp;
           <input type="button" value="<?php echo $button_cart; ?>" id="button-cart" class="button" />
-         </div>
-  
+          <span>&nbsp;&nbsp;<?php echo $text_or; ?>&nbsp;&nbsp;</span>
+          <span class="links"><a onclick="addToWishList('<?php echo $product_id; ?>');"><?php echo $button_wishlist; ?></a><br />
+            <a onclick="addToCompare('<?php echo $product_id; ?>');"><?php echo $button_compare; ?></a></span>
+        </div>
+        <?php if ($minimum > 1) { ?>
+        <div class="minimum"><?php echo $text_minimum; ?></div>
+        <?php } ?>
       </div>
-  
+      <?php if ($review_status) { ?>
+      <div class="review">
+        <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
+        <div class="share"><!-- AddThis Button BEGIN -->
+          <div class="addthis_default_style"><a class="addthis_button_compact"><?php echo $text_share; ?></a> <a class="addthis_button_email"></a><a class="addthis_button_print"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a></div>
+          <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script> 
+          <!-- AddThis Button END --> 
+        </div>
+      </div>
+      <?php } ?>
     </div>
-	
-	
   </div>
-  
-  
-  
-  
-  
-  
- 
-
-
-  
-  <?php /* if ($products) { ?>
+  <div id="tabs" class="htabs"><a href="#tab-description"><?php echo $tab_description; ?></a>
+    <?php if ($attribute_groups) { ?>
+    <a href="#tab-attribute"><?php echo $tab_attribute; ?></a>
+    <?php } ?>
+    <?php if ($review_status) { ?>
+    <a href="#tab-review"><?php echo $tab_review; ?></a>
+    <?php } ?>
+    <?php if ($products) { ?>
+    <a href="#tab-related"><?php echo $tab_related; ?> (<?php echo count($products); ?>)</a>
+    <?php } ?>
+  </div>
+  <div id="tab-description" class="tab-content"><?php echo $description; ?></div>
+  <?php if ($attribute_groups) { ?>
+  <div id="tab-attribute" class="tab-content">
+    <table class="attribute">
+      <?php foreach ($attribute_groups as $attribute_group) { ?>
+      <thead>
+        <tr>
+          <td colspan="2"><?php echo $attribute_group['name']; ?></td>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+        <tr>
+          <td><?php echo $attribute['name']; ?></td>
+          <td><?php echo $attribute['text']; ?></td>
+        </tr>
+        <?php } ?>
+      </tbody>
+      <?php } ?>
+    </table>
+  </div>
+  <?php } ?>
+  <?php if ($review_status) { ?>
+  <div id="tab-review" class="tab-content">
+    <div id="review"></div>
+    <h2 id="review-title"><?php echo $text_write; ?></h2>
+    <b><?php echo $entry_name; ?></b><br />
+    <input type="text" name="name" value="" />
+    <br />
+    <br />
+    <b><?php echo $entry_review; ?></b>
+    <textarea name="text" cols="40" rows="8" style="width: 98%;"></textarea>
+    <span style="font-size: 11px;"><?php echo $text_note; ?></span><br />
+    <br />
+    <b><?php echo $entry_rating; ?></b> <span><?php echo $entry_bad; ?></span>&nbsp;
+    <input type="radio" name="rating" value="1" />
+    &nbsp;
+    <input type="radio" name="rating" value="2" />
+    &nbsp;
+    <input type="radio" name="rating" value="3" />
+    &nbsp;
+    <input type="radio" name="rating" value="4" />
+    &nbsp;
+    <input type="radio" name="rating" value="5" />
+    &nbsp;<span><?php echo $entry_good; ?></span><br />
+    <br />
+    <b><?php echo $entry_captcha; ?></b><br />
+    <input type="text" name="captcha" value="" />
+    <br />
+    <img src="index.php?route=product/product/captcha" alt="" id="captcha" /><br />
+    <br />
+    <div class="buttons">
+      <div class="right"><a id="button-review" class="button"><?php echo $button_continue; ?></a></div>
+    </div>
+  </div>
+  <?php } ?>
+  <?php if ($products) { ?>
   <div id="tab-related" class="tab-content">
     <div class="box-product">
       <?php foreach ($products as $product) { ?>
@@ -481,42 +336,7 @@
       <?php } ?>
     </div>
   </div>
-  <?php } */ ?>
-  
-  <?php if ($products) { ?>
-  <ul id="flexiselDemo1"> 
-   <?php foreach ($products as $product) { ?>
-    <li>
-		<img src="<?php echo $product['thumb']; ?>" />
-		<div class="name_last"><a href="<?php echo $product['href']; ?>">		
-		<?php echo $product['name']; ?></a><br/>
-			<span ><?php echo $product['price']; ?></span>
-		</div>
-	</li>
-		
-	<?php } ?>
-	</ul>
-<?php }
- ?>
-<script type="text/javascript">
-
-$(window).load(function() {
-	
-    $("#flexiselDemo1").flexisel({
-		visibleItems: 3
-	});   
-});
-</script>
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <?php } ?>
   <?php if ($tags) { ?>
   <div class="tags"><b><?php echo $text_tags; ?></b>
     <?php for ($i = 0; $i < count($tags); $i++) { ?>
@@ -674,35 +494,9 @@ $('#button-review').bind('click', function() {
 	});
 });
 //--></script> 
-
-<link type="text/css" rel="stylesheet" href="catalog/view/theme/default/stylesheet/easy-responsive-tabs.css" />
-
-<script src="catalog/view/javascript/easyResponsiveTabs.js" type="text/javascript"></script>
-
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#horizontalTab').easyResponsiveTabs({
-            type: 'default', //Types: default, vertical, accordion           
-            width: 'auto', //auto or any width like 600px
-            fit: true,   // 100% fit in a container
-            closed: 'accordion', // Start closed if in accordion view
-            activate: function(event) { // Callback function if tab is switched
-                var $tab = $(this);
-                var $info = $('#tabInfo');
-                var $name = $('span', $info);
-
-                $name.text($tab.text());
-
-                $info.show();
-            }
-        });
-
-     
-    });
-</script>
-
-
+<script type="text/javascript"><!--
+$('#tabs a').tabs();
+//--></script> 
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-timepicker-addon.js"></script> 
 <script type="text/javascript"><!--
 $(document).ready(function() {
@@ -718,25 +512,4 @@ $(document).ready(function() {
 	$('.time').timepicker({timeFormat: 'h:m'});
 });
 //--></script> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php echo $footer; ?>

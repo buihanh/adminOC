@@ -88,11 +88,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_status">
                   <?php if ($royal_mail_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -116,11 +116,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_1st_class_standard_status">
                   <?php if ($royal_mail_1st_class_standard_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -140,11 +140,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_1st_class_recorded_status">
                   <?php if ($royal_mail_1st_class_recorded_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -160,11 +160,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_2nd_class_standard_status">
                   <?php if ($royal_mail_2nd_class_standard_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -184,11 +184,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_2nd_class_recorded_status">
                   <?php if ($royal_mail_2nd_class_recorded_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -208,11 +208,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_special_delivery_500_status">
                   <?php if ($royal_mail_special_delivery_500_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -232,11 +232,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_special_delivery_1000_status">
                   <?php if ($royal_mail_special_delivery_1000_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -256,11 +256,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_special_delivery_2500_status">
                   <?php if ($royal_mail_special_delivery_2500_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -280,11 +280,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_standard_parcels_status">
                   <?php if ($royal_mail_standard_parcels_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -304,11 +304,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_airmail_status">
                   <?php if ($royal_mail_airmail_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -336,11 +336,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_international_signed_status">
                   <?php if ($royal_mail_international_signed_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -368,11 +368,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_airsure_status">
                   <?php if ($royal_mail_airsure_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>
@@ -388,11 +388,11 @@
               <td><?php echo $entry_status; ?></td>
               <td><select name="royal_mail_surface_status">
                   <?php if ($royal_mail_surface_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
             </tr>

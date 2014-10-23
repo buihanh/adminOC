@@ -51,7 +51,7 @@
 				'module/currency',
 			]]></search>
 			<add><![CDATA[
-				'module/carttop',
+				//'module/carttop',
 			]]></add>
 		</operation>	
 	</file>	

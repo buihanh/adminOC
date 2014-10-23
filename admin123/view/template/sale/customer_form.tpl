@@ -79,11 +79,11 @@
                 <td><?php echo $entry_newsletter; ?></td>
                 <td><select  class="form-control" name="newsletter">
                     <?php if ($newsletter) { ?>
-                    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                    <option value="0"><?php echo $text_disabled; ?></option>
+                    <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                    <option value="0"><?php echo "Tắt"; ?></option>
                     <?php } else { ?>
-                    <option value="1"><?php echo $text_enabled; ?></option>
-                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                    <option value="1"><?php echo "Bật"; ?></option>
+                    <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                     <?php } ?>
                   </select></td>
               </tr>
@@ -103,11 +103,11 @@
                 <td><?php echo $entry_status; ?></td>
                 <td><select  class="form-control" name="status">
                     <?php if ($status) { ?>
-                    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                    <option value="0"><?php echo $text_disabled; ?></option>
+                    <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                    <option value="0"><?php echo "Tắt"; ?></option>
                     <?php } else { ?>
-                    <option value="1"><?php echo $text_enabled; ?></option>
-                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                    <option value="1"><?php echo "Bật"; ?></option>
+                    <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                     <?php } ?>
                   </select></td>
               </tr>

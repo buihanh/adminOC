@@ -31,7 +31,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -98,7 +98,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -455,7 +455,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -668,7 +668,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -717,7 +717,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -766,7 +766,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -812,7 +812,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -866,7 +866,7 @@ class ControllerOpenbayOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -911,7 +911,7 @@ class ControllerOpenbayOpenbay extends Controller {
 		$pagination->total = $total_linked;
 		$pagination->page = $linked_item_page;
 		$pagination->limit = 100;
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('openbay/openbay/viewItemLinks', 'token=' . $this->session->data['token'] . '&linked_item_page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

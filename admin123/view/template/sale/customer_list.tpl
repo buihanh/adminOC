@@ -103,14 +103,14 @@
               <td><select class="form-control" name="filter_status">
                   <option value="*"></option>
                   <?php if ($filter_status) { ?>
-                  <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
+                  <option value="1" selected="selected"><?php echo "Bật"; ?></option>
                   <?php } else { ?>
-                  <option value="1"><?php echo $text_enabled; ?></option>
+                  <option value="1"><?php echo "Bật"; ?></option>
                   <?php } ?>
                   <?php if (!is_null($filter_status) && !$filter_status) { ?>
-                  <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                  <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                   <?php } else { ?>
-                  <option value="0"><?php echo $text_disabled; ?></option>
+                  <option value="0"><?php echo "Tắt"; ?></option>
                   <?php } ?>
                 </select></td>
               <td><select class="form-control" name="filter_approved">

@@ -20,7 +20,7 @@ class ControllerReportProductViewed extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -63,7 +63,7 @@ class ControllerReportProductViewed extends Controller {
 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] = 'Không có dữ liệu!';
 
 		$this->data['column_name'] = $this->language->get('column_name');
 		$this->data['column_model'] = $this->language->get('column_model');
@@ -92,7 +92,7 @@ class ControllerReportProductViewed extends Controller {
 		$pagination->total = $product_viewed_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('report/product_viewed', 'token=' . $this->session->data['token'] . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

@@ -146,7 +146,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),      		
 			'separator' => false
 		);
@@ -177,7 +177,7 @@ class ControllerLocalisationTaxClass extends Controller {
 			$action = array();
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('localisation/tax_class/update', 'token=' . $this->session->data['token'] . '&tax_class_id=' . $result['tax_class_id'] . $url, 'SSL')
 			);
 
@@ -241,7 +241,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$pagination->total = $tax_class_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -271,8 +271,8 @@ class ControllerLocalisationTaxClass extends Controller {
 		$this->data['entry_based'] = $this->language->get('entry_based');
 		$this->data['entry_priority'] = $this->language->get('entry_priority');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['button_add_rule'] = $this->language->get('button_add_rule');
 		$this->data['button_remove'] = $this->language->get('button_remove');
 
@@ -311,7 +311,7 @@ class ControllerLocalisationTaxClass extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

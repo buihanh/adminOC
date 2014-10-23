@@ -96,11 +96,11 @@
                 <td><?php echo $entry_status; ?></td>
                 <td><select name="klarna_account[<?php echo $country['code']; ?>][status]">
                     <?php if (isset($klarna_account[$country['code']]) && $klarna_account[$country['code']]['status']) { ?>
-                    <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                    <option value="0"><?php echo $text_disabled; ?></option>
+                    <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                    <option value="0"><?php echo "Tắt"; ?></option>
                     <?php } else { ?>
-                    <option value="1"><?php echo $text_enabled; ?></option>
-                    <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                    <option value="1"><?php echo "Bật"; ?></option>
+                    <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                     <?php } ?>
                   </select></td>
               </tr>

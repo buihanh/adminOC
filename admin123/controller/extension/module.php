@@ -8,7 +8,7 @@ class ControllerExtensionModule extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -74,7 +74,7 @@ class ControllerExtensionModule extends Controller {
 					);
 				} else {
 					$action[] = array(
-						'text' => $this->language->get('text_edit'),
+						'text' => 'Sửa',
 						'href' => $this->url->link('module/' . $extension . '', 'token=' . $this->session->data['token'], 'SSL')
 					);
 

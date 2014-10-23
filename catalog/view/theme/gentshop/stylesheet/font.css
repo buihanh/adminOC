@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansBlack.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBlack.eot?*/ format("eot"), url("PlutoSansBlack.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBlack.otf*/ format("opentype"), url("PlutoSansBlack.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBlack.woff*/ format("woff"), url("PlutoSansBlack.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBlack.ttf*/ format("truetype"), url("PlutoSansBlack.svg#pluto")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBlack.svg#pluto*/ format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansBold.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBold.eot?*/ format("eot"), url("PlutoSansBold.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBold.otf*/ format("opentype"), url("PlutoSansBold.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBold.woff*/ format("woff"), url("PlutoSansBold.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBold.ttf*/ format("truetype"), url("PlutoSansBold.svg#pluto")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansBold.svg#pluto*/ format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansHeavy.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansHeavy.eot?*/ format("eot"), url("PlutoSansHeavy.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansHeavy.otf*/ format("opentype"), url("PlutoSansHeavy.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansHeavy.woff*/ format("woff"), url("PlutoSansHeavy.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansHeavy.ttf*/ format("truetype"), url("PlutoSansHeavy.svg#pluto")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansHeavy.svg#pluto*/ format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansRegular.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansRegular.eot?*/ format("eot"), url("PlutoSansRegular.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansRegular.otf*/ format("opentype"), url("PlutoSansRegular.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansRegular.woff*/ format("woff"), url("PlutoSansRegular.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansRegular.ttf*/ format("truetype"), url("PlutoSansRegular.svg#PlutoSansRegular")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansRegular.svg#PlutoSansRegular*/ format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansLight.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansLight.eot?*/ format("eot"), url("PlutoSansLight.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansLight.otf*/ format("opentype"), url("PlutoSansLight.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansLight.woff*/ format("woff"), url("PlutoSansLight.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansLight.ttf*/ format("truetype"), url("PlutoSansLight.svg#PlutoSansLight")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansLight.svg#PlutoSansLight*/ format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pluto';
+  src: url("PlutoSansExtraLight.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansExtraLight.eot?*/ format("eot"), url("PlutoSansExtraLight.otf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansExtraLight.otf*/ format("opentype"), url("PlutoSansExtraLight.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansExtraLight.woff*/ format("woff"), url("PlutoSansExtraLight.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansExtraLight.ttf*/ format("truetype"), url("PlutoSansExtraLight.svg#pluto")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/plutosans/PlutoSansExtraLight.svg#pluto*/ format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bebas_neue';
+  src: url("bebasneue_bold-webfont.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_bold-webfont.eot*/;
+  src: url("bebasneue_bold-webfont.eot-#iefix")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_bold-webfont.eot?#iefix*/ format("embedded-opentype"), url("bebasneue_bold-webfont.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_bold-webfont.woff*/ format("woff"), url("bebasneue_bold-webfont.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_bold-webfont.ttf*/ format("truetype"), url("bebasneue_bold-webfont.svg#bebas_neue")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_bold-webfont.svg#bebas_neue*/ format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bebas_neue';
+  src: url("bebasneue_book-webfont.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_book-webfont.eot*/;
+  src: url("bebasneue_book-webfont.eot-#iefix")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_book-webfont.eot?#iefix*/ format("embedded-opentype"), url("bebasneue_book-webfont.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_book-webfont.woff*/ format("woff"), url("bebasneue_book-webfont.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_book-webfont.ttf*/ format("truetype"), url("bebasneue_book-webfont.svg#bebas_neue")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_book-webfont.svg#bebas_neue*/ format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bebas_neue';
+  src: url("bebasneue_regular-webfont.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_regular-webfont.eot*/;
+  src: url("bebasneue_regular-webfont.eot-#iefix")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_regular-webfont.eot?#iefix*/ format("embedded-opentype"), url("bebasneue_regular-webfont.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_regular-webfont.woff*/ format("woff"), url("bebasneue_regular-webfont.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_regular-webfont.ttf*/ format("truetype"), url("bebasneue_regular-webfont.svg#bebas_neue")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_regular-webfont.svg#bebas_neue*/ format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bebas_neue';
+  src: url("bebasneue_light-webfont.eot")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_light-webfont.eot*/;
+  src: url("bebasneue_light-webfont.eot-#iefix")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_light-webfont.eot?#iefix*/ format("embedded-opentype"), url("bebasneue_light-webfont.woff")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_light-webfont.woff*/ format("woff"), url("bebasneue_light-webfont.ttf")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_light-webfont.ttf*/ format("truetype"), url("bebasneue_light-webfont.svg#bebas_neue")/*tpa=http://www.themelexus.com/demo/opencart/gentshop/d/catalog/view/theme/lexus_gentshop/fonts/bebasneue/bebasneue_light-webfont.svg#bebas_neue*/ format("svg");
+  font-weight: 300;
+  font-style: normal;
+}

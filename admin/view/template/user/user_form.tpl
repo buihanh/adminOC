@@ -67,6 +67,17 @@
               <span class="error"><?php echo $error_confirm; ?></span>
               <?php  } ?></td>
           </tr>
+
+
+            <tr>
+                <td>Store</td>
+                <td><select id="store_id" name="store_id"  >
+                    <?php   foreach($arrstores as $stor) { ?>
+                    <option <?php  if($store_id==$stor['store_id']) echo "selected='selected'"; ?>  value="<?php echo $stor['store_id'];  ?>"><?php echo $stor['name'];  ?></option>
+                    <?php } ?>
+                </select></td>
+            </tr>
+
           <tr>
             <td><?php echo $entry_status; ?></td>
             <td><select name="status">

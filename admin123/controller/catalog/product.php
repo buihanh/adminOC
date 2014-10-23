@@ -321,7 +321,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -360,7 +360,7 @@ class ControllerCatalogProduct extends Controller {
 			$action = array();
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('catalog/product/update', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, 'SSL')
 			);
 
@@ -405,9 +405,9 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->data['heading_title'] = $this->language->get('heading_title');		
 
-		$this->data['text_enabled'] = $this->language->get('text_enabled');		
-		$this->data['text_disabled'] = $this->language->get('text_disabled');		
-		$this->data['text_no_results'] = $this->language->get('text_no_results');		
+		$this->data['text_enabled'] = 'Bật';		
+		$this->data['text_disabled'] = 'Tắt';		
+		$this->data['text_no_results'] = 'Không có dữ liệu!';	
 		$this->data['text_image_manager'] = $this->language->get('text_image_manager');		
 
 		$this->data['column_image'] = $this->language->get('column_image');		
@@ -512,7 +512,7 @@ class ControllerCatalogProduct extends Controller {
 		$pagination->total = $product_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -538,11 +538,11 @@ class ControllerCatalogProduct extends Controller {
 	protected function getForm() {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
-		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = 'Bật';
+		$this->data['text_disabled'] = 'Tắt';
 		$this->data['text_none'] = $this->language->get('text_none');
-		$this->data['text_yes'] = $this->language->get('text_yes');
-		$this->data['text_no'] = $this->language->get('text_no');
+		$this->data['text_yes'] = 'Có';
+		$this->data['text_no'] = 'Không';
 		$this->data['text_plus'] = $this->language->get('text_plus');
 		$this->data['text_minus'] = $this->language->get('text_minus');
 		$this->data['text_default'] = $this->language->get('text_default');
@@ -626,8 +626,8 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['text_length_month_semi'] = $this->language->get('text_length_month_semi');
 		$this->data['text_length_year'] = $this->language->get('text_length_year');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 		$this->data['button_add_attribute'] = $this->language->get('button_add_attribute');
 		$this->data['button_add_option'] = $this->language->get('button_add_option');
 		$this->data['button_add_option_value'] = $this->language->get('button_add_option_value');
@@ -723,7 +723,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

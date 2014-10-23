@@ -90,7 +90,7 @@ class ControllerSettingStore extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -109,7 +109,7 @@ class ControllerSettingStore extends Controller {
 		$action = array();
 
 		$action[] = array(
-			'text' => $this->language->get('text_edit'),
+			'text' => 'Sửa',
 			'href' => $this->url->link('setting/setting', 'token=' . $this->session->data['token'], 'SSL')
 		);
 
@@ -129,7 +129,7 @@ class ControllerSettingStore extends Controller {
 			$action = array();
 
 			$action[] = array(
-				'text' => $this->language->get('text_edit'),
+				'text' => 'Sửa',
 				'href' => $this->url->link('setting/store/update', 'token=' . $this->session->data['token'] . '&store_id=' . $result['store_id'], 'SSL')
 			);
 
@@ -238,8 +238,8 @@ class ControllerSettingStore extends Controller {
 		$this->data['entry_image_cart'] = $this->language->get('entry_image_cart');
 		$this->data['entry_secure'] = $this->language->get('entry_secure');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 
 		$this->data['tab_general'] = $this->language->get('tab_general');
 		$this->data['tab_store'] = $this->language->get('tab_store');
@@ -365,7 +365,7 @@ class ControllerSettingStore extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

@@ -3,17 +3,15 @@ class ModelCatalogInformation extends Model {
 	public function addInformation($data) {
 		$this->db->query("INSERT INTO " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', status = '" . (int)$data['status'] . "'");
 
-		$information_id = $this->db->getLastId(); 
+		$information_id = $this->db->getLastId();
 
 		foreach ($data['information_description'] as $language_id => $value) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "', description = '" . $this->db->escape($value['description']) . "'");
 		}
 
-		if (isset($data['information_store'])) {
-			foreach ($data['information_store'] as $store_id) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "information_to_store SET information_id = '" . (int)$information_id . "', store_id = '" . (int)$store_id . "'");
-			}
-		}
+
+		$this->db->query("INSERT INTO " . DB_PREFIX . "information_to_store SET information_id = '" . (int)$information_id . "', store_id = '" . (int)$this->user->getStoreID(). "'");
+
 
 		if (isset($data['information_layout'])) {
 			foreach ($data['information_layout'] as $store_id => $layout) {
@@ -39,13 +37,11 @@ class ModelCatalogInformation extends Model {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "', description = '" . $this->db->escape($value['description']) . "'");
 		}
 
-		$this->db->query("DELETE FROM " . DB_PREFIX . "information_to_store WHERE information_id = '" . (int)$information_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "information_to_store WHERE information_id = '" . (int)$information_id . "'  and store_id = '".(int)$this->user->getStoreID()."' ");
 
-		if (isset($data['information_store'])) {
-			foreach ($data['information_store'] as $store_id) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "information_to_store SET information_id = '" . (int)$information_id . "', store_id = '" . (int)$store_id . "'");
-			}
-		}
+
+		$this->db->query("INSERT INTO " . DB_PREFIX . "information_to_store SET information_id = '" . (int)$information_id . "', store_id = '" . (int)$this->user->getStoreID(). "'");
+
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "information_to_layout WHERE information_id = '" . (int)$information_id . "'");
 
@@ -74,7 +70,7 @@ class ModelCatalogInformation extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "url_alias WHERE query = 'information_id=" . (int)$information_id . "'");
 
 		$this->cache->delete('information');
-	}	
+	}
 
 	public function getInformation($information_id) {
 		$query = $this->db->query("SELECT DISTINCT *, (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'information_id=" . (int)$information_id . "') AS keyword FROM " . DB_PREFIX . "information WHERE information_id = '" . (int)$information_id . "'");
@@ -84,17 +80,17 @@ class ModelCatalogInformation extends Model {
 
 	public function getInformations($data = array()) {
 		if ($data) {
-			$sql = "SELECT * FROM " . DB_PREFIX . "information i LEFT JOIN " . DB_PREFIX . "information_description id ON (i.information_id = id.information_id) WHERE id.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+            $sql = "SELECT * FROM " . DB_PREFIX . "information i LEFT JOIN " . DB_PREFIX . "information_description id ON (i.information_id = id.information_id)  JOIN " . DB_PREFIX . "information_to_store s on (s.information_id = i.information_id)   WHERE s.store_id = '".$this->user->getStoreID()."' and id.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
-			$sort_data = array(
+            $sort_data = array(
 				'id.title',
 				'i.sort_order'
-			);		
+			);
 
 			if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
-				$sql .= " ORDER BY " . $data['sort'];	
+				$sql .= " ORDER BY " . $data['sort'];
 			} else {
-				$sql .= " ORDER BY id.title";	
+				$sql .= " ORDER BY id.title";
 			}
 
 			if (isset($data['order']) && ($data['order'] == 'DESC')) {
@@ -106,14 +102,14 @@ class ModelCatalogInformation extends Model {
 			if (isset($data['start']) || isset($data['limit'])) {
 				if ($data['start'] < 0) {
 					$data['start'] = 0;
-				}		
+				}
 
 				if ($data['limit'] < 1) {
 					$data['limit'] = 20;
-				}	
+				}
 
 				$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-			}	
+			}
 
 			$query = $this->db->query($sql);
 
@@ -127,9 +123,9 @@ class ModelCatalogInformation extends Model {
 				$information_data = $query->rows;
 
 				$this->cache->set('information.' . (int)$this->config->get('config_language_id'), $information_data);
-			}	
+			}
 
-			return $information_data;			
+			return $information_data;
 		}
 	}
 
@@ -172,16 +168,16 @@ class ModelCatalogInformation extends Model {
 		return $information_layout_data;
 	}
 
-	public function getTotalInformations() {
-		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "information");
+    public function getTotalInformations() {
+        $query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "information  i JOIN " . DB_PREFIX . "information_to_store s on (s.information_id = i.information_id)   WHERE s.store_id = '".$this->user->getStoreID()."' ");
 
-		return $query->row['total'];
-	}	
+        return $query->row['total'];
+    }
 
 	public function getTotalInformationsByLayoutId($layout_id) {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "information_to_layout WHERE layout_id = '" . (int)$layout_id . "'");
 
 		return $query->row['total'];
-	}	
+	}
 }
 ?>

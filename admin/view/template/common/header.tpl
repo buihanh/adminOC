@@ -267,8 +267,8 @@ $(document).ready(function(){
     <ul class="right" style="display: none;">
 	<li>
 		<select class="fconchangestore" onchange="fconchangestore(this.value);"  >
-		<?php foreach($arrstores as $store) { ?>
-			<option <?php  if($store['storeselect']==$store['store_id']) echo "selected='selected'"; ?>  value="<?php echo $store['store_id'];  ?>"><?php echo $store['name'];  ?></option>
+		<?php   foreach($arrstores as $stor) { ?>
+			<option <?php  if($stor['storeselect']==$stor['store_id']) echo "selected='selected'"; ?>  value="<?php echo $stor['store_id'];  ?>"><?php echo $stor['name'];  ?></option>
 		<?php } ?>
 		</select>
 	</li>	

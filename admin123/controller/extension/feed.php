@@ -8,7 +8,7 @@ class ControllerExtensionFeed extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -75,7 +75,7 @@ class ControllerExtensionFeed extends Controller {
 					);
 				} else {
 					$action[] = array(
-						'text' => $this->language->get('text_edit'),
+						'text' => 'Sửa',
 						'href' => $this->url->link('feed/' . $extension . '', 'token=' . $this->session->data['token'], 'SSL')
 					);
 
@@ -87,7 +87,7 @@ class ControllerExtensionFeed extends Controller {
 
 				$this->data['extensions'][] = array(
 					'name'   => $this->language->get('heading_title'),
-					'status' => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
+					'status' => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_enabled'),
 					'action' => $action
 				);
 			}

@@ -40,8 +40,10 @@ class ControllerCommonContentTop extends Controller {
 
 		$this->load->model('setting/extension');
 
-		$extensions = $this->model_setting_extension->getExtensions('module');		
-
+		$extensions = $this->model_setting_extension->getExtensions('module');
+/* echo "<pre>";		
+print_r($extensions);		
+die; */
 		foreach ($extensions as $extension) {
 			$modules = $this->config->get($extension['code'] . '_module');
 

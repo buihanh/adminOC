@@ -1,0 +1,85 @@
+/**
+ * Web Application Prefix Apply For Making Owner Styles
+ */
+/**
+ *   Blocks Layout Selectors 
+ */
+/**
+ * Product Item Selectors
+ */
+/***********************************************************************/
+/*  
+ * LAYOUT VARIABLES 
+ */
+/**
+* Transition-timing-function property@mixin 
+*/
+/*background RGBA
+============================================*/
+/****/
+/* RIGHT TO LEFT */
+.box-module-pavreassurances {
+  padding: 0 15px;
+  overflow: hidden;
+}
+.box-module-pavreassurances .box-outer > div {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+.box-module-pavreassurances .column {
+  position: inherit;
+}
+.box-module-pavreassurances .icon-name {
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+  display: inline-block;
+}
+.box-module-pavreassurances .reassurances-center {
+  padding: 30px 0 20px;
+  text-align: center;
+}
+.box-module-pavreassurances .reassurances-center .reassurance-title {
+  text-transform: uppercase;
+  font-family: "bebas_neue";
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.box-module-pavreassurances .reassurances-center .description {
+  color: #c6c6c6;
+}
+.box-module-pavreassurances .reassurances-center .read-more .icon-read-more {
+  color: #6cabd5;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.box-module-pavreassurances .reassurances-center .read-more .icon-read-more:hover {
+  color: white;
+}
+.box-module-pavreassurances .reassurances-center:hover .reassurance-title {
+  letter-spacing: 4px;
+}
+.box-module-pavreassurances .reassurances-center:hover .read-more .icon-read-more {
+  cursor: pointer;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.title_detail h4 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 50px;
+}
+.title_detail .icon-name {
+  color: #2E3A47;
+  font-size: 170px;
+  margin: 0 20px;
+}
+.title_detail p {
+  color: #8C8C8C;
+  font-size: 15px;
+  margin: 25px 0 0;
+}

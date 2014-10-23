@@ -1,6 +1,9 @@
 <?php 
 class ControllerCommonHeader extends Controller {
 	protected function index() {
+
+
+
 		$this->data['title'] = $this->document->getTitle(); 
 
 		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
@@ -125,6 +128,8 @@ class ControllerCommonHeader extends Controller {
 			$this->data['home'] = $this->url->link('common/login', '', 'SSL');
 		} else {
 			$this->data['logged'] = sprintf($this->language->get('text_logged'), $this->user->getUserName());
+
+
 
 
             $this->data['username'] =  $this->user->getUserName();

@@ -11,7 +11,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -112,7 +112,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -161,7 +161,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -276,7 +276,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -420,7 +420,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -469,7 +469,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -793,7 +793,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -924,7 +924,7 @@ class ControllerOpenbayAmazon extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $this->config->get('config_admin_limit');
-			$pagination->text = $this->language->get('text_pagination');
+			$pagination->text = "Phân trang";
 			$pagination->url = $this->url->link('openbay/amazon/bulkListProducts', 'token=' . $this->session->data['token'] . '&page={page}&filter_marketplace=' . $filter_marketplace, 'SSL');
 
 			$this->data['pagination'] = $pagination->render();
@@ -951,7 +951,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 		$this->data['breadcrumbs'][] = array(
@@ -1043,7 +1043,7 @@ class ControllerOpenbayAmazon extends Controller {
 		$pagination->total = $total_linked;
 		$pagination->page = $linked_item_page;
 		$pagination->limit = $linked_item_limit;
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('openbay/amazon/bulkLinking', 'token=' . $this->session->data['token'] . '&linked_item_page={page}&marketplace='.$marketplace_code, 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

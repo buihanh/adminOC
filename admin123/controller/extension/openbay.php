@@ -12,7 +12,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'href' => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -71,7 +71,7 @@ class ControllerExtensionOpenbay extends Controller {
 				);
 			} else {
 				$action[] = array(
-					'text' => $this->language->get('text_edit'),
+					'text' => 'Sửa',
 					'href' => $this->url->link('openbay/' . $extension, 'token=' . $this->session->data['token'], 'SSL')
 				);
 
@@ -83,7 +83,7 @@ class ControllerExtensionOpenbay extends Controller {
 
 			$this->data['extensions'][] = array(
 				'name' => $this->language->get('heading_title'),
-				'status' => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
+				'status' => $this->config->get($extension . '_status') ? $this->language->get('text_enabled') : $this->language->get('text_enabled'),
 				'action' => $action
 			);
 		}
@@ -272,7 +272,7 @@ class ControllerExtensionOpenbay extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => HTTPS_SERVER . 'index.php?route=common/home&token=' . $this->session->data['token'],
-			'text' => $this->language->get('text_home'),
+			'text' => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -577,7 +577,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -620,7 +620,7 @@ class ControllerExtensionOpenbay extends Controller {
 
 			if (strtotime($result['date_added']) > strtotime('-' . (int)$this->config->get('config_order_edit') . ' day')) {
 				$action[] = array(
-					'text' => $this->language->get('text_edit'),
+					'text' => 'Sửa',
 					'href' => $this->url->link('sale/order/update', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL')
 				);
 			}
@@ -727,7 +727,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$pagination->total = $order_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('extension/openbay/orderList', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();
@@ -818,7 +818,7 @@ class ControllerExtensionOpenbay extends Controller {
 			$this->data['breadcrumbs'] = array();
 
 			$this->data['breadcrumbs'][] = array(
-				'text'      => $this->language->get('text_home'),
+				'text'      => "Trang Chủ",
 				'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 				'separator' => false
 			);
@@ -1209,7 +1209,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);
@@ -1444,7 +1444,7 @@ class ControllerExtensionOpenbay extends Controller {
 				'special'    => $special,
 				'image'      => $image,
 				'quantity'   => $result['quantity'],
-				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
+				'status'     => ($result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_enabled')),
 				'selected'   => isset($this->request->post['selected']) && in_array($result['product_id'], $this->request->post['selected']),
 				'edit'       => $edit,
 				'has_option' => $openstock_installed ? $result['has_option'] : 0,
@@ -1598,7 +1598,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$pagination->total = $product_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
+		$pagination->text = "Phân trang";
 		$pagination->url = $this->url->link('extension/openbay/itemList', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$this->data['pagination'] = $pagination->render();

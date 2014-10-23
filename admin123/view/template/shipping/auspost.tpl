@@ -27,11 +27,11 @@
             <td><?php echo $entry_standard ?></td>
             <td><select name="auspost_standard">
                 <?php if ($auspost_standard) { ?>
-                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                <option value="0"><?php echo $text_disabled; ?></option>
+                <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                <option value="0"><?php echo "Tắt"; ?></option>
                 <?php } else { ?>
-                <option value="1"><?php echo $text_enabled; ?></option>
-                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <option value="1"><?php echo "Bật"; ?></option>
+                <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                 <?php } ?>
               </select></td>
           </tr>
@@ -39,11 +39,11 @@
             <td><?php echo $entry_express ?></td>
             <td><select name="auspost_express">
                 <?php if ($auspost_express) { ?>
-                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                <option value="0"><?php echo $text_disabled; ?></option>
+                <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                <option value="0"><?php echo "Tắt"; ?></option>
                 <?php } else { ?>
-                <option value="1"><?php echo $text_enabled; ?></option>
-                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <option value="1"><?php echo "Bật"; ?></option>
+                <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                 <?php } ?>
               </select></td>
           </tr>
@@ -51,11 +51,11 @@
             <td><?php echo $entry_display_time ?></td>
             <td><select name="auspost_display_time">
                 <?php if ($auspost_display_time) { ?>
-                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                <option value="0"><?php echo $text_disabled; ?></option>
+                <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                <option value="0"><?php echo "Tắt"; ?></option>
                 <?php } else { ?>
-                <option value="1"><?php echo $text_enabled; ?></option>
-                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <option value="1"><?php echo "Bật"; ?></option>
+                <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                 <?php } ?>
               </select></td>
           </tr>
@@ -101,11 +101,11 @@
             <td><?php echo $entry_status ?></td>
             <td><select name="auspost_status">
                 <?php if ($auspost_status) { ?>
-                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                <option value="0"><?php echo $text_disabled; ?></option>
+                <option value="1" selected="selected"><?php echo "Bật"; ?></option>
+                <option value="0"><?php echo "Tắt"; ?></option>
                 <?php } else { ?>
-                <option value="1"><?php echo $text_enabled; ?></option>
-                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <option value="1"><?php echo "Bật"; ?></option>
+                <option value="0" selected="selected"><?php echo "Tắt"; ?></option>
                 <?php } ?>
               </select></td>
           </tr>

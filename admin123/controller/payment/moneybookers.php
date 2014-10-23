@@ -20,7 +20,7 @@ class ControllerPaymentMoneyBookers extends Controller {
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
-		$this->data['text_disabled'] = $this->language->get('text_disabled');
+		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_all_zones'] = $this->language->get('text_all_zones');
 
 		$this->data['entry_email'] = $this->language->get('entry_email');
@@ -37,8 +37,8 @@ class ControllerPaymentMoneyBookers extends Controller {
 		$this->data['entry_secret'] = $this->language->get('entry_secret');
 		$this->data['entry_custnote'] = $this->language->get('entry_custnote');
 
-		$this->data['button_save'] = $this->language->get('button_save');
-		$this->data['button_cancel'] = $this->language->get('button_cancel');
+		$this->data['button_save'] = 'Lưu';
+		$this->data['button_cancel'] = 'Trở lại';
 
 		if (isset($this->error['warning'])) {
 			$this->data['error_warning'] = $this->error['warning'];
@@ -55,7 +55,7 @@ class ControllerPaymentMoneyBookers extends Controller {
 		$this->data['breadcrumbs'] = array();
 
 		$this->data['breadcrumbs'][] = array(
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => false
 		);

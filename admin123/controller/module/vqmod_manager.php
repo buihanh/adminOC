@@ -88,7 +88,7 @@ class ControllerModuleVQModManager extends Controller {
 
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL'),
-			'text'      => $this->language->get('text_home'),
+			'text'      => "Trang Chủ",
 			'separator' => false
 		);
 
@@ -165,7 +165,7 @@ class ControllerModuleVQModManager extends Controller {
 					'version'     => isset($xml->version) ? $xml->version : $this->language->get('text_unavailable'),
 					'vqmver'      => isset($xml->vqmver) ? $xml->vqmver : $this->language->get('text_unavailable'),
 					'author'      => isset($xml->author) ? $xml->author : $this->language->get('text_unavailable'),
-					'status'      => $extension == 'xml_' ? sprintf($this->language->get('highlight'), $this->language->get('text_disabled')) : $this->language->get('text_enabled'),
+					'status'      => $extension == 'xml_' ? sprintf($this->language->get('highlight'), $this->language->get('text_enabled')) : $this->language->get('text_enabled'),
 					'delete'      => $this->url->link('module/vqmod_manager/vqmod_delete', 'token=' . $this->session->data['token'] . '&vqmod=' . basename($vqmod_script), 'SSL'),
 					'action'      => $action,
 					'invalid_xml' => $invalid_xml
@@ -239,14 +239,14 @@ class ControllerModuleVQModManager extends Controller {
 				if ($setting == 'useCache') {
 					$this->data['vqmod_vars'][] = array(
 						'setting' => $this->language->get('setting_usecache'),
-						'value'   => ($value === true ? $this->language->get('text_enabled') : $this->language->get('text_disabled')),
+						'value'   => ($value === true ? 'Bật' : 'Tắt'),
 					);
 				}
 
 				if ($setting == 'logging') {
 					$this->data['vqmod_vars'][] = array(
 						'setting' => $this->language->get('setting_logging'),
-						'value'   => ($value === true ? $this->language->get('text_enabled') : $this->language->get('text_disabled'))
+						'value'   => ($value === true ? 'Bật' : 'Tắt')
 					);
 				}
 
